@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.astro/
+
+# environment / secrets
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# logs
+*.log
+npm-debug.log*
+
+# scratch folder — safe to delete entirely
+_to_delete/

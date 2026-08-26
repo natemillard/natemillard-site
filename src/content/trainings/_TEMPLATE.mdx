@@ -1,0 +1,93 @@
+---
+# Copy this file, rename it, fill it in. The filename becomes the URL:
+#   community-mobilization.mdx  →  /training/community-mobilization
+# Files starting with an underscore are ignored by the build.
+
+title: 'Name of the module'
+summary: 'One or two sentences. What is this, and what happens in it?'
+audience: 'Who this is designed for, in plain language'
+objectives:
+  - 'Participants should be able to do this afterwards'
+  - 'And this'
+duration: '90 minutes'
+format: 'in-person'      # in-person | virtual | hybrid | self-paced
+stage: 'prototype'       # concept | prototype | pilot-ready | field-tested
+updated: 2026-01-15
+
+# --- Provenance. Read the note in src/content.config.ts before changing. ---
+# personal-prototype  (default, most conservative)
+# personal-adaptation (add affiliationNote naming the context)
+# organizational      (ONLY where literally true; affiliationNote required)
+affiliation: 'personal-prototype'
+# affiliationNote: ''
+
+tags: ['example tag']
+
+# --- Optional -------------------------------------------------------------
+# image: '/images/trainings/my-image.jpg'
+# imageAlt: 'Describe the image.'
+# resources:
+#   - { label: 'Participant worksheet', href: '/downloads/worksheets/x.pdf', kind: 'PDF', note: '2 pages' }
+# featured: true                     # eligible for the homepage
+
+draft: true          # ← remove or set false when ready to publish
+listed: true         # ← set false to publish at a direct URL without listing it
+---
+
+Opening prose. Explain what the session is about and why it exists.
+
+<!-- ======================================================================
+     AVAILABLE COMPONENTS
+     You do NOT need to import anything — they are provided automatically.
+     Delete the ones you don't use.
+     ====================================================================== -->
+
+<ScenarioCard title="A situation" setting="Where it happens" time="5 minutes">
+A situation for participants to work with. Markdown works in here.
+</ScenarioCard>
+
+<ReflectionPrompt question="A question to sit with?" notes time="4 minutes">
+Optional extra context under the question. `notes` adds a private text box —
+nothing typed in it is saved or sent anywhere.
+</ReflectionPrompt>
+
+<Quiz
+  question="A question with one right answer?"
+  options={[
+    { text: 'An answer', correct: false, response: 'Why this one falls short.' },
+    { text: 'The better answer', correct: true, response: 'Why this one holds up.' },
+  ]}
+  explanation="An optional closing note, shown once an answer is chosen."
+/>
+
+<RevealCard prompt="Something to think about before you see an answer" label="One reading">
+The hidden content.
+</RevealCard>
+
+<StepSequence title="Running the session">
+  <Step title="First move" time="10 min">What happens.</Step>
+  <Step title="Second move" time="20 min">What happens next.</Step>
+</StepSequence>
+
+<DecisionChoice
+  situation="Optional context for the decision."
+  question="What do you do?"
+  choices={[
+    { label: 'One option', judgement: 'costly', outcome: 'What follows from it.' },
+    { label: 'Another option', judgement: 'sound', outcome: 'What follows from this one.' },
+    { label: 'A third', judgement: 'mixed', outcome: 'And this one.' },
+  ]}
+/>
+
+<FacilitatorNote title="Something the facilitator needs to know">
+Collapsed by default. NOTE: this is not access control — anyone who opens the
+page can expand it. Genuinely private material should stay out of the
+repository and be shared as a file instead.
+</FacilitatorNote>
+
+<DownloadResource
+  label="Participant worksheet"
+  href="/downloads/worksheets/example.pdf"
+  kind="PDF"
+  note="Two pages, print double-sided"
+/>

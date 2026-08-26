@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import WritingCard from '../../components/cards/WritingCard.astro';
+import Tag from '../../components/site/Tag.astro';
+import ContactBlock from '../../components/site/ContactBlock.astro';
+import { visible, byDateDesc, writingTags } from '../../lib/content';
+
+const entries = (await visible('writing')).sort(byDateDesc('date'));
+const tags = await writingTags();
+
+/* Group by year — a quiet way to give a long archive structure without
+   needing a filter widget. */
+const byYear = new Map<number, typeof entries>();
+for (const entry of entries) {
+  const year = entry.data.date.getUTCFullYear();
+  byYear.set(year, [...(byYear.get(year) ?? []), entry]);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+
+<BaseLayout
+  title="Writing & Research"
+  description="Essays, research, publications, talks, and reflections."
+>
+  <div class="container">
+    <PageHeader
+      eyebrow="Writing & Research"
+      title="Essays, research, and things worth thinking through in public"
+      lede="Published research sits alongside shorter essays and reflections. Where a piece was published elsewhere, the entry links out to it."
+    />
+
+    {tags.length > 0 && (
+      <nav class="tag-bar" aria-label="Browse by topic">
+        <span class="tag-bar__label">Topics</span>
+        <div class="tag-bar__tags">
+          {tags.map((t) => (
+            <Tag tag={t.tag} count={t.count} href={`/writing/tag/${t.slug}`} />
+          ))}
+        </div>
+      </nav>
+    )}
+
+    {years.map((year) => (
+      <section class="year">
+        <h2 class="year__heading">{year}</h2>
+        <div class="year__list">
+          {byYear.get(year)!.map((entry) => <WritingCard entry={entry} />)}
+        </div>
+      </section>
+    ))}
+
+    {entries.length === 0 && <p class="empty">No writing published yet.</p>}
+  </div>
+
+  <ContactBlock />
+</BaseLayout>
+
+<style>
+  .tag-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-sm);
+    padding-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .tag-bar__label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .tag-bar__tags { display: flex; flex-wrap: wrap; gap: var(--space-2xs); }
+
+  .year { margin-top: var(--space-xl); }
+
+  .year__heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .year__list { margin-top: var(--space-2xs); }
+  .year__list > :first-child { padding-top: var(--space-2xs); }
+
+  .empty { color: var(--color-ink-muted); }
+</style>

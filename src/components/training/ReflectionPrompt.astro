@@ -1,0 +1,105 @@
+---
+/**
+ * A question to sit with. Optionally offers a private notes box.
+ *
+ *   <ReflectionPrompt question="Who would notice if you didn't come outside?" notes />
+ *
+ * Notes are not saved or transmitted anywhere — they exist only until the
+ * page is closed. That is stated on the page so nobody is misled.
+ */
+interface Props {
+  question: string;
+  /** Show a text area for the reader to think in. */
+  notes?: boolean;
+  /** Suggested time to spend. */
+  time?: string;
+}
+const { question, notes = false, time } = Astro.props;
+---
+
+<aside class="reflect prose-wide">
+  <p class="reflect__label">
+    Reflection{time && <span class="reflect__time"> · {time}</span>}
+  </p>
+
+  <p class="reflect__question">{question}</p>
+
+  <div class="reflect__body"><slot /></div>
+
+  {notes && (
+    <div class="reflect__notes">
+      <label class="reflect__notes-label" for={`notes-${question.length}-${question.charCodeAt(0)}`}>
+        Your notes
+      </label>
+      <textarea
+        id={`notes-${question.length}-${question.charCodeAt(0)}`}
+        rows="4"
+        placeholder="Think here…"
+      ></textarea>
+      <p class="reflect__notes-help">
+        Nothing typed here is saved or sent anywhere. Copy it out if you want to keep it.
+      </p>
+    </div>
+  )}
+</aside>
+
+<style>
+  .reflect {
+    margin-block: var(--space-lg);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--color-accent);
+  }
+
+  .reflect__label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .reflect__time { font-weight: var(--weight-normal); color: var(--color-ink-faint); }
+
+  .reflect__question {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    color: var(--color-ink);
+  }
+
+  .reflect__body :global(> * + *) { margin-top: var(--space-sm); }
+  .reflect__body :global(> *:first-child) { margin-top: var(--space-sm); }
+
+  .reflect__notes { margin-top: var(--space-md); }
+
+  .reflect__notes-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+    margin-bottom: var(--space-3xs);
+  }
+
+  .reflect__notes textarea {
+    width: 100%;
+    max-width: 40rem;
+    padding: var(--space-2xs) var(--space-xs);
+    border: 1px solid var(--color-rule-strong);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    resize: vertical;
+  }
+
+  .reflect__notes-help {
+    margin-top: var(--space-3xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+</style>

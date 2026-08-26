@@ -1,0 +1,67 @@
+---
+/**
+ * A situation for participants to work with.
+ *
+ *   <ScenarioCard title="Tuesday, 4pm" setting="County EOC" time="10 minutes">
+ *     The body of the scenario, in Markdown.
+ *   </ScenarioCard>
+ */
+interface Props {
+  title: string;
+  /** Where this takes place. Optional. */
+  setting?: string;
+  /** How long to spend on it. Optional. */
+  time?: string;
+}
+const { title, setting, time } = Astro.props;
+---
+
+<aside class="scenario prose-wide">
+  <p class="scenario__label">Scenario</p>
+  <h3 class="scenario__title">{title}</h3>
+
+  {(setting || time) && (
+    <p class="scenario__meta">
+      {setting}
+      {setting && time && <span aria-hidden="true"> · </span>}
+      {time}
+    </p>
+  )}
+
+  <div class="scenario__body"><slot /></div>
+</aside>
+
+<style>
+  .scenario {
+    margin-block: var(--space-lg);
+    padding: var(--space-md);
+    background: var(--color-paper-raised);
+    border: 1px solid var(--color-rule);
+    border-left: 3px solid var(--color-clay);
+    border-radius: var(--radius-md);
+  }
+
+  .scenario__label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-clay);
+  }
+
+  .scenario__title {
+    margin-top: var(--space-3xs);
+    font-size: var(--text-lg);
+  }
+
+  .scenario__meta {
+    margin-top: var(--space-3xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .scenario__body { margin-top: var(--space-sm); }
+  .scenario__body :global(> * + *) { margin-top: var(--space-sm); }
+</style>

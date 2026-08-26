@@ -1,0 +1,233 @@
+---
+/**
+ * A branching decision point. The reader picks a course of action and sees
+ * what follows from it — including that some choices are defensible and some
+ * are merely comfortable.
+ *
+ *   <DecisionChoice
+ *     situation="You have twelve volunteers and no confirmed shelter site."
+ *     question="What do you do first?"
+ *     choices={[
+ *       { label: 'Send everyone to the church hall',
+ *         outcome: 'You arrive to a locked building…',
+ *         judgement: 'costly' },
+ *       { label: 'Call the two people who hold keys',
+ *         outcome: 'Ten minutes of phone calls saves two hours.',
+ *         judgement: 'sound' },
+ *     ]}
+ *   />
+ *
+ * WITHOUT JAVASCRIPT every outcome is shown as a plain list.
+ */
+interface Choice {
+  label: string;
+  outcome: string;
+  /** Shapes the tone of the response, not a score. */
+  judgement?: 'sound' | 'mixed' | 'costly';
+}
+
+interface Props {
+  situation?: string;
+  question: string;
+  choices: Choice[];
+}
+
+const { situation, question, choices } = Astro.props;
+
+const judgementLabel: Record<string, string> = {
+  sound: 'A defensible call',
+  mixed: 'Workable, with a cost',
+  costly: 'This one hurts',
+};
+---
+
+<div class="decision prose-wide" data-decision>
+  <p class="decision__label">Decision point</p>
+  {situation && <p class="decision__situation">{situation}</p>}
+  <p class="decision__question">{question}</p>
+
+  <div class="decision__choices">
+    {choices.map((choice, index) => (
+      <button class="decision__button" type="button" data-choice={index}>
+        {choice.label}
+      </button>
+    ))}
+  </div>
+
+  <div class="decision__outcomes">
+    {choices.map((choice, index) => (
+      <div
+        class="decision__outcome"
+        data-outcome={index}
+        data-judgement={choice.judgement ?? 'mixed'}
+        hidden
+      >
+        <p class="decision__judgement">{judgementLabel[choice.judgement ?? 'mixed']}</p>
+        <p class="decision__outcome-text">{choice.outcome}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- No-JavaScript path -->
+  <details class="decision__fallback" data-fallback>
+    <summary>Show what follows from each choice</summary>
+    <dl>
+      {choices.map((choice) => (
+        <>
+          <dt>{choice.label}</dt>
+          <dd>{choice.outcome}</dd>
+        </>
+      ))}
+    </dl>
+  </details>
+
+  <p class="decision__reset" hidden data-reset-wrap>
+    <button type="button" class="decision__reset-button" data-reset>Try another choice</button>
+  </p>
+</div>
+
+<style>
+  .decision {
+    margin-block: var(--space-lg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-top: 3px solid var(--color-clay);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+  }
+
+  .decision__label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-clay);
+  }
+
+  .decision__situation {
+    margin-top: var(--space-2xs);
+    color: var(--color-ink-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .decision__question {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+  }
+
+  .decision__choices {
+    margin-top: var(--space-sm);
+    display: grid;
+    gap: var(--space-2xs);
+  }
+
+  .decision__button {
+    text-align: left;
+    padding: var(--space-2xs) var(--space-xs);
+    border: 1px solid var(--color-rule-strong);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    cursor: pointer;
+    transition: border-color var(--duration) var(--ease),
+                background var(--duration) var(--ease);
+  }
+
+  .decision__button:hover {
+    border-color: var(--color-clay);
+    background: var(--color-clay-wash);
+  }
+
+  .decision__button[aria-pressed='true'] {
+    border-color: var(--color-clay);
+    background: var(--color-clay-wash);
+    font-weight: var(--weight-medium);
+  }
+
+  .decision__outcome {
+    margin-top: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-left: 2px solid var(--color-rule-strong);
+    background: var(--color-paper-sunk);
+    border-radius: var(--radius-sm);
+  }
+
+  .decision__outcome[data-judgement='sound'] { border-left-color: var(--color-accent); }
+  .decision__outcome[data-judgement='costly'] { border-left-color: var(--color-clay); }
+
+  .decision__judgement {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    font-weight: var(--weight-semibold);
+    color: var(--color-ink-faint);
+  }
+
+  .decision__outcome-text {
+    margin-top: var(--space-3xs);
+    line-height: var(--leading-normal);
+  }
+
+  .decision__fallback { margin-top: var(--space-sm); font-size: var(--text-sm); }
+
+  .decision__fallback summary {
+    font-family: var(--font-sans);
+    cursor: pointer;
+    color: var(--color-accent);
+  }
+
+  .decision__fallback dt {
+    margin-top: var(--space-2xs);
+    font-weight: var(--weight-semibold);
+  }
+
+  .decision__fallback dd { margin: 0 0 0 var(--space-sm); color: var(--color-ink-muted); }
+
+  .decision__reset { margin-top: var(--space-sm); }
+
+  .decision__reset-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-decision]').forEach((block) => {
+    const fallback = block.querySelector<HTMLDetailsElement>('[data-fallback]');
+    if (fallback) fallback.hidden = true;
+
+    const resetWrap = block.querySelector<HTMLElement>('[data-reset-wrap]');
+    const buttons = block.querySelectorAll<HTMLButtonElement>('[data-choice]');
+    const outcomes = block.querySelectorAll<HTMLElement>('[data-outcome]');
+
+    buttons.forEach((button) => {
+      button.setAttribute('aria-pressed', 'false');
+
+      button.addEventListener('click', () => {
+        buttons.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+        button.setAttribute('aria-pressed', 'true');
+
+        outcomes.forEach((o) => { o.hidden = o.dataset.outcome !== button.dataset.choice; });
+        if (resetWrap) resetWrap.hidden = false;
+      });
+    });
+
+    block.querySelector<HTMLButtonElement>('[data-reset]')?.addEventListener('click', () => {
+      buttons.forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      outcomes.forEach((o) => { o.hidden = true; });
+      if (resetWrap) resetWrap.hidden = true;
+      buttons[0]?.focus();
+    });
+  });
+</script>

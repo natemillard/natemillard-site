@@ -1,0 +1,40 @@
+---
+/**
+ * The shell every page sits inside: <head>, skip link, header, footer.
+ * Pass SEO details through as props.
+ */
+import SEO from '../components/site/SEO.astro';
+import Header from '../components/site/Header.astro';
+import Footer from '../components/site/Footer.astro';
+import '../styles/global.css';
+import '../styles/prose.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  publishedDate?: Date;
+}
+
+const { title, description, image, noindex, publishedDate } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO {title} {description} {image} {noindex} {publishedDate} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main" class="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .main { flex: 1 0 auto; }
+</style>

@@ -1,0 +1,15 @@
+---
+/**
+ * Wraps any block of rendered Markdown so it gets the site's long-form
+ * typography. Use it anywhere a <Content /> is rendered.
+ *
+ *   <Prose><Content /></Prose>
+ */
+interface Props {
+  /** Extra class names, e.g. for width overrides. */
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<div class:list={['prose', className]}><slot /></div>

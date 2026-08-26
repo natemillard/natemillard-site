@@ -1,0 +1,73 @@
+---
+/**
+ * Something to think about before you see the answer.
+ * Uses the browser's own <details> element, so it works with JavaScript off.
+ *
+ *   <RevealCard prompt="What would you check first?" label="One approach">
+ *     The hidden content, in Markdown.
+ *   </RevealCard>
+ */
+interface Props {
+  prompt: string;
+  /** The text on the disclosure control. */
+  label?: string;
+}
+const { prompt, label = 'Reveal' } = Astro.props;
+---
+
+<details class="reveal prose-wide">
+  <summary class="reveal__summary">
+    <span class="reveal__prompt">{prompt}</span>
+    <span class="reveal__action">{label}</span>
+  </summary>
+  <div class="reveal__body"><slot /></div>
+</details>
+
+<style>
+  .reveal {
+    margin-block: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+  }
+
+  .reveal__summary {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .reveal__summary::-webkit-details-marker { display: none; }
+
+  .reveal__prompt {
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-snug);
+  }
+
+  .reveal__action {
+    flex: none;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-accent);
+    white-space: nowrap;
+  }
+
+  .reveal__action::after { content: ' +'; }
+  .reveal[open] .reveal__action::after { content: ' –'; }
+
+  .reveal__body {
+    padding: 0 var(--space-md) var(--space-md);
+    border-top: 1px solid var(--color-rule);
+    padding-top: var(--space-sm);
+    font-size: var(--text-base);
+  }
+
+  .reveal__body :global(> * + *) { margin-top: var(--space-sm); }
+</style>

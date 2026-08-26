@@ -1,0 +1,108 @@
+---
+/** The "what is this and who is it for" block at the top of a training. */
+interface Props {
+  audience: string;
+  duration: string;
+  format: string;
+  stage: string;
+  objectives: string[];
+  updated: Date;
+}
+const { audience, duration, format, stage, objectives, updated } = Astro.props;
+
+const formatLabel: Record<string, string> = {
+  'in-person': 'In person',
+  virtual: 'Virtual',
+  hybrid: 'Hybrid',
+  'self-paced': 'Self-paced',
+};
+
+const stageLabel: Record<string, string> = {
+  concept: 'Concept',
+  prototype: 'Prototype',
+  'pilot-ready': 'Pilot ready',
+  'field-tested': 'Field tested',
+};
+---
+
+<div class="tmeta">
+  <dl class="tmeta__facts">
+    <div><dt>Audience</dt><dd>{audience}</dd></div>
+    <div><dt>Time</dt><dd>{duration}</dd></div>
+    <div><dt>Format</dt><dd>{formatLabel[format] ?? format}</dd></div>
+    <div><dt>Stage</dt><dd>{stageLabel[stage] ?? stage}</dd></div>
+  </dl>
+
+  <section class="tmeta__objectives">
+    <h2>By the end, participants should be able to</h2>
+    <ul>
+      {objectives.map((o) => <li>{o}</li>)}
+    </ul>
+  </section>
+
+  <p class="tmeta__updated">
+    Last revised <time datetime={updated.toISOString()}>
+      {new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(updated)}
+    </time>
+  </p>
+</div>
+
+<style>
+  .tmeta {
+    padding: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-sunk);
+  }
+
+  .tmeta__facts {
+    display: grid;
+    gap: var(--space-sm) var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    font-family: var(--font-sans);
+  }
+
+  .tmeta__facts dt {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .tmeta__facts dd {
+    margin: var(--space-3xs) 0 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink);
+  }
+
+  .tmeta__objectives {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .tmeta__objectives h2 {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    font-weight: var(--weight-semibold);
+    color: var(--color-ink-faint);
+  }
+
+  .tmeta__objectives ul {
+    margin-top: var(--space-2xs);
+    padding-left: 1.1em;
+    line-height: var(--leading-normal);
+  }
+
+  .tmeta__objectives li + li { margin-top: var(--space-3xs); }
+
+  .tmeta__updated {
+    margin-top: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+</style>

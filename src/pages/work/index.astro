@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/site/PageHeader.astro';
+import ProjectCard from '../../components/cards/ProjectCard.astro';
+import ContactBlock from '../../components/site/ContactBlock.astro';
+import { visible } from '../../lib/content';
+
+const projects = (await visible('projects')).sort((a, b) => {
+  const order = (a.data.order ?? 99) - (b.data.order ?? 99);
+  if (order !== 0) return order;
+  return b.data.startDate.getTime() - a.data.startDate.getTime();
+});
+---
+
+<BaseLayout
+  title="Work"
+  description="Selected research, program design, and community projects."
+>
+  <div class="container">
+    <PageHeader
+      eyebrow="Work"
+      title="Selected projects"
+      lede="Research, program design, and community work. Each entry describes what the project was, what my role in it was, and what came of it."
+    />
+
+    {projects.length === 0 ? (
+      <p class="empty">No projects published yet.</p>
+    ) : (
+      <div class="work-grid">
+        {projects.map((entry) => <ProjectCard entry={entry} headingLevel={2} />)}
+      </div>
+    )}
+  </div>
+
+  <ContactBlock />
+</BaseLayout>
+
+<style>
+  .work-grid { display: grid; gap: var(--space-xl); }
+
+  @media (min-width: 44rem) {
+    .work-grid { grid-template-columns: 1fr 1fr; gap: var(--space-xl) var(--space-lg); }
+  }
+
+  .empty { color: var(--color-ink-muted); }
+</style>

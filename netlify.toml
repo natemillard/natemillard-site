@@ -1,0 +1,10 @@
+# Netlify build configuration.
+# Deliberately minimal — Astro produces a plain static site, so Netlify only
+# needs to know how to build it and where the finished files land.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

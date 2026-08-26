@@ -1,0 +1,40 @@
+---
+/**
+ * The standing Training Lab note. Quiet by design — a clear statement rather
+ * than a warning box.
+ */
+interface Props {
+  /** 'full' on the Lab landing page, 'short' at the foot of a training. */
+  variant?: 'full' | 'short';
+}
+const { variant = 'full' } = Astro.props;
+---
+
+{variant === 'full' ? (
+  <p class="lab-note">
+    The Training Lab is part of my personal professional website. Materials here
+    are concepts, prototypes, and works in progress. They are not official
+    training materials, and they do not represent the positions, curricula, or
+    endorsement of any employer or organisation unless a page says so explicitly.
+  </p>
+) : (
+  <p class="lab-note lab-note--short">
+    A personal prototype published on my own site. Not an official training
+    product of, or endorsed by, any employer or organisation unless stated above.
+  </p>
+)}
+
+<style>
+  .lab-note {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-faint);
+    font-style: italic;
+    max-width: 60ch;
+  }
+
+  .lab-note--short {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+  }
+</style>

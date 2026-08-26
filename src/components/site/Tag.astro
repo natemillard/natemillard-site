@@ -1,0 +1,54 @@
+---
+import { slugifyTag } from '../../lib/content';
+
+interface Props {
+  tag: string;
+  /** Link to the tag archive. Off by default outside the writing section. */
+  href?: string;
+  count?: number;
+  current?: boolean;
+}
+const { tag, href, count, current = false } = Astro.props;
+const Element = href ? 'a' : 'span';
+---
+
+<Element
+  class:list={['tag', { 'is-current': current }]}
+  href={href}
+  aria-current={current ? 'page' : undefined}
+  data-slug={slugifyTag(tag)}
+>
+  {tag}{count !== undefined && <span class="tag__count">{count}</span>}
+</Element>
+
+<style>
+  .tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4em;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-ink-muted);
+    background: var(--color-paper-sunk);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-sm);
+    padding: 0.2em 0.55em;
+    text-decoration: none;
+  }
+
+  a.tag:hover {
+    color: var(--color-accent);
+    border-color: var(--color-rule-strong);
+    background: var(--color-accent-wash);
+  }
+
+  .tag.is-current {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-paper);
+  }
+
+  .tag__count { color: var(--color-ink-faint); font-variant-numeric: tabular-nums; }
+  .tag.is-current .tag__count { color: var(--color-selection); }
+</style>

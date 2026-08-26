@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactBlock from '../components/site/ContactBlock.astro';
+import { cvIntro, cvSections, cvSkills } from '../data/cv';
+import { site, cvDownload } from '../config';
+---
+
+<BaseLayout title="CV" description={`Curriculum vitae for ${site.name}.`}>
+  <div class="container cv">
+    <header class="cv__head">
+      <div class="cv__head-text">
+        <p class="eyebrow">Curriculum vitae</p>
+        <h1>{site.name}</h1>
+        <p class="cv__summary">{cvIntro.summary}</p>
+        <p class="cv__location">{cvIntro.location}</p>
+      </div>
+
+      <div class="cv__download">
+        <a class="button" href={cvDownload} download>Download PDF</a>
+        <p class="cv__download-note">
+          The PDF is the version to send on. This page is kept current.
+        </p>
+      </div>
+    </header>
+
+    {cvIntro.focus.length > 0 && (
+      <section class="cv__focus">
+        <h2 class="cv__section-heading">Focus</h2>
+        <ul class="cv__focus-list">
+          {cvIntro.focus.map((f) => <li>{f}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {cvSections.map((section) => (
+      <section class="cv__section">
+        <h2 class="cv__section-heading">{section.heading}</h2>
+        {section.note && <p class="cv__section-note">{section.note}</p>}
+
+        <div class="cv__entries">
+          {section.entries.map((entry) => (
+            <article class="cv__entry">
+              <p class="cv__period">{entry.period}</p>
+              <div class="cv__entry-body">
+                <h3 class="cv__entry-title">{entry.title}</h3>
+                {(entry.organisation || entry.location) && (
+                  <p class="cv__org">
+                    {entry.organisation}
+                    {entry.organisation && entry.location && <span aria-hidden="true"> · </span>}
+                    {entry.location}
+                  </p>
+                )}
+                {entry.description && <p class="cv__desc">{entry.description}</p>}
+                {entry.points && entry.points.length > 0 && (
+                  <ul class="cv__points">
+                    {entry.points.map((p) => <li>{p}</li>)}
+                  </ul>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    {cvSkills.length > 0 && (
+      <section class="cv__section">
+        <h2 class="cv__section-heading">Methods &amp; skills</h2>
+        <div class="cv__skills">
+          {cvSkills.map((group) => (
+            <div class="cv__skill-group">
+              <h3>{group.group}</h3>
+              <p>{group.items.join(' · ')}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+
+  <ContactBlock />
+</BaseLayout>
+
+<style>
+  /* The container stays full width so the left edge lines up with the
+     header and footer; the content inside it is what gets constrained. */
+  .cv > * { max-width: 54rem; }
+
+  .cv__head {
+    display: grid;
+    gap: var(--space-lg);
+    padding-block: var(--space-2xl) var(--space-lg);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  @media (min-width: 48rem) {
+    .cv__head {
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: var(--space-2xl);
+    }
+  }
+
+  .cv__head h1 { margin-top: var(--space-xs); font-size: var(--text-3xl); }
+
+  .cv__summary {
+    margin-top: var(--space-md);
+    max-width: 58ch;
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+
+  .cv__location {
+    margin-top: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .cv__download-note {
+    margin-top: var(--space-2xs);
+    max-width: 20ch;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+    line-height: var(--leading-normal);
+  }
+
+  .cv__section, .cv__focus { margin-top: var(--space-2xl); }
+
+  .cv__section-heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .cv__section-note {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .cv__focus-list {
+    margin-top: var(--space-sm);
+    padding-left: 1.1em;
+    color: var(--color-ink-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .cv__entries { margin-top: var(--space-md); display: grid; gap: var(--space-lg); }
+
+  .cv__entry { display: grid; gap: var(--space-2xs); }
+
+  @media (min-width: 44rem) {
+    .cv__entry { grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-lg); }
+  }
+
+  .cv__period {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+    font-variant-numeric: tabular-nums;
+    padding-top: 0.15rem;
+  }
+
+  .cv__entry-title { font-size: var(--text-base); font-weight: var(--weight-semibold); }
+
+  .cv__org {
+    margin-top: var(--space-3xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+
+  .cv__desc, .cv__points {
+    margin-top: var(--space-2xs);
+    color: var(--color-ink-muted);
+    line-height: var(--leading-normal);
+    font-size: var(--text-sm);
+  }
+
+  .cv__points { padding-left: 1.1em; }
+  .cv__points li + li { margin-top: var(--space-3xs); }
+
+  .cv__skills {
+    margin-top: var(--space-md);
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  @media (min-width: 44rem) {
+    .cv__skills { grid-template-columns: 1fr 1fr; }
+  }
+
+  .cv__skill-group h3 {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+  }
+
+  .cv__skill-group p {
+    margin-top: var(--space-3xs);
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+  }
+
+  /* Printing the CV page should produce something usable. */
+  @media print {
+    .cv__download { display: none; }
+  }
+</style>

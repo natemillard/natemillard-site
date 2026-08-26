@@ -1,0 +1,67 @@
+---
+/** One step inside <StepSequence>. */
+interface Props {
+  title: string;
+  /** e.g. '10 min'. Optional. */
+  time?: string;
+}
+const { title, time } = Astro.props;
+---
+
+<li class="step">
+  <div class="step__head">
+    <h4 class="step__title">{title}</h4>
+    {time && <span class="step__time">{time}</span>}
+  </div>
+  <div class="step__body"><slot /></div>
+</li>
+
+<style>
+  .step {
+    counter-increment: step;
+    position: relative;
+    padding-left: 2.75rem;
+  }
+
+  .step::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.85rem;
+    height: 1.85rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-rule-strong);
+    background: var(--color-paper-raised);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-ink-muted);
+  }
+
+  .step__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2xs);
+    min-height: 1.85rem;
+  }
+
+  .step__title { font-size: var(--text-base); font-weight: var(--weight-semibold); }
+
+  .step__time {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+    white-space: nowrap;
+  }
+
+  .step__body {
+    margin-top: var(--space-3xs);
+    color: var(--color-ink-muted);
+    line-height: var(--leading-normal);
+  }
+
+  .step__body :global(> * + *) { margin-top: var(--space-2xs); }
+</style>

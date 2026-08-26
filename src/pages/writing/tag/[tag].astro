@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/site/PageHeader.astro';
+import WritingCard from '../../../components/cards/WritingCard.astro';
+import Tag from '../../../components/site/Tag.astro';
+import { visible, byDateDesc, writingTags, slugifyTag } from '../../../lib/content';
+
+/* One static page per tag. No JavaScript, works without it, linkable,
+   and indexable — which a filter widget would not be. */
+export async function getStaticPaths() {
+  const entries = (await visible('writing')).sort(byDateDesc('date'));
+  const tags = await writingTags();
+
+  return tags.map((t) => ({
+    params: { tag: t.slug },
+    props: {
+      label: t.tag,
+      entries: entries.filter((e) => e.data.tags.some((x) => slugifyTag(x) === t.slug)),
+    },
+  }));
+}
+
+const { label, entries } = Astro.props;
+const allTags = await writingTags();
+---
+
+<BaseLayout
+  title={`Writing tagged “${label}”`}
+  description={`Writing and research tagged ${label}.`}
+>
+  <div class="container">
+    <PageHeader eyebrow="Writing & Research" title={`Tagged “${label}”`}>
+      <p class="count">{entries.length} {entries.length === 1 ? 'entry' : 'entries'} · <a href="/writing">All writing</a></p>
+    </PageHeader>
+
+    <nav class="tag-bar" aria-label="Browse by topic">
+      {allTags.map((t) => (
+        <Tag
+          tag={t.tag}
+          count={t.count}
+          href={`/writing/tag/${t.slug}`}
+          current={t.slug === slugifyTag(label)}
+        />
+      ))}
+    </nav>
+
+    <div class="list">
+      {entries.map((entry) => <WritingCard entry={entry} headingLevel={2} />)}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .count {
+    margin-top: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .tag-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .list { margin-top: var(--space-sm); }
+</style>

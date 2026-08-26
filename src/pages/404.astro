@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { nav } from '../config';
+---
+
+<BaseLayout title="Page not found" noindex>
+  <div class="container notfound">
+    <p class="eyebrow">404</p>
+    <h1>That page isn’t here</h1>
+    <p class="lede">
+      The link may be out of date, or the page may have been unpublished.
+      Everything on the site is reachable from these sections:
+    </p>
+    <ul class="notfound__links">
+      {nav.map((item) => <li><a class="link-arrow" href={item.href}>{item.label}</a></li>)}
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .notfound {
+    padding-block: var(--space-3xl) var(--space-2xl);
+    max-width: var(--width-text);
+  }
+
+  .notfound h1 { margin-top: var(--space-xs); font-size: var(--text-3xl); }
+  .notfound .lede { margin-top: var(--space-md); }
+
+  .notfound__links {
+    margin-top: var(--space-lg);
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2xs);
+  }
+</style>

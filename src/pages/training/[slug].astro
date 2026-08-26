@@ -1,0 +1,163 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Prose from '../../components/site/Prose.astro';
+import Tag from '../../components/site/Tag.astro';
+import TrainingMeta from '../../components/training/TrainingMeta.astro';
+import AffiliationLine from '../../components/training/AffiliationLine.astro';
+import LabDisclaimer from '../../components/training/LabDisclaimer.astro';
+import DownloadResource from '../../components/training/DownloadResource.astro';
+import ScenarioCard from '../../components/training/ScenarioCard.astro';
+import ReflectionPrompt from '../../components/training/ReflectionPrompt.astro';
+import Quiz from '../../components/training/Quiz.astro';
+import RevealCard from '../../components/training/RevealCard.astro';
+import StepSequence from '../../components/training/StepSequence.astro';
+import Step from '../../components/training/Step.astro';
+import DecisionChoice from '../../components/training/DecisionChoice.astro';
+import FacilitatorNote from '../../components/training/FacilitatorNote.astro';
+
+/* Every training component is handed to MDX here, which means a training file
+   can use <Quiz />, <ScenarioCard />, and the rest WITHOUT importing anything.
+   Add a new component to this object and it becomes available in every
+   training file automatically. */
+const trainingComponents = {
+  ScenarioCard,
+  ReflectionPrompt,
+  Quiz,
+  RevealCard,
+  StepSequence,
+  Step,
+  DecisionChoice,
+  DownloadResource,
+  FacilitatorNote,
+};
+
+export async function getStaticPaths() {
+  const entries = await getCollection('trainings');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<BaseLayout
+  title={d.title}
+  description={d.summary}
+  image={d.image}
+  noindex={d.draft || !d.listed}
+>
+  <article class="container training">
+    <header class="training__head">
+      <p class="eyebrow"><a href="/training">Training Lab</a></p>
+      <h1>{d.title}</h1>
+      <p class="lede">{d.summary}</p>
+
+      {(d.draft || !d.listed) && (
+        <p class="status-note">
+          {d.draft
+            ? 'Working draft — still being developed, and not linked from the Training Lab.'
+            : 'Unlisted — reachable by direct link only, and not listed in the Training Lab.'}
+        </p>
+      )}
+
+      <div class="training__affiliation">
+        <AffiliationLine affiliation={d.affiliation} note={d.affiliationNote} />
+      </div>
+    </header>
+
+    <div class="training__meta">
+      <TrainingMeta
+        audience={d.audience}
+        duration={d.duration}
+        format={d.format}
+        stage={d.stage}
+        objectives={d.objectives}
+        updated={d.updated}
+      />
+    </div>
+
+    <Prose class="training__body"><Content components={trainingComponents} /></Prose>
+
+    {d.resources.length > 0 && (
+      <section class="training__resources">
+        <h2>Facilitation resources</h2>
+        {d.resources.map((r) => (
+          <DownloadResource label={r.label} href={r.href} kind={r.kind} note={r.note} />
+        ))}
+      </section>
+    )}
+
+    {d.tags.length > 0 && (
+      <p class="training__tags">{d.tags.map((t) => <Tag tag={t} />)}</p>
+    )}
+
+    <footer class="training__foot">
+      <LabDisclaimer variant="short" />
+      <p><a class="link-arrow" href="/training">All Training Lab modules</a></p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  /* See the note in cv.astro — constrain the content, not the container. */
+  .training > * { max-width: var(--width-text); }
+
+  .training__head { padding-block: var(--space-2xl) var(--space-lg); }
+
+  .training__head .eyebrow { margin-bottom: var(--space-xs); }
+  .training__head .eyebrow a { color: inherit; text-decoration: none; }
+  .training__head .eyebrow a:hover { color: var(--color-clay); }
+
+  .training__head h1 { font-size: var(--text-3xl); }
+  .training__head .lede { margin-top: var(--space-md); }
+
+  .status-note {
+    margin-top: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-clay);
+  }
+
+  .training__affiliation { margin-top: var(--space-lg); }
+
+  .training__meta { margin-bottom: var(--space-2xl); }
+
+  /* Training bodies run wider than an essay: the interactive components need
+     the room, and .prose-wide children opt out of the reading measure. */
+  .training__body { max-width: var(--width-prose); }
+  .training__body :global(.prose-wide) { max-width: none; }
+
+  .training__resources {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .training__resources h2 {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+    margin-bottom: var(--space-2xs);
+  }
+
+  .training__tags {
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+  }
+
+  .training__foot {
+    margin-top: var(--space-2xl);
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  @media print {
+    .training__foot { break-inside: avoid; }
+  }
+</style>

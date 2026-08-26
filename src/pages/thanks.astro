@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Message sent" noindex>
+  <div class="container thanks">
+    <p class="eyebrow">Contact</p>
+    <h1>Thank you — that reached me</h1>
+    <p class="lede">
+      I read everything that comes through here. If a reply is needed, it will
+      come from my own address rather than from this site.
+    </p>
+    <p><a class="link-arrow" href="/">Back to the homepage</a></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .thanks {
+    padding-block: var(--space-3xl) var(--space-2xl);
+    max-width: var(--width-text);
+  }
+
+  .thanks h1 { margin-top: var(--space-xs); font-size: var(--text-3xl); }
+  .thanks .lede { margin-top: var(--space-md); margin-bottom: var(--space-lg); }
+</style>

@@ -1,0 +1,126 @@
+/* =========================================================================
+   DESIGN TOKENS
+   Every colour, size, and spacing value on the site traces back to here.
+   Change a value in this file and it changes everywhere, consistently.
+   ========================================================================= */
+
+:root {
+  /* ---------- Colour -----------------------------------------------------
+     Warm paper ground, near-black ink carrying a trace of brown, deep
+     juniper as the accent, clay as a secondary reserved for the Training Lab.
+     All text pairings below meet WCAG AA against --color-paper.            */
+
+  --color-paper:        #FBFAF7;  /* page background */
+  --color-paper-sunk:   #F3F0EA;  /* recessed panels, table stripes */
+  --color-paper-raised: #FFFFFF;  /* cards that need to sit above the page */
+
+  --color-ink:          #1C1A17;  /* body text and headings      16.2:1 */
+  --color-ink-muted:    #5C5750;  /* secondary text               6.6:1 */
+  --color-ink-faint:    #6E675E;  /* metadata, captions           5.4:1 */
+
+  --color-rule:         #E2DED6;  /* hairline borders and dividers */
+  --color-rule-strong:  #CFC9BE;  /* borders that need to read as edges */
+
+  --color-accent:       #2E4F42;  /* juniper — links, marks      10.0:1 */
+  --color-accent-hover: #1F3A30;
+  --color-accent-wash:  #EAF0EC;  /* tinted background */
+
+  --color-clay:         #8F5138;  /* Training Lab secondary       5.9:1 */
+  --color-clay-hover:   #703D28;
+  --color-clay-wash:    #F7EFEA;
+
+  --color-focus:        #2E4F42;  /* focus ring */
+  --color-selection:    #DCE6DF;  /* ::selection background */
+
+  /* ---------- Typography -------------------------------------------------
+     Source Serif 4 (self-hosted variable font) for headings and long-form
+     prose; the system sans stack for navigation, labels, and metadata.
+     To drop the web font entirely: change --font-serif to Georgia, serif
+     and delete the @fontsource import in global.css.                       */
+
+  --font-serif: 'Source Serif 4 Variable', 'Source Serif 4', Georgia,
+                'Times New Roman', serif;
+  --font-sans:  ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+                'Helvetica Neue', Arial, sans-serif;
+  --font-mono:  ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+                'Liberation Mono', monospace;
+
+  /* Fluid type scale. The clamp() middle value is the ideal size in vw;
+     the outer values are the floor and ceiling. */
+  --text-xs:   0.78rem;
+  --text-sm:   0.875rem;
+  --text-base: 1.0625rem;                              /* body */
+  --text-lg:   clamp(1.15rem, 1.05rem + 0.4vw,  1.3rem);
+  --text-xl:   clamp(1.35rem, 1.2rem  + 0.7vw,  1.6rem);
+  --text-2xl:  clamp(1.6rem,  1.35rem + 1.1vw,  2.1rem);
+  --text-3xl:  clamp(2rem,    1.6rem  + 1.8vw,  2.85rem);
+  --text-4xl:  clamp(2.35rem, 1.8rem  + 2.6vw,  3.6rem);
+
+  --leading-tight:  1.15;
+  --leading-snug:   1.3;
+  --leading-normal: 1.45;
+  --leading-prose:  1.65;   /* long-form reading */
+
+  --tracking-tight: -0.015em;
+  --tracking-wide:   0.02em;
+  --tracking-caps:   0.08em;
+
+  --weight-normal:    400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+
+  /* ---------- Spacing ----------------------------------------------------
+     A 4px-based scale. Use these rather than arbitrary pixel values.       */
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 8rem;
+
+  /* Vertical rhythm between major page sections; shrinks on small screens. */
+  --section-gap: clamp(3rem, 2rem + 5vw, 6rem);
+
+  /* ---------- Content widths --------------------------------------------- */
+
+  --width-prose: 34rem;   /* ~68 characters — long-form reading measure */
+  --width-text:  46rem;   /* headed text blocks, forms */
+  --width-page:  72rem;   /* outer container for index and landing pages */
+  --gutter:      clamp(1.25rem, 0.5rem + 3vw, 3rem);
+
+  /* ---------- Radius -----------------------------------------------------
+     Deliberately small. Pill shapes and heavy rounding read as "app UI";
+     this site should read as printed matter.                               */
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;   /* images and large panels only */
+
+  /* ---------- Shadow -----------------------------------------------------
+     Two levels, both very soft. Most surfaces use a hairline rule instead. */
+
+  --shadow-sm: 0 1px 2px rgba(28, 26, 23, 0.05);
+  --shadow-md: 0 2px 12px rgba(28, 26, 23, 0.07);
+
+  /* ---------- Motion ----------------------------------------------------- */
+
+  --ease: cubic-bezier(0.2, 0, 0.2, 1);
+  --duration: 140ms;
+}
+
+/* Respect the operating system's reduced-motion setting everywhere. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration: 0ms; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

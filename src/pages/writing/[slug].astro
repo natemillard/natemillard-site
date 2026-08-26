@@ -1,0 +1,131 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Prose from '../../components/site/Prose.astro';
+import Tag from '../../components/site/Tag.astro';
+import { formatDate, slugifyTag } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('writing');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+
+<BaseLayout
+  title={d.title}
+  description={d.summary}
+  image={d.image}
+  noindex={d.draft || !d.listed}
+  publishedDate={d.date}
+>
+  <article class="container">
+    <header class="piece-head">
+      <p class="piece-meta">
+        <span class="piece-type">{d.type}</span>
+        <span aria-hidden="true">·</span>
+        <time datetime={d.date.toISOString()}>{formatDate(d.date, { day: true })}</time>
+        {d.source && (<><span aria-hidden="true">·</span><span>{d.source}</span></>)}
+      </p>
+
+      <h1>{d.title}</h1>
+      <p class="lede">{d.summary}</p>
+
+      {d.draft && <p class="status-note">Working draft — not linked from the site.</p>}
+      {!d.draft && !d.listed && <p class="status-note">Unlisted — reachable by direct link only.</p>}
+
+      {d.externalUrl && (
+        <p class="piece-external">
+          <a class="button button--secondary" href={d.externalUrl} rel="noopener" target="_blank">
+            Read the full piece at {d.source ?? 'the publisher'} ↗
+          </a>
+        </p>
+      )}
+
+      {d.doi && (
+        <p class="piece-doi">
+          DOI <a href={`https://doi.org/${d.doi}`} rel="noopener" target="_blank">{d.doi}</a>
+        </p>
+      )}
+    </header>
+
+    {d.image && <img class="piece-image" src={d.image} alt={d.imageAlt ?? ''} />}
+
+    <Prose class="piece-body"><Content /></Prose>
+
+    {d.tags.length > 0 && (
+      <footer class="piece-tags">
+        {d.tags.map((t) => <Tag tag={t} href={`/writing/tag/${slugifyTag(t)}`} />)}
+      </footer>
+    )}
+
+    <p class="piece-back"><a class="link-arrow" href="/writing">All writing &amp; research</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .piece-head {
+    padding-block: var(--space-2xl) var(--space-lg);
+    max-width: var(--width-text);
+  }
+
+  .piece-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+    margin-bottom: var(--space-xs);
+  }
+
+  .piece-type {
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    font-weight: var(--weight-semibold);
+    color: var(--color-accent);
+  }
+
+  .piece-head h1 { font-size: var(--text-3xl); }
+  .piece-head .lede { margin-top: var(--space-md); }
+
+  .status-note {
+    margin-top: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-clay);
+  }
+
+  .piece-external { margin-top: var(--space-lg); }
+
+  .piece-doi {
+    margin-top: var(--space-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .piece-image {
+    width: 100%;
+    max-height: 30rem;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-rule);
+    margin-bottom: var(--space-xl);
+  }
+
+  .piece-tags {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+    max-width: var(--width-prose);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+  }
+
+  .piece-back { margin-top: var(--space-lg); }
+</style>

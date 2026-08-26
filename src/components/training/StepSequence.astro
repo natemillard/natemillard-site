@@ -1,0 +1,36 @@
+---
+/**
+ * A numbered sequence of moves. Pairs with <Step>.
+ *
+ *   <StepSequence title="Running the walk">
+ *     <Step title="Gather" time="10 min">What happens, in Markdown.</Step>
+ *     <Step title="Walk">…</Step>
+ *   </StepSequence>
+ *
+ * Pure CSS — no JavaScript at all.
+ */
+interface Props {
+  title?: string;
+}
+const { title } = Astro.props;
+---
+
+<section class="steps prose-wide">
+  {title && <h3 class="steps__title">{title}</h3>}
+  <ol class="steps__list"><slot /></ol>
+</section>
+
+<style>
+  .steps { margin-block: var(--space-lg); }
+
+  .steps__title { font-size: var(--text-lg); margin-bottom: var(--space-sm); }
+
+  .steps__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step;
+    display: grid;
+    gap: var(--space-sm);
+  }
+</style>

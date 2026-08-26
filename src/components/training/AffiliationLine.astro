@@ -1,0 +1,58 @@
+---
+/**
+ * Prints the attribution line for a training, driven by the `affiliation`
+ * field in frontmatter. Defaults to the most conservative wording, so a
+ * module can never imply organisational endorsement through an omission.
+ */
+interface Props {
+  affiliation: 'personal-prototype' | 'personal-adaptation' | 'organizational';
+  note?: string;
+}
+const { affiliation, note } = Astro.props;
+
+const text: Record<Props['affiliation'], string> = {
+  'personal-prototype':
+    'A personal prototype. Developed independently; not affiliated with or endorsed by any organisation.',
+  'personal-adaptation':
+    'A personal adaptation of ideas encountered in the course of professional work. Not an official product of any organisation.',
+  organizational: 'An official product of the organisation named below.',
+};
+---
+
+<p class="affiliation" data-affiliation={affiliation}>
+  <span class="affiliation__label">Provenance</span>
+  <span class="affiliation__text">
+    {text[affiliation]}{note && <> {note}</>}
+  </span>
+</p>
+
+<style>
+  .affiliation {
+    display: grid;
+    gap: var(--space-3xs);
+    padding: var(--space-xs) var(--space-sm);
+    border-left: 2px solid var(--color-rule-strong);
+    background: var(--color-paper-sunk);
+    border-radius: var(--radius-sm);
+    max-width: 60ch;
+  }
+
+  .affiliation[data-affiliation='organizational'] {
+    border-left-color: var(--color-accent);
+  }
+
+  .affiliation__label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    font-weight: var(--weight-semibold);
+    color: var(--color-ink-faint);
+  }
+
+  .affiliation__text {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+</style>

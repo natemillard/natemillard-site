@@ -1,0 +1,99 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatRange } from '../../lib/content';
+
+interface Props {
+  headingLevel?: 2 | 3;
+  entry: CollectionEntry<'projects'>;
+}
+/* Cards sit under a section <h2> by default, so their own heading is an
+   <h3>. Index pages that place cards directly under the page <h1> pass
+   headingLevel={2} to keep the heading order unbroken. */
+const Heading = `h${Astro.props.headingLevel ?? 3}` as any;
+const { entry } = Astro.props;
+const { title, summary, role, startDate, endDate, ongoing, image, imageAlt, draft } = entry.data;
+---
+
+<article class="p-card">
+  <a class="p-card__link" href={`/work/${entry.id}`}>
+    {image ? (
+      <img class="p-card__image" src={image} alt={imageAlt ?? ''} loading="lazy" decoding="async" />
+    ) : (
+      <div class="p-card__image p-card__image--empty" aria-hidden="true"><span>Project image</span></div>
+    )}
+
+    <div class="p-card__body">
+      <p class="p-card__meta">
+        <span>{formatRange(startDate, endDate, ongoing)}</span>
+        <span aria-hidden="true">·</span>
+        <span>{role}</span>
+        {draft && <span class="p-card__draft">Draft</span>}
+      </p>
+      <Heading class="p-card__title">{title}</Heading>
+      <p class="p-card__summary">{summary}</p>
+    </div>
+  </a>
+</article>
+
+<style>
+  .p-card__link {
+    display: grid;
+    gap: var(--space-sm);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .p-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-rule);
+    background: var(--color-paper-sunk);
+    transition: border-color var(--duration) var(--ease);
+  }
+
+  .p-card__image--empty {
+    display: grid;
+    place-items: center;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+
+  .p-card__link:hover .p-card__image { border-color: var(--color-rule-strong); }
+
+  .p-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .p-card__draft {
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    font-weight: var(--weight-semibold);
+    color: var(--color-clay);
+  }
+
+  .p-card__title {
+    margin-top: var(--space-3xs);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-snug);
+  }
+
+  .p-card__link:hover .p-card__title { color: var(--color-accent); }
+
+  .p-card__summary {
+    margin-top: var(--space-2xs);
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+</style>

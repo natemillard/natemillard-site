@@ -1,0 +1,92 @@
+---
+/**
+ * Guidance meant for whoever is running the session rather than for
+ * participants. Collapsed by default so it does not interrupt the flow.
+ *
+ * IMPORTANT: this is not access control. The site is a set of static files,
+ * so anything in here is readable by anyone who opens the page and expands
+ * the section. If material genuinely should not be public, keep it out of the
+ * repository and share it as a file instead — see <DownloadResource>.
+ *
+ *   <FacilitatorNote title="If the room goes quiet">
+ *     What to do, in Markdown.
+ *   </FacilitatorNote>
+ */
+interface Props {
+  title?: string;
+  /** Start expanded. Default false. */
+  open?: boolean;
+}
+const { title = 'Facilitator note', open = false } = Astro.props;
+---
+
+<details class="fnote prose-wide" open={open}>
+  <summary class="fnote__summary">
+    <span class="fnote__badge">For facilitators</span>
+    <span class="fnote__title">{title}</span>
+  </summary>
+  <div class="fnote__body"><slot /></div>
+</details>
+
+<style>
+  .fnote {
+    margin-block: var(--space-md);
+    border: 1px dashed var(--color-rule-strong);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-sunk);
+  }
+
+  .fnote__summary {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2xs);
+    flex-wrap: wrap;
+    padding: var(--space-xs) var(--space-md);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .fnote__summary::-webkit-details-marker { display: none; }
+
+  .fnote__badge {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+    border: 1px solid var(--color-rule-strong);
+    border-radius: var(--radius-sm);
+    padding: 0 0.4em;
+  }
+
+  .fnote__title {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+
+  .fnote__summary::after {
+    content: '+';
+    margin-left: auto;
+    font-family: var(--font-sans);
+    color: var(--color-ink-faint);
+  }
+
+  .fnote[open] .fnote__summary::after { content: '–'; }
+
+  .fnote__body {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+    border-top: 1px dashed var(--color-rule-strong);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+
+  .fnote__body :global(> * + *) { margin-top: var(--space-sm); }
+
+  /* Facilitator notes print expanded — a printed training is a run sheet. */
+  @media print {
+    .fnote__body { display: block !important; }
+  }
+</style>

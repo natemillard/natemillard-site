@@ -1,0 +1,207 @@
+---
+/**
+ * A single multiple-choice check for understanding.
+ *
+ *   <Quiz
+ *     question="Which of these is the first thing to establish?"
+ *     options={[
+ *       { text: 'The number of people affected', correct: false,
+ *         response: 'Useful, but it changes hourly and you can act before you know it.' },
+ *       { text: 'Who is already there', correct: true,
+ *         response: 'Yes — existing presence is the fastest route to reach.' },
+ *     ]}
+ *     explanation="Optional closing note shown once an answer is chosen."
+ *   />
+ *
+ * WITHOUT JAVASCRIPT this renders as the question, the options, and a
+ * disclosure containing the answers — still completely usable.
+ */
+interface Option {
+  text: string;
+  correct?: boolean;
+  /** Shown after this option is chosen. */
+  response?: string;
+}
+
+interface Props {
+  question: string;
+  options: Option[];
+  explanation?: string;
+}
+
+const { question, options, explanation } = Astro.props;
+
+/* A build-time counter gives each quiz on a page a unique radio group. */
+let counter = ((globalThis as any).__quizCounter ??= { n: 0 });
+counter.n += 1;
+const id = `quiz-${counter.n}`;
+---
+
+<div class="quiz prose-wide" data-quiz>
+  <fieldset class="quiz__field">
+    <legend class="quiz__label">Check your thinking</legend>
+    <p class="quiz__question">{question}</p>
+
+    <ul class="quiz__options">
+      {options.map((option, index) => (
+        <li class="quiz__option">
+          <label class="quiz__choice">
+            <input
+              type="radio"
+              name={id}
+              value={index}
+              data-correct={option.correct ? 'true' : 'false'}
+            />
+            <span class="quiz__choice-text">{option.text}</span>
+          </label>
+          {option.response && (
+            <p class="quiz__response" data-response hidden>{option.response}</p>
+          )}
+        </li>
+      ))}
+    </ul>
+  </fieldset>
+
+  {explanation && (
+    <p class="quiz__explanation" data-explanation hidden>{explanation}</p>
+  )}
+
+  <!-- The no-JavaScript path: the same information, just always open. -->
+  <details class="quiz__fallback" data-fallback>
+    <summary>Show the answer</summary>
+    <ul>
+      {options.map((option) => (
+        <li>
+          <strong>{option.correct ? 'Yes — ' : 'Not quite — '}</strong>
+          {option.text}
+          {option.response && <span> {option.response}</span>}
+        </li>
+      ))}
+    </ul>
+    {explanation && <p>{explanation}</p>}
+  </details>
+</div>
+
+<style>
+  .quiz {
+    margin-block: var(--space-lg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-sunk);
+  }
+
+  .quiz__field { border: 0; padding: 0; margin: 0; }
+
+  .quiz__label {
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+
+  .quiz__question {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+  }
+
+  .quiz__options {
+    margin-top: var(--space-sm);
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2xs);
+  }
+
+  .quiz__choice {
+    display: flex;
+    gap: var(--space-2xs);
+    align-items: baseline;
+    padding: var(--space-2xs) var(--space-xs);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+    cursor: pointer;
+    transition: border-color var(--duration) var(--ease);
+  }
+
+  .quiz__choice:hover { border-color: var(--color-rule-strong); }
+
+  .quiz__choice input { accent-color: var(--color-accent); margin: 0; }
+
+  .quiz__choice-text { font-size: var(--text-base); line-height: var(--leading-normal); }
+
+  .quiz__option[data-state='correct'] .quiz__choice {
+    border-color: var(--color-accent);
+    background: var(--color-accent-wash);
+  }
+
+  .quiz__option[data-state='incorrect'] .quiz__choice {
+    border-color: var(--color-clay);
+    background: var(--color-clay-wash);
+  }
+
+  .quiz__response,
+  .quiz__explanation {
+    margin-top: var(--space-2xs);
+    padding-left: var(--space-xs);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+
+  .quiz__explanation {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-rule);
+    padding-left: 0;
+  }
+
+  .quiz__fallback {
+    margin-top: var(--space-sm);
+    font-size: var(--text-sm);
+  }
+
+  .quiz__fallback summary {
+    font-family: var(--font-sans);
+    cursor: pointer;
+    color: var(--color-accent);
+  }
+
+  .quiz__fallback ul { margin-top: var(--space-2xs); padding-left: 1.2em; }
+  .quiz__fallback li + li { margin-top: var(--space-3xs); }
+  .quiz__fallback p { margin-top: var(--space-2xs); }
+</style>
+
+<script>
+  // Progressive enhancement: hide the always-open fallback, then reveal each
+  // response as its option is chosen.
+  document.querySelectorAll<HTMLElement>('[data-quiz]').forEach((quiz) => {
+    const fallback = quiz.querySelector<HTMLDetailsElement>('[data-fallback]');
+    if (fallback) fallback.hidden = true;
+
+    const explanation = quiz.querySelector<HTMLElement>('[data-explanation]');
+
+    quiz.querySelectorAll<HTMLInputElement>('input[type="radio"]').forEach((input) => {
+      input.addEventListener('change', () => {
+        quiz.querySelectorAll<HTMLElement>('.quiz__option').forEach((option) => {
+          option.removeAttribute('data-state');
+          const response = option.querySelector<HTMLElement>('[data-response]');
+          if (response) response.hidden = true;
+        });
+
+        const option = input.closest<HTMLElement>('.quiz__option');
+        if (!option) return;
+
+        option.dataset.state = input.dataset.correct === 'true' ? 'correct' : 'incorrect';
+        const response = option.querySelector<HTMLElement>('[data-response]');
+        if (response) response.hidden = false;
+        if (explanation) explanation.hidden = false;
+      });
+    });
+  });
+</script>

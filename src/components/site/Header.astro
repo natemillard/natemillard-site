@@ -1,0 +1,202 @@
+---
+/**
+ * Site header: name at left, navigation at right.
+ * On narrow screens the navigation collapses into a disclosure panel.
+ *
+ * To change the navigation, edit `nav` in src/config.ts — not this file.
+ */
+import { site, nav } from '../../config';
+
+const path = Astro.url.pathname;
+
+/** A nav item is "current" on its own page and on any page beneath it. */
+function isCurrent(href: string) {
+  if (href === '/') return path === '/';
+  return path === href || path.startsWith(href + '/');
+}
+---
+
+<header class="header">
+  <div class="header__inner container">
+    <a class="header__name" href="/">{site.name}</a>
+
+    <button
+      class="header__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-menu"
+      data-menu-toggle
+    >
+      <span class="header__toggle-label">Menu</span>
+      <span class="header__toggle-icon" aria-hidden="true"><span></span><span></span></span>
+    </button>
+
+    <nav class="header__nav" id="site-menu" aria-label="Main">
+      <ul class="header__list">
+        {nav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={['header__link', { 'is-current': isCurrent(item.href) }]}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    border-bottom: 1px solid var(--color-rule);
+    background: var(--color-paper);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    min-height: 4.5rem;
+    flex-wrap: wrap;
+  }
+
+  .header__name {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  .header__name:hover { color: var(--color-accent); }
+
+  .header__list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header__link {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    text-decoration: none;
+    padding-block: 0.35rem;
+    border-bottom: 1px solid transparent;
+    transition: color var(--duration) var(--ease),
+                border-color var(--duration) var(--ease);
+  }
+
+  .header__link:hover {
+    color: var(--color-ink);
+    border-bottom-color: var(--color-rule-strong);
+  }
+
+  .header__link.is-current {
+    color: var(--color-ink);
+    font-weight: var(--weight-medium);
+    border-bottom-color: var(--color-accent);
+  }
+
+  /* ---------- Mobile disclosure ---------- */
+
+  .header__toggle {
+    display: none;
+    align-items: center;
+    gap: var(--space-2xs);
+    background: none;
+    border: 1px solid var(--color-rule-strong);
+    border-radius: var(--radius-md);
+    padding: 0.4rem 0.7rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    cursor: pointer;
+  }
+
+  .header__toggle-icon {
+    display: grid;
+    gap: 4px;
+    width: 15px;
+  }
+
+  .header__toggle-icon span {
+    display: block;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform var(--duration) var(--ease);
+  }
+
+  .header__toggle[aria-expanded='true'] .header__toggle-icon span:first-child {
+    transform: translateY(2.75px) rotate(45deg);
+  }
+  .header__toggle[aria-expanded='true'] .header__toggle-icon span:last-child {
+    transform: translateY(-2.75px) rotate(-45deg);
+  }
+
+  @media (max-width: 44rem) {
+    .header__toggle { display: inline-flex; }
+
+    .header__nav {
+      display: none;
+      flex-basis: 100%;
+      border-top: 1px solid var(--color-rule);
+      padding-block: var(--space-sm) var(--space-md);
+    }
+
+    .header__nav.is-open { display: block; }
+
+    .header__list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-2xs);
+    }
+
+    .header__link {
+      font-size: var(--text-base);
+      padding-block: var(--space-2xs);
+    }
+  }
+</style>
+
+<script>
+  // Mobile menu: a disclosure button, nothing more.
+  // Without JavaScript the nav is simply always visible (see the CSS fallback
+  // in the <noscript> rule below), so the site remains fully navigable.
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const menu = document.getElementById('site-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open', !open);
+    });
+
+    // Escape closes the menu and returns focus to the button.
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+        toggle.focus();
+      }
+    });
+  }
+</script>
+
+<noscript>
+  <style>
+    @media (max-width: 44rem) {
+      .header__toggle { display: none !important; }
+      .header__nav { display: block !important; }
+    }
+  </style>
+</noscript>

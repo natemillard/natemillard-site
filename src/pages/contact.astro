@@ -1,0 +1,174 @@
+---
+/**
+ * Contact form, handled by Netlify Forms.
+ *
+ * How it works: Netlify scans the built HTML at deploy time, finds any form
+ * with `data-netlify="true"`, and starts collecting its submissions. Nothing
+ * runs on the server, and your email address never appears in the page source.
+ *
+ * Submissions arrive in the Netlify dashboard under Forms, and you can turn on
+ * email notifications there. The free tier covers 100 submissions per month.
+ *
+ * The `bot-field` input is a honeypot: real people never see it, so anything
+ * that fills it in is discarded as spam.
+ *
+ * NOTE: forms only work on the deployed site, not in `npm run dev`.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/site/PageHeader.astro';
+import { site, profiles } from '../config';
+---
+
+<BaseLayout
+  title="Contact"
+  description={`Get in touch with ${site.name}.`}
+>
+  <div class="container contact">
+    <PageHeader
+      eyebrow="Contact"
+      title="Get in touch"
+      lede="Whether you are working on something adjacent, want to adapt a training module, or have a question about the research — this reaches me directly."
+    />
+
+    <div class="contact__layout">
+      <form
+        class="contact__form"
+        name={site.contactFormName}
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/thanks"
+      >
+        <input type="hidden" name="form-name" value={site.contactFormName} />
+
+        <p class="contact__honeypot">
+          <label>
+            Leave this field empty
+            <input name="bot-field" tabindex="-1" autocomplete="off" />
+          </label>
+        </p>
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+          <p class="field__help">So I can reply. Not used for anything else.</p>
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" required></textarea>
+        </div>
+
+        <button class="button" type="submit">Send message</button>
+      </form>
+
+      <aside class="contact__aside">
+        <h2>Elsewhere</h2>
+        <ul class="contact__links">
+          {profiles.map((p) => (
+            <li><a href={p.href} rel="me noopener" target="_blank">{p.label} ↗</a></li>
+          ))}
+        </ul>
+
+        <h2 class="contact__aside-second">On response times</h2>
+        <p class="contact__note">
+          [PLACEHOLDER] I read everything and reply to most things, though not
+          always quickly. If something is time-sensitive, say so in the subject
+          line.
+        </p>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact > * { max-width: 58rem; }
+
+  .contact__layout {
+    display: grid;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  @media (min-width: 52rem) {
+    .contact__layout { grid-template-columns: minmax(0, 1fr) 14rem; gap: var(--space-2xl); }
+  }
+
+  .contact__form { max-width: 34rem; display: grid; gap: var(--space-md); }
+
+  /* The honeypot must be reachable by nothing and nobody. */
+  .contact__honeypot { position: absolute; left: -9999px; }
+
+  .field { display: grid; gap: var(--space-3xs); }
+
+  .field label {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+  }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    padding: var(--space-2xs) var(--space-xs);
+    border: 1px solid var(--color-rule-strong);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+  }
+
+  .field textarea { resize: vertical; }
+
+  .field input:focus-visible,
+  .field textarea:focus-visible { border-color: var(--color-accent); }
+
+  .field__help {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .contact__form .button { justify-self: start; }
+
+  .contact__aside h2 {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .contact__aside-second { margin-top: var(--space-lg); }
+
+  .contact__links {
+    margin-top: var(--space-2xs);
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+  }
+
+  .contact__links a { text-decoration: none; }
+  .contact__links a:hover { text-decoration: underline; }
+
+  .contact__note {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+</style>
