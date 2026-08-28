@@ -13,14 +13,14 @@ export const site = {
   name: 'Nathaniel Millard',
 
   /** One line. Used in metadata and as the header subtitle on wide screens. */
-  tagline: '[PLACEHOLDER] Community collaboration, facilitation, and learning design',
+  tagline: 'Leadership development, community mobilization, and the practice of collaboration',
 
   /**
    * Default description for search engines and link previews.
    * Aim for 140–160 characters.
    */
   description:
-    '[PLACEHOLDER] The professional site of Nathaniel Millard — work, writing, and learning design on how communities and organisations collaborate.',
+    'Nathaniel Millard is a coach, facilitator, and educator in Chico, California, working on leadership development, community mobilization, and cross-sector collaboration.',
 
   /** Used for the copyright line in the footer. */
   startYear: 2026,
@@ -68,9 +68,16 @@ export const footerLinks = [
  * [PLACEHOLDER] — replace these URLs.
  */
 export const profiles = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/PLACEHOLDER' },
-  { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=PLACEHOLDER' },
-  { label: 'GitHub', href: 'https://github.com/PLACEHOLDER' },
+  { label: 'GitHub', href: 'https://github.com/natemillard' },
+
+  /*
+   * Add these back once you have the real URLs — a link containing
+   * PLACEHOLDER is worse than no link at all, so they are commented out
+   * rather than left broken. Uncomment and paste the address.
+   *
+   * { label: 'LinkedIn', href: 'https://www.linkedin.com/in/YOUR-HANDLE' },
+   * { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=YOUR-ID' },
+   */
 ] as const;
 
 /** Path to the downloadable CV, relative to /public. */
