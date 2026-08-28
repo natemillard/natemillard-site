@@ -13,7 +13,7 @@ const { title, time, finding } = Astro.props;
 
 <article class="practice">
   {time && <p class="practice__time">{time}</p>}
-  <h4 class="practice__title">{title}</h4>
+  <h3 class="practice__title">{title}</h3>
   <div class="practice__body"><slot /></div>
   {finding && <p class="practice__finding">{finding}</p>}
 </article>

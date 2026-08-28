@@ -1,41 +1,60 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/site/PageHeader.astro';
-import TrainingCard from '../../components/cards/TrainingCard.astro';
 import LabDisclaimer from '../../components/training/LabDisclaimer.astro';
 import ContactBlock from '../../components/site/ContactBlock.astro';
 import { visible } from '../../lib/content';
 
-const trainings = (await visible('trainings')).sort(
-  (a, b) => b.data.updated.getTime() - a.data.updated.getTime()
-);
+const all = await visible('trainings');
+
+/* Modules that belong to the numbered curriculum, in order. */
+const numbered = all
+  .filter((t) => t.data.skillNumber !== undefined)
+  .sort((a, b) => (a.data.skillNumber ?? 0) - (b.data.skillNumber ?? 0));
+
+/* Group by track, preserving first-seen order so the curriculum defines
+   its own grouping rather than this page hard-coding it. */
+const tracks: { name: string; items: typeof numbered }[] = [];
+for (const entry of numbered) {
+  const name = entry.data.track ?? 'Skills';
+  let group = tracks.find((t) => t.name === name);
+  if (!group) { group = { name, items: [] }; tracks.push(group); }
+  group.items.push(entry);
+}
+
+const trackLabel: Record<string, string> = {
+  foundational: 'The two foundational skills',
+  applied: 'The eleven applied skills',
+};
+
+/* Anything outside the numbered curriculum. */
+const other = all.filter((t) => t.data.skillNumber === undefined);
+
+const total = numbered.length;
 ---
 
 <BaseLayout
   title="Training Lab"
-  description="Training concepts, prototypes, and interactive learning tools for community resilience and preparedness."
+  description="Interactive learner pages and training prototypes on community mobilization — what a skill is, one framework, things to try, and a short self-check."
 >
   <div class="container">
     <PageHeader
       eyebrow="Training Lab"
-      title="Training concepts, prototypes, and learning tools"
-      lede="This is a workshop rather than a catalogue. What's here are session designs, scenario exercises, and interactive tools I am developing — some ready to run with a real group, some still arguments with myself about how a thing should work."
+      title="Community mobilization skills"
+      lede={`${total} skills. Each page takes about twenty minutes: what the skill is, one framework, a few things to try on your own, and five questions to see where you stand.`}
     />
 
     <div class="lab-intro">
       <div class="lab-intro__text">
-        <h2>What you'll find here</h2>
         <p>
-          Each module explains what it is for, who it is designed for, and how
-          long it takes — then lets you work through the material yourself
-          rather than only reading about it. Where a session has structure a
-          facilitator would need, that is included too, in sections marked for
-          facilitators.
+          Start anywhere. The first two are relational and everything else draws
+          on them, so if you are not sure where to begin, begin there.
         </p>
         <p>
-          Every module carries a provenance line saying where it came from and
-          what it is not. That matters to me: prototypes should be legible as
-          prototypes.
+          These are prototypes of an interactive format. The self-check at the
+          foot of each page responds to your answers rather than asking you to
+          tally them yourself, and every page works without JavaScript if you
+          would rather read it on paper.
         </p>
       </div>
 
@@ -45,21 +64,57 @@ const trainings = (await visible('trainings')).sort(
       </div>
     </div>
 
-    {trainings.length === 0 ? (
-      <p class="empty">No modules published yet.</p>
-    ) : (
-      <section class="lab-list">
-        <h2 class="lab-list__heading">Modules</h2>
-        <div class="lab-grid">
-          {trainings.map((entry) => <TrainingCard entry={entry} />)}
-        </div>
+    {tracks.map((track) => (
+      <section class="track">
+        <h2 class="track__heading">{trackLabel[track.name] ?? track.name}</h2>
+        <ol class="skills">
+          {track.items.map((entry) => (
+            <li class="skill">
+              <a class="skill__link" href={`/training/${entry.id}`}>
+                <span class="skill__num">
+                  {String(entry.data.skillNumber).padStart(2, '0')}
+                </span>
+                <span class="skill__text">
+                  <span class="skill__title">{entry.data.title}</span>
+                  <span class="skill__summary">{entry.data.summary}</span>
+                </span>
+                <span class="skill__time">{entry.data.duration}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+
+    {other.length > 0 && (
+      <section class="track">
+        <h2 class="track__heading">Other prototypes</h2>
+        <ol class="skills">
+          {other.map((entry) => (
+            <li class="skill">
+              <a class="skill__link" href={`/training/${entry.id}`}>
+                <span class="skill__num">—</span>
+                <span class="skill__text">
+                  <span class="skill__title">{entry.data.title}</span>
+                  <span class="skill__summary">{entry.data.summary}</span>
+                </span>
+                <span class="skill__time">{entry.data.duration}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
       </section>
     )}
+
+    <p class="lab-foot">
+      Each of these has a longer facilitator pack behind it for anyone who wants
+      to run a session for their team.
+    </p>
   </div>
 
   <ContactBlock
-    heading="Interested in running one of these?"
-    text="These are prototypes, and they get better when someone else takes them into a real room. If you would like to adapt a module for your own group, or want the facilitator materials that are not published here, get in touch."
+    heading="Want to run one of these?"
+    text="These get better when someone else takes them into a real room. If you would like to adapt a module for your own group, or want the facilitator materials that are not published here, get in touch."
   />
 </BaseLayout>
 
@@ -68,21 +123,23 @@ const trainings = (await visible('trainings')).sort(
     display: grid;
     align-items: start;
     gap: var(--space-xl);
-    padding-bottom: var(--section-gap);
+    padding-bottom: var(--space-xl);
     border-bottom: 1px solid var(--color-rule);
   }
 
   @media (min-width: 60rem) {
-    .lab-intro { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--space-2xl); }
+    .lab-intro {
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: var(--space-2xl);
+    }
   }
 
-  .lab-intro h2 { font-size: var(--text-lg); }
-
   .lab-intro__text p {
-    margin-top: var(--space-sm);
     max-width: 58ch;
     color: var(--color-ink-muted);
   }
+
+  .lab-intro__text p + p { margin-top: var(--space-sm); }
 
   .lab-intro__note {
     padding: var(--space-md);
@@ -99,22 +156,92 @@ const trainings = (await visible('trainings')).sort(
     margin-bottom: var(--space-2xs);
   }
 
-  .lab-list { margin-top: var(--section-gap); }
+  /* ---------- Skill list ---------- */
 
-  .lab-list__heading {
+  .track { margin-top: var(--space-2xl); }
+
+  .track__heading {
     font-family: var(--font-sans);
     font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
     text-transform: uppercase;
     letter-spacing: var(--tracking-caps);
     color: var(--color-ink-faint);
-    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px solid var(--color-rule);
   }
 
-  .lab-grid { display: grid; gap: var(--space-md); }
-
-  @media (min-width: 48rem) {
-    .lab-grid { grid-template-columns: 1fr 1fr; }
+  .skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  .empty { color: var(--color-ink-muted); }
+  .skill + .skill { border-top: 1px solid var(--color-rule); }
+
+  .skill__link {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: var(--space-2xs) var(--space-sm);
+    align-items: baseline;
+    padding: var(--space-md) var(--space-2xs);
+    text-decoration: none;
+    color: inherit;
+    transition: background var(--duration) var(--ease);
+  }
+
+  @media (min-width: 44rem) {
+    .skill__link {
+      grid-template-columns: 2.5rem minmax(0, 1fr) 9rem;
+      align-items: baseline;
+    }
+  }
+
+  .skill__link:hover { background: var(--color-paper-sunk); }
+
+  .skill__num {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-clay);
+  }
+
+  .skill__text { display: grid; gap: var(--space-3xs); }
+
+  .skill__title {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-snug);
+  }
+
+  .skill__link:hover .skill__title { color: var(--color-clay-hover); }
+
+  .skill__summary {
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    max-width: 58ch;
+  }
+
+  .skill__time {
+    grid-column: 2;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+    white-space: nowrap;
+  }
+
+  @media (min-width: 44rem) {
+    .skill__time { grid-column: 3; text-align: right; }
+  }
+
+  .lab-foot {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+    max-width: 60ch;
+  }
 </style>

@@ -33,12 +33,14 @@ const stageLabel: Record<string, string> = {
     <div><dt>Stage</dt><dd>{stageLabel[stage] ?? stage}</dd></div>
   </dl>
 
-  <section class="tmeta__objectives">
-    <h2>By the end, participants should be able to</h2>
-    <ul>
-      {objectives.map((o) => <li>{o}</li>)}
-    </ul>
-  </section>
+  {objectives.length > 0 && (
+    <section class="tmeta__objectives">
+      <h2>By the end, participants should be able to</h2>
+      <ul>
+        {objectives.map((o) => <li>{o}</li>)}
+      </ul>
+    </section>
+  )}
 
   <p class="tmeta__updated">
     Last revised <time datetime={updated.toISOString()}>

@@ -189,8 +189,21 @@ const trainings = defineCollection({
       /**
        * What a participant should be able to do afterwards.
        * Written as verbs: 'Identify the three signals that...'
+       * Optional — self-paced learner pages often carry none.
        */
-      objectives: z.array(z.string()).min(1),
+      objectives: z.array(z.string()).default([]),
+
+      /**
+       * Position within a numbered curriculum, if the module belongs to one.
+       * Drives the ordering and the "01 / 13" labels on the Training Lab index.
+       */
+      skillNumber: z.number().int().positive().optional(),
+
+      /**
+       * Which group the skill sits in on the index page.
+       * Free text, so a different curriculum can use its own names.
+       */
+      track: z.string().optional(),
 
       /** Human-readable, e.g. '45–60 minutes' or 'Two 90-minute sessions'. */
       duration: z.string(),

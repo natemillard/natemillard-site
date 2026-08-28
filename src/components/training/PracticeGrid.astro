@@ -17,7 +17,7 @@ const { heading, note } = Astro.props;
 ---
 
 <section class="practices prose-wide">
-  {heading && <h3 class="practices__heading">{heading}</h3>}
+  {heading && <h2 class="practices__heading">{heading}</h2>}
   {note && <p class="practices__note">{note}</p>}
   <div class="practices__grid"><slot /></div>
 </section>
