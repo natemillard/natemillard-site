@@ -304,6 +304,8 @@ const exercises = defineCollection({
     /** Human-readable version of `type`, e.g. "Core experience". */
     typeLabel: z.string(),
     duration: z.string(),
+    /** Length in minutes, for sorting and for filtering by time available. */
+    minutes: z.number(),
     /** Body content: paragraphs and lists, in order. */
     blocks: z.array(
       z.union([

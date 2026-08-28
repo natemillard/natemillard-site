@@ -24,9 +24,12 @@ const { training, items } = Astro.props;
 
 /* Order the pack the way a facilitator would work through it. */
 const ORDER = ['prework', 'icebreaker', 'core', 'practice', 'activity', 'element', 'socratic', 'workshop', 'field', 'coffee'];
-const sorted = [...items].sort(
-  (a, b) => ORDER.indexOf(a.data.type) - ORDER.indexOf(b.data.type)
-);
+const sorted = [...items].sort((a, b) => {
+  const byType = ORDER.indexOf(a.data.type) - ORDER.indexOf(b.data.type);
+  if (byType !== 0) return byType;
+  /* Then shortest first, so workshops run 1 hour, 2 hours, 4 hours. */
+  return a.data.minutes - b.data.minutes;
+});
 
 /* Anything over ~40 blocks is a long facilitator guide; collapse it so the
    page stays scannable. */

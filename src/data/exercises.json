@@ -6,6 +6,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "25 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -84,6 +85,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 to 20 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -182,6 +184,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -260,6 +263,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -352,6 +356,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -451,6 +456,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "25 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -554,6 +560,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "40 minutes",
+  "minutes": 40,
   "blocks": [
    {
     "kind": "p",
@@ -669,6 +676,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -775,6 +783,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -880,6 +889,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "35 minutes",
+  "minutes": 35,
   "blocks": [
    {
     "kind": "p",
@@ -1012,6 +1022,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "25 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -1218,7 +1229,8 @@
   "title": "Socratic Discussion Guide",
   "type": "socratic",
   "typeLabel": "Socratic guide",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -1516,6 +1528,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -1584,7 +1597,8 @@
   "title": "One-Hour Workshop: What You Bring",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -1667,7 +1681,8 @@
   "title": "Two-Hour Workshop: Bringing Yourself",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "120 minutes, including a break",
+  "duration": "2 hours, including a break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -1760,7 +1775,8 @@
   "title": "Four-Hour Workshop: The Full Arc",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "240 minutes, plus two breaks",
+  "duration": "4 hours, plus two breaks",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -2330,6 +2346,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -2428,6 +2445,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "5 to 10 minutes",
+  "minutes": 5,
   "blocks": [
    {
     "kind": "p",
@@ -2566,6 +2584,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "5 to 10 minutes",
+  "minutes": 5,
   "blocks": [
    {
     "kind": "p",
@@ -2672,6 +2691,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -2782,6 +2802,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "5 to 10 minutes",
+  "minutes": 5,
   "blocks": [
    {
     "kind": "p",
@@ -3072,6 +3093,7 @@
   "type": "practice",
   "typeLabel": "Practice",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -3178,6 +3200,7 @@
   "type": "practice",
   "typeLabel": "Practice",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -3284,6 +3307,7 @@
   "type": "practice",
   "typeLabel": "Practice",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -3394,6 +3418,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -3495,7 +3520,8 @@
   "title": "Deep Dive on the Flow and the Ramp",
   "type": "core",
   "typeLabel": "Core experience",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -3645,7 +3671,8 @@
   "title": "Community Discovery Practice",
   "type": "core",
   "typeLabel": "Core experience",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -3811,7 +3838,8 @@
   "title": "Socratic Discussion Guide",
   "type": "socratic",
   "typeLabel": "Socratic guide",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -4253,7 +4281,8 @@
   "title": "Assessment and Coaching",
   "type": "activity",
   "typeLabel": "Activity",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -4616,6 +4645,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -4705,7 +4735,8 @@
   "title": "One-Hour Workshop: Core Skills",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -4807,7 +4838,8 @@
   "title": "Two-Hour Workshop: Applied Practice",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "120 minutes",
+  "duration": "2 hours",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -4917,7 +4949,8 @@
   "title": "Four-Hour Mastery Intensive",
   "type": "activity",
   "typeLabel": "Activity",
-  "duration": "240 minutes, plus two breaks",
+  "duration": "4 hours, plus two breaks",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -5680,6 +5713,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -5730,6 +5764,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "7 minutes (2-minute activity + 5-minute debrief)",
+  "minutes": 7,
   "blocks": [
    {
     "kind": "p",
@@ -5799,6 +5834,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "20 minutes (15-minute activity + 5-minute debrief)",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -5843,6 +5879,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "20 minutes (10-minute activity + 10-minute debrief)",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -5901,6 +5938,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -6170,6 +6208,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -6255,6 +6294,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -6467,6 +6507,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -6540,6 +6581,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "7-8 minutes",
+  "minutes": 7,
   "blocks": [
    {
     "kind": "p",
@@ -6599,6 +6641,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -6661,6 +6704,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -6728,6 +6772,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -6877,6 +6922,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "50 minutes",
+  "minutes": 50,
   "blocks": [
    {
     "kind": "p",
@@ -7007,6 +7053,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "40 minutes",
+  "minutes": 40,
   "blocks": [
    {
     "kind": "p",
@@ -7116,6 +7163,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -7250,6 +7298,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -7573,6 +7622,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -7639,6 +7689,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -7713,6 +7764,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -8227,6 +8279,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -8306,6 +8359,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -8376,6 +8430,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -8442,6 +8497,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -8505,6 +8561,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -8568,6 +8625,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -8735,6 +8793,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "25 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -8838,6 +8897,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -8918,6 +8978,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "25 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -9057,7 +9118,8 @@
   "title": "Targeting What Matters Most",
   "type": "core",
   "typeLabel": "Core experience",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -9317,6 +9379,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "55 minutes",
+  "minutes": 55,
   "blocks": [
    {
     "kind": "p",
@@ -9560,7 +9623,8 @@
   "title": "The Volunteer Onboarding Simulation",
   "type": "core",
   "typeLabel": "Core experience",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -9779,6 +9843,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -10135,6 +10200,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -10212,6 +10278,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -10299,6 +10366,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -10875,6 +10943,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -10948,6 +11017,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -11107,6 +11177,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "5 minutes",
+  "minutes": 5,
   "blocks": [
    {
     "kind": "p",
@@ -11146,6 +11217,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -11185,6 +11257,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -11250,6 +11323,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -11396,6 +11470,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "40 minutes",
+  "minutes": 40,
   "blocks": [
    {
     "kind": "p",
@@ -11534,6 +11609,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -11688,6 +11764,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -11956,6 +12033,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -12018,6 +12096,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -12079,6 +12158,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -12141,6 +12221,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -12209,6 +12290,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -12300,6 +12382,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -12851,6 +12934,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -12972,6 +13056,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -13072,6 +13157,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -13174,6 +13260,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -13244,6 +13331,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -13505,6 +13593,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -13706,6 +13795,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "35 minutes",
+  "minutes": 35,
   "blocks": [
    {
     "kind": "p",
@@ -13825,6 +13915,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "40 minutes",
+  "minutes": 40,
   "blocks": [
    {
     "kind": "p",
@@ -13990,6 +14081,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -14363,6 +14455,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -14452,6 +14545,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -14591,6 +14685,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -14676,6 +14771,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -14759,6 +14855,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -14842,6 +14939,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -15356,6 +15454,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -15448,6 +15547,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "5 to 10 minutes",
+  "minutes": 5,
   "blocks": [
    {
     "kind": "p",
@@ -15546,6 +15646,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "5 to 7 minutes",
+  "minutes": 5,
   "blocks": [
    {
     "kind": "p",
@@ -15657,6 +15758,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -15768,6 +15870,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -15922,6 +16025,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -16081,6 +16185,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "40 minutes",
+  "minutes": 40,
   "blocks": [
    {
     "kind": "p",
@@ -16235,6 +16340,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "50 minutes",
+  "minutes": 50,
   "blocks": [
    {
     "kind": "p",
@@ -16404,6 +16510,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -16609,6 +16716,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "90 minutes, including a 2-minute close",
+  "minutes": 90,
   "blocks": [
    {
     "kind": "p",
@@ -16989,6 +17097,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -17066,6 +17175,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -17141,6 +17251,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -17675,6 +17786,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -17846,6 +17958,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -18063,6 +18176,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -18146,6 +18260,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -18236,6 +18351,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -18322,6 +18438,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "20 to 25 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -18422,6 +18539,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "12 to 15 minutes",
+  "minutes": 12,
   "blocks": [
    {
     "kind": "p",
@@ -18508,6 +18626,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "12 to 15 minutes",
+  "minutes": 12,
   "blocks": [
    {
     "kind": "p",
@@ -18595,6 +18714,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "15 to 20 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -18681,6 +18801,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "20 to 25 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -18768,6 +18889,7 @@
   "type": "element",
   "typeLabel": "Element",
   "duration": "2 hours 15 minutes",
+  "minutes": 135,
   "blocks": [
    {
     "kind": "p",
@@ -18929,7 +19051,8 @@
   "title": "2. Designing the decision process, and 3. Building legitimacy.",
   "type": "element",
   "typeLabel": "Element",
-  "duration": "25 to 30 minutes in the room",
+  "duration": "25 to 30 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -19017,7 +19140,8 @@
   "title": "2. Designing the decision process, and 6. Telling commitment from compliance.",
   "type": "element",
   "typeLabel": "Element",
-  "duration": "25 to 30 minutes in the room",
+  "duration": "25 to 30 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -19107,7 +19231,8 @@
   "title": "4. Mobilizing action without control, and 6. Telling commitment from compliance.",
   "type": "element",
   "typeLabel": "Element",
-  "duration": "20 to 25 minutes in the room",
+  "duration": "20 to 25 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -19193,7 +19318,8 @@
   "title": "Everyday Life Examples",
   "type": "activity",
   "typeLabel": "Activity",
-  "duration": "8 to 12 minutes for one or two examples",
+  "duration": "8 to 12 minutes",
+  "minutes": 8,
   "blocks": [
    {
     "kind": "p",
@@ -19276,6 +19402,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "30 to 60 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -19424,6 +19551,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -19485,6 +19613,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -19545,6 +19674,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -19608,6 +19738,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -19670,6 +19801,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -19736,6 +19868,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -20021,6 +20154,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -20111,6 +20245,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -20230,6 +20365,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -20331,6 +20467,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 to 20 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -20440,6 +20577,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 to 20 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -20578,6 +20716,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -20690,6 +20829,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -20965,6 +21105,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -21233,6 +21374,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "30 minutes",
+  "minutes": 30,
   "blocks": [
    {
     "kind": "p",
@@ -21460,7 +21602,8 @@
   "title": "Socratic Discussion Guide",
   "type": "socratic",
   "typeLabel": "Socratic guide",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -21763,6 +21906,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -21838,7 +21982,8 @@
   "title": "One-Hour Workshop: Making Tradeoffs Visible",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -21933,7 +22078,8 @@
   "title": "Two-Hour Workshop: Aligning Limited Resources with the Highest-Impact Work",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "120 minutes",
+  "duration": "2 hours",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -22057,7 +22203,8 @@
   "title": "Two-Hour Workshop: Program Stewardship",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "120 minutes",
+  "duration": "2 hours",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -22184,7 +22331,8 @@
   "title": "Four-Hour Workshop: Choosing and Sustaining",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "240 minutes, plus two breaks",
+  "duration": "4 hours, plus two breaks",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -22993,6 +23141,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -23077,6 +23226,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "20 to 22 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -23201,6 +23351,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -23397,7 +23548,8 @@
   "title": "Your Strongest Level",
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
-  "duration": "10 minutes, or 15 with a full share-around in a room over...",
+  "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -23492,6 +23644,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -23627,6 +23780,7 @@
   "type": "practice",
   "typeLabel": "Practice",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -23721,6 +23875,7 @@
   "type": "practice",
   "typeLabel": "Practice",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -23798,7 +23953,8 @@
   "title": "Find Your Layer Partners (field assignment)",
   "type": "practice",
   "typeLabel": "Practice",
-  "duration": "15 minutes in the room to prepare, then one real...",
+  "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -23881,6 +24037,7 @@
   "type": "practice",
   "typeLabel": "Practice",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -23971,6 +24128,7 @@
   "type": "practice",
   "typeLabel": "Practice",
   "duration": "25 minutes",
+  "minutes": 25,
   "blocks": [
    {
     "kind": "p",
@@ -24075,7 +24233,8 @@
   "title": "The Layered Design Studio",
   "type": "core",
   "typeLabel": "Core experience",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -24206,6 +24365,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -24392,6 +24552,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -24491,7 +24652,8 @@
   "title": "Socratic Discussion Guide",
   "type": "socratic",
   "typeLabel": "Socratic guide",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -24805,6 +24967,7 @@
   "type": "activity",
   "typeLabel": "Activity",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -24877,7 +25040,8 @@
   "title": "One-Hour Workshop: Seeing the Five Levels",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -24968,7 +25132,8 @@
   "title": "One-Hour Workshop: Finding the Partner You Are Missing",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -25063,7 +25228,8 @@
   "title": "Two-Hour Workshop: Layered Impact",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "120 minutes",
+  "duration": "2 hours",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -25158,7 +25324,8 @@
   "title": "Four-Hour Workshop: Building Across Levels",
   "type": "workshop",
   "typeLabel": "Workshop",
-  "duration": "240 minutes, including two breaks",
+  "duration": "4 hours, including two breaks",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",
@@ -25893,6 +26060,7 @@
   "type": "prework",
   "typeLabel": "Pre-work",
   "duration": "20 minutes",
+  "minutes": 20,
   "blocks": [
    {
     "kind": "p",
@@ -25974,6 +26142,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 to 15 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -26107,6 +26276,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "10 minutes",
+  "minutes": 10,
   "blocks": [
    {
     "kind": "p",
@@ -26217,6 +26387,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "5 to 10 minutes",
+  "minutes": 5,
   "blocks": [
    {
     "kind": "p",
@@ -26344,6 +26515,7 @@
   "type": "icebreaker",
   "typeLabel": "Icebreaker",
   "duration": "15 minutes",
+  "minutes": 15,
   "blocks": [
    {
     "kind": "p",
@@ -26499,6 +26671,7 @@
   "type": "core",
   "typeLabel": "Core experience",
   "duration": "45 minutes",
+  "minutes": 45,
   "blocks": [
    {
     "kind": "p",
@@ -26901,7 +27074,8 @@
   "title": "Map, Design, Practice",
   "type": "core",
   "typeLabel": "Core experience",
-  "duration": "60 minutes",
+  "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -27069,6 +27243,7 @@
   "type": "socratic",
   "typeLabel": "Socratic guide",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -27502,6 +27677,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "1 hour",
+  "minutes": 60,
   "blocks": [
    {
     "kind": "p",
@@ -27579,6 +27755,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "2 hours, including one 10-minute break",
+  "minutes": 120,
   "blocks": [
    {
     "kind": "p",
@@ -27654,6 +27831,7 @@
   "type": "workshop",
   "typeLabel": "Workshop",
   "duration": "4 hours, including two breaks totalling 25 minutes",
+  "minutes": 240,
   "blocks": [
    {
     "kind": "p",

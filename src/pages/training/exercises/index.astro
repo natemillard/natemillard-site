@@ -22,7 +22,10 @@ const groups = ORDER.map((type) => ({
   label: pooled.find((e) => e.data.type === type)?.data.typeLabel ?? type,
   items: pooled
     .filter((e) => e.data.type === type)
-    .sort((a, b) => numberOf(a.data.skill) - numberOf(b.data.skill)),
+    .sort((a, b) =>
+      numberOf(a.data.skill) - numberOf(b.data.skill) ||
+      a.data.minutes - b.data.minutes
+    ),
 })).filter((g) => g.items.length > 0);
 
 /* "Activity" -> "Activities". */
