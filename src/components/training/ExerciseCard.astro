@@ -1,0 +1,87 @@
+---
+import ExerciseBody from './ExerciseBody.astro';
+
+interface Props {
+  /** Anchor target, so the pooled index can link straight to this exercise. */
+  id?: string;
+  title: string;
+  typeLabel: string;
+  duration: string;
+  blocks: any[];
+  /** Show which skill it belongs to (used on the pooled index). */
+  skillTitle?: string;
+  skillHref?: string;
+  /** Start collapsed. Long facilitator guides should. */
+  collapsed?: boolean;
+  headingLevel?: 2 | 3;
+}
+const { id, title, typeLabel, duration, blocks, skillTitle, skillHref, collapsed = false, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as any;
+---
+
+<article class="xcard" id={id}>
+  <div class="xcard__meta">
+    <span class="xcard__type">{typeLabel}</span>
+    {duration && (<><span aria-hidden="true">·</span><span>{duration}</span></>)}
+    {skillTitle && skillHref && (
+      <><span aria-hidden="true">·</span><a class="xcard__skill" href={skillHref}>{skillTitle}</a></>
+    )}
+  </div>
+
+  <Heading class="xcard__title">{title}</Heading>
+
+  {collapsed ? (
+    <details class="xcard__details">
+      <summary>Show the full guide</summary>
+      <ExerciseBody blocks={blocks} />
+    </details>
+  ) : (
+    <ExerciseBody blocks={blocks} />
+  )}
+</article>
+
+<style>
+  .xcard {
+    scroll-margin-top: var(--space-lg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-left: 2px solid var(--color-clay);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+  }
+
+  .xcard__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5em;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .xcard__type {
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    font-weight: var(--weight-semibold);
+    color: var(--color-clay);
+  }
+
+  .xcard__skill { color: var(--color-ink-faint); }
+
+  .xcard__title {
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+  }
+
+  .xcard__details summary {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+
+  .xcard__details[open] summary { margin-bottom: var(--space-sm); }
+</style>

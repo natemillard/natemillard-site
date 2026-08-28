@@ -1,0 +1,34 @@
+---
+/** Renders an exercise's paragraphs and lists in order. */
+interface Block { kind: 'p' | 'list'; text?: string; items?: string[] }
+interface Props { blocks: Block[] }
+const { blocks } = Astro.props;
+
+/* Short lines ending in a colon are the document's own sub-headings
+   ("Setup (say this to participants):"), so give them some weight. */
+const isLabel = (t: string) => t.length < 90 && /[:?]$/.test(t.trim());
+---
+
+<div class="xbody">
+  {blocks.map((b) =>
+    b.kind === 'list' ? (
+      <ul>{b.items!.map((i) => <li>{i}</li>)}</ul>
+    ) : isLabel(b.text!) ? (
+      <p class="xbody__label">{b.text}</p>
+    ) : (
+      <p>{b.text}</p>
+    )
+  )}
+</div>
+
+<style>
+  .xbody { font-size: var(--text-base); line-height: var(--leading-normal); }
+  .xbody > * + * { margin-top: var(--space-sm); }
+  .xbody__label {
+    font-weight: var(--weight-semibold);
+    color: var(--color-ink);
+  }
+  .xbody ul { padding-left: 1.2em; }
+  .xbody li + li { margin-top: var(--space-3xs); }
+  .xbody li::marker { color: var(--color-ink-faint); }
+</style>

@@ -1,0 +1,150 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/site/PageHeader.astro';
+import LabDisclaimer from '../../../components/training/LabDisclaimer.astro';
+
+const exercises = await getCollection('exercises');
+const trainings = await getCollection('trainings');
+const titleOf = (slug: string) =>
+  trainings.find((t) => t.id === slug)?.data.title ?? slug;
+const numberOf = (slug: string) =>
+  trainings.find((t) => t.id === slug)?.data.skillNumber ?? 99;
+
+/* "Element" entries are components of a larger exercise rather than things
+   you would drop into a session on their own, so they stay on the skill pack
+   page and out of this pool. */
+const pooled = exercises.filter((e) => e.data.type !== 'element');
+
+const ORDER = ['icebreaker', 'core', 'practice', 'activity', 'prework', 'socratic', 'workshop', 'field', 'coffee'];
+const groups = ORDER.map((type) => ({
+  type,
+  label: pooled.find((e) => e.data.type === type)?.data.typeLabel ?? type,
+  items: pooled
+    .filter((e) => e.data.type === type)
+    .sort((a, b) => numberOf(a.data.skill) - numberOf(b.data.skill)),
+})).filter((g) => g.items.length > 0);
+
+/* "Activity" -> "Activities". */
+const plural = (word: string, n: number) =>
+  n === 1 ? word : /y$/i.test(word) ? word.slice(0, -1) + 'ies' : word + 's';
+---
+
+<BaseLayout
+  title="Every exercise"
+  description="The full activity bank across all thirteen community mobilization skills — icebreakers, core experiences, workshops, and facilitator guides, browsable by type."
+>
+  <div class="container">
+    <PageHeader
+      eyebrow="Training Lab"
+      title="Every exercise, by type"
+      lede={`${pooled.length} exercises drawn from across the skills. Browsing by type rather than by skill is how you find the right thing when you know you have twenty minutes and a room, but not yet which skill you are teaching.`}
+    >
+      <p class="backlink">
+        <a class="link-arrow" href="/training">Back to the thirteen skills</a>
+      </p>
+    </PageHeader>
+
+    <nav class="jump" aria-label="Jump to a type">
+      {groups.map((g) => (
+        <a href={`#${g.type}`}>{plural(g.label, g.items.length)} <span class="jump__n">{g.items.length}</span></a>
+      ))}
+    </nav>
+
+    {groups.map((g) => (
+      <section class="group" id={g.type}>
+        <h2 class="group__heading">{plural(g.label, g.items.length)} <span class="group__n">{g.items.length}</span></h2>
+        <ul class="rows">
+          {g.items.map((e) => (
+            <li class="row">
+              <a class="row__link" href={`/training/exercises/${e.data.skill}#${e.id}`}>
+                <span class="row__title">{e.data.title}</span>
+                <span class="row__skill">{titleOf(e.data.skill)}</span>
+                <span class="row__time">{e.data.duration}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <footer class="foot">
+      <LabDisclaimer variant="short" />
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .backlink { margin-top: var(--space-md); }
+
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .jump a {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    text-decoration: none;
+    color: var(--color-ink-muted);
+    background: var(--color-paper-sunk);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-sm);
+    padding: 0.25em 0.6em;
+  }
+
+  .jump a:hover { border-color: var(--color-clay); color: var(--color-clay); }
+  .jump__n { color: var(--color-ink-faint); font-variant-numeric: tabular-nums; }
+
+  .group { margin-top: var(--space-2xl); scroll-margin-top: var(--space-lg); }
+
+  .group__heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .group__n { color: var(--color-clay); font-variant-numeric: tabular-nums; }
+
+  .rows { list-style: none; padding: 0; margin: 0; }
+  .row + .row { border-top: 1px solid var(--color-rule); }
+
+  .row__link {
+    display: grid;
+    gap: var(--space-3xs) var(--space-md);
+    padding: var(--space-sm) var(--space-2xs);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media (min-width: 46rem) {
+    .row__link {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 8rem;
+      align-items: baseline;
+    }
+  }
+
+  .row__link:hover { background: var(--color-paper-sunk); }
+
+  .row__title { font-weight: var(--weight-medium); line-height: var(--leading-snug); }
+  .row__link:hover .row__title { color: var(--color-clay-hover); }
+
+  .row__skill, .row__time {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  @media (min-width: 46rem) { .row__time { text-align: right; } }
+
+  .foot { margin-top: var(--space-2xl); max-width: var(--width-text); }
+</style>

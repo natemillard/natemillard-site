@@ -28,7 +28,7 @@
    ========================================================================= */
 
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { glob, file } from 'astro/loaders';
 
 /* Fields shared by every collection, so the three schemas stay consistent. */
 const shared = {
@@ -281,4 +281,37 @@ const trainings = defineCollection({
     }),
 });
 
-export const collections = { writing, projects, trainings };
+/* -------------------------------------------------------------------------
+   EXERCISES — the activity bank behind the training modules
+   File: src/data/exercises.json  (generated, not hand-edited)
+
+   Each record is ONE exercise: an icebreaker, a core experience, a workshop,
+   a Socratic guide. Keeping them as separate records rather than as one long
+   document per skill is what makes it possible to show "every icebreaker
+   across all skills", and later to assemble a session out of parts.
+
+   Regenerate with the converter rather than editing this file by hand.
+   ---------------------------------------------------------------------- */
+
+const exercises = defineCollection({
+  loader: file('src/data/exercises.json'),
+  schema: z.object({
+    /** Slug of the training module this belongs to. */
+    skill: z.string(),
+    title: z.string(),
+    /** icebreaker | core | practice | workshop | socratic | prework | element | activity */
+    type: z.string(),
+    /** Human-readable version of `type`, e.g. "Core experience". */
+    typeLabel: z.string(),
+    duration: z.string(),
+    /** Body content: paragraphs and lists, in order. */
+    blocks: z.array(
+      z.union([
+        z.object({ kind: z.literal('p'), text: z.string() }),
+        z.object({ kind: z.literal('list'), items: z.array(z.string()) }),
+      ])
+    ),
+  }),
+});
+
+export const collections = { writing, projects, trainings, exercises };

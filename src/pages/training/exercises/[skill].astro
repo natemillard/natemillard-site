@@ -1,0 +1,131 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/site/PageHeader.astro';
+import ExerciseCard from '../../../components/training/ExerciseCard.astro';
+import LabDisclaimer from '../../../components/training/LabDisclaimer.astro';
+
+export async function getStaticPaths() {
+  const trainings = await getCollection('trainings');
+  const exercises = await getCollection('exercises');
+
+  return trainings
+    .filter((t) => exercises.some((e) => e.data.skill === t.id))
+    .map((t) => ({
+      params: { skill: t.id },
+      props: {
+        training: t,
+        items: exercises.filter((e) => e.data.skill === t.id),
+      },
+    }));
+}
+
+const { training, items } = Astro.props;
+
+/* Order the pack the way a facilitator would work through it. */
+const ORDER = ['prework', 'icebreaker', 'core', 'practice', 'activity', 'element', 'socratic', 'workshop', 'field', 'coffee'];
+const sorted = [...items].sort(
+  (a, b) => ORDER.indexOf(a.data.type) - ORDER.indexOf(b.data.type)
+);
+
+/* Anything over ~40 blocks is a long facilitator guide; collapse it so the
+   page stays scannable. */
+const isLong = (n: number) => n > 40;
+
+const counts = ORDER.map((t) => ({
+  type: t,
+  label: items.find((i) => i.data.type === t)?.data.typeLabel ?? t,
+  n: items.filter((i) => i.data.type === t).length,
+})).filter((c) => c.n > 0);
+
+/* "Activity" -> "Activities". */
+const plural = (word: string, n: number) =>
+  n === 1 ? word : /y$/i.test(word) ? word.slice(0, -1) + 'ies' : word + 's';
+---
+
+<BaseLayout
+  title={`${training.data.title} — exercises`}
+  description={`The activity bank behind ${training.data.title}: icebreakers, core experiences, workshops, and the facilitator guide.`}
+  noindex={training.data.draft || !training.data.listed}
+>
+  <div class="container">
+    <PageHeader
+      eyebrow="Training Lab"
+      title={`${training.data.title}: the activity bank`}
+      lede={`Everything behind the twenty-minute learner page — ${items.length} exercises, from short openers to a four-hour workshop. This is the facilitator material, not the participant view.`}
+    >
+      <p class="backlink">
+        <a class="link-arrow" href={`/training/${training.id}`}>Back to the {training.data.title} learner page</a>
+      </p>
+    </PageHeader>
+
+    <nav class="summary" aria-label="What this pack contains">
+      <h2 class="summary__heading">What is in here</h2>
+      <ul class="summary__list">
+        {counts.map((c) => (
+          <li><strong>{c.n}</strong> {plural(c.label, c.n)}</li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="pack">
+      {sorted.map((e) => (
+        <ExerciseCard
+          id={e.id}
+          title={e.data.title}
+          typeLabel={e.data.typeLabel}
+          duration={e.data.duration}
+          blocks={e.data.blocks}
+          collapsed={isLong(e.data.blocks.length)}
+          headingLevel={2}
+        />
+      ))}
+    </div>
+
+    <footer class="pack__foot">
+      <LabDisclaimer variant="short" />
+      <p><a class="link-arrow" href="/training/exercises">Browse every exercise across all skills</a></p>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .backlink { margin-top: var(--space-md); }
+
+  .summary {
+    padding: var(--space-md);
+    background: var(--color-paper-sunk);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .summary__heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .summary__list {
+    margin-top: var(--space-2xs);
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs) var(--space-md);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+
+  .summary__list strong { color: var(--color-ink); font-variant-numeric: tabular-nums; }
+
+  .pack { display: grid; gap: var(--space-md); max-width: var(--width-text); }
+
+  .pack__foot {
+    margin-top: var(--space-2xl);
+    display: grid;
+    gap: var(--space-md);
+    max-width: var(--width-text);
+  }
+</style>

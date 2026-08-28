@@ -60,6 +60,13 @@ const d = entry.data;
    the relationships live in frontmatter rather than being written by hand into
    the prose. */
 const allTrainings = await getCollection('trainings');
+
+/* Does this skill have an activity bank behind it? */
+const allExercises = await getCollection('exercises');
+const packItems = allExercises.filter((e) => e.data.skill === entry.id);
+const packCounts = [...new Set(packItems.map((e) => e.data.typeLabel))]
+  .map((label) => ({ label, n: packItems.filter((e) => e.data.typeLabel === label).length }))
+  .sort((a, b) => b.n - a.n);
 const related = d.related
   .map((slug) => allTrainings.find((t) => t.id === slug))
   .filter((t) => t !== undefined && !t.data.draft && t.data.listed);
@@ -114,6 +121,26 @@ const related = d.related
 
     {d.tags.length > 0 && (
       <p class="training__tags">{d.tags.map((t) => <Tag tag={t} />)}</p>
+    )}
+
+    {packItems.length > 0 && (
+      <section class="pack-link">
+        <p class="pack-link__eyebrow">Go deeper</p>
+        <h2>The activity bank behind this skill</h2>
+        <p class="pack-link__text">
+          {packItems.length} exercises for anyone running this with a group —
+          {' '}{packCounts.map((c, i) => `${c.n} ${c.label.toLowerCase()}${c.n === 1 ? '' : 's'}`).join(', ')}.
+        </p>
+        <p>
+          <a class="button" href={`/training/exercises/${entry.id}`}>
+            Open the activity bank
+          </a>
+        </p>
+        <p class="pack-link__note">
+          Facilitator material rather than participant material. You can also
+          <a href="/training/exercises"> browse every exercise across all skills</a>.
+        </p>
+      </section>
     )}
 
     {related.length > 0 && (
@@ -179,6 +206,43 @@ const related = d.related
     letter-spacing: var(--tracking-caps);
     color: var(--color-ink-faint);
     margin-bottom: var(--space-2xs);
+  }
+
+  .pack-link {
+    margin-top: var(--space-2xl);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-rule);
+    border-top: 3px solid var(--color-clay);
+    border-radius: var(--radius-md);
+    background: var(--color-clay-wash);
+  }
+
+  .pack-link__eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-clay);
+  }
+
+  .pack-link h2 {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-xl);
+  }
+
+  .pack-link__text {
+    margin-top: var(--space-2xs);
+    margin-bottom: var(--space-md);
+    color: var(--color-ink-muted);
+    max-width: 56ch;
+  }
+
+  .pack-link__note {
+    margin-top: var(--space-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
   }
 
   .training__related {
