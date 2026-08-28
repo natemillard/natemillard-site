@@ -71,8 +71,19 @@ const writing = defineCollection({
       /** Publication or writing date. Written as 2026-03-14. */
       date: z.coerce.date(),
 
-      /** Drives the label on cards and the filters on /writing. */
-      type: z.enum(['essay', 'research', 'publication', 'talk', 'reflection']),
+      /**
+       * Drives the label on cards and which lane the piece sits in on /writing.
+       *
+       *   Research & essays : essay, research, publication, talk
+       *   Poems & stories   : poem, fiction, nonfiction, reflection
+       *
+       * `poem` also changes how the body renders — line breaks are preserved
+       * exactly as you type them, which prose Markdown would otherwise collapse.
+       */
+      type: z.enum([
+        'essay', 'research', 'publication', 'talk',
+        'reflection', 'poem', 'fiction', 'nonfiction',
+      ]),
 
       /** Journal, outlet, conference, or venue. Optional. */
       source: z.string().optional(),

@@ -110,3 +110,19 @@
   font-variant-caps: small-caps;
   letter-spacing: var(--tracking-wide);
 }
+
+
+/* ---------- Verse -------------------------------------------------------
+   Markdown folds consecutive lines into one paragraph, which is wrong for
+   poetry. Preserving the newlines inside each stanza keeps the line breaks
+   exactly as written in the .md file, with no <br> tags needed.
+   Applied automatically when a writing entry has type: poem.
+   ------------------------------------------------------------------- */
+
+.prose--verse p {
+  white-space: pre-line;
+  line-height: 1.75;
+  max-width: 42ch;
+}
+
+.prose--verse p + p { margin-top: var(--space-lg); }   /* stanza spacing */

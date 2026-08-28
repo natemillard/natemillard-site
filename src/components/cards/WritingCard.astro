@@ -14,13 +14,17 @@ interface Props {
 const Heading = `h${Astro.props.headingLevel ?? 3}` as any;
 const { entry, compact = false } = Astro.props;
 const { title, date, type, summary, source, externalUrl, draft } = entry.data;
+
+/* Display names where the raw value reads badly on a card. */
+const LABELS: Record<string, string> = { nonfiction: 'creative nonfiction' };
+const typeLabel = LABELS[type] ?? type;
 const href = externalUrl ?? `/writing/${entry.id}`;
 const external = Boolean(externalUrl);
 ---
 
 <article class:list={['w-card', { 'w-card--compact': compact }]}>
   <p class="w-card__meta">
-    <span class="w-card__type">{type}</span>
+    <span class="w-card__type">{typeLabel}</span>
     <span aria-hidden="true">·</span>
     <time datetime={date.toISOString()}>{formatDate(date)}</time>
     {source && (<><span aria-hidden="true">·</span><span class="w-card__source">{source}</span></>)}

@@ -54,7 +54,7 @@ const d = entry.data;
 
     {d.image && <img class="piece-image" src={d.image} alt={d.imageAlt ?? ''} />}
 
-    <Prose class="piece-body"><Content /></Prose>
+    <Prose class:list={['piece-body', { 'prose--verse': d.type === 'poem' }]}><Content /></Prose>
 
     {d.tags.length > 0 && (
       <footer class="piece-tags">

@@ -9,14 +9,29 @@ import { visible, byDateDesc, writingTags } from '../../lib/content';
 const entries = (await visible('writing')).sort(byDateDesc('date'));
 const tags = await writingTags();
 
-/* Group by year — a quiet way to give a long archive structure without
-   needing a filter widget. */
-const byYear = new Map<number, typeof entries>();
-for (const entry of entries) {
-  const year = entry.data.date.getUTCFullYear();
-  byYear.set(year, [...(byYear.get(year) ?? []), entry]);
-}
-const years = [...byYear.keys()].sort((a, b) => b - a);
+/* Two lanes rather than one list. A peer-reviewed article and a poem do
+   each other no favours in the same reverse-chronological run: a colleague
+   scanning for research should not wade through verse, and a reader who came
+   for the poems should not hit a grant report. */
+const LANES = [
+  {
+    id: 'work',
+    heading: 'Research & essays',
+    note: 'Published research, essays, and talks.',
+    types: ['research', 'publication', 'essay', 'talk'],
+  },
+  {
+    id: 'creative',
+    heading: 'Poems & stories',
+    note: 'Creative nonfiction and poems, some going back twenty years.',
+    types: ['nonfiction', 'poem', 'fiction', 'reflection'],
+  },
+];
+
+const lanes = LANES.map((lane) => ({
+  ...lane,
+  items: entries.filter((e) => lane.types.includes(e.data.type)),
+})).filter((lane) => lane.items.length > 0);
 ---
 
 <BaseLayout
@@ -26,8 +41,8 @@ const years = [...byYear.keys()].sort((a, b) => b - a);
   <div class="container">
     <PageHeader
       eyebrow="Writing & Research"
-      title="Essays, research, and things worth thinking through in public"
-      lede="Published research sits alongside shorter essays and reflections. Where a piece was published elsewhere, the entry links out to it."
+      title="Research, essays, and things written for their own sake"
+      lede="Two kinds of writing that turn out not to be as separate as they look. The research asks how communities hold together; the rest is mostly about water, place, and paying attention. Where a piece was published elsewhere, the entry links out to it."
     />
 
     {tags.length > 0 && (
@@ -41,11 +56,14 @@ const years = [...byYear.keys()].sort((a, b) => b - a);
       </nav>
     )}
 
-    {years.map((year) => (
-      <section class="year">
-        <h2 class="year__heading">{year}</h2>
-        <div class="year__list">
-          {byYear.get(year)!.map((entry) => <WritingCard entry={entry} />)}
+    {lanes.map((lane) => (
+      <section class="lane">
+        <div class="lane__head">
+          <h2 class="lane__heading">{lane.heading}</h2>
+          <p class="lane__note">{lane.note}</p>
+        </div>
+        <div class="lane__list">
+          {lane.items.map((entry) => <WritingCard entry={entry} />)}
         </div>
       </section>
     ))}
@@ -77,20 +95,27 @@ const years = [...byYear.keys()].sort((a, b) => b - a);
 
   .tag-bar__tags { display: flex; flex-wrap: wrap; gap: var(--space-2xs); }
 
-  .year { margin-top: var(--space-xl); }
+  .lane { margin-top: var(--space-2xl); }
 
-  .year__heading {
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    font-weight: var(--weight-semibold);
-    letter-spacing: var(--tracking-caps);
-    text-transform: uppercase;
-    color: var(--color-ink-faint);
-    font-variant-numeric: tabular-nums;
+  .lane__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding-bottom: var(--space-2xs);
+    border-bottom: 1px solid var(--color-rule);
   }
 
-  .year__list { margin-top: var(--space-2xs); }
-  .year__list > :first-child { padding-top: var(--space-2xs); }
+  .lane__heading { font-size: var(--text-xl); }
+
+  .lane__note {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .lane__list > :first-child { padding-top: var(--space-sm); }
 
   .empty { color: var(--color-ink-muted); }
 </style>
