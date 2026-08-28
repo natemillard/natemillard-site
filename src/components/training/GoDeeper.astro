@@ -1,0 +1,86 @@
+---
+/**
+ * Escalating ways to take a skill further, and where it connects next.
+ *
+ *   <GoDeeper
+ *     options={[
+ *       { time: 'Five minutes', label: 'The microlearning', note: 'Not yet recorded.' },
+ *       { time: 'One hour', label: 'The workshop', note: 'Map a real community with other people.',
+ *         href: '/training/asset-mapping-workshop' },
+ *     ]}
+ *   />
+ */
+interface Option {
+  time: string;
+  label: string;
+  note?: string;
+  href?: string;
+}
+interface Props {
+  heading?: string;
+  options: Option[];
+}
+const { heading = 'Want to go further?', options } = Astro.props;
+---
+
+<section class="deeper prose-wide">
+  <h3 class="deeper__heading">{heading}</h3>
+  <ul class="deeper__list">
+    {options.map((o) => (
+      <li class="deeper__item">
+        <span class="deeper__time">{o.time}</span>
+        <span class="deeper__body">
+          {o.href ? <a href={o.href}>{o.label}</a> : <span class="deeper__label">{o.label}</span>}
+          {o.note && <span class="deeper__note"> {o.note}</span>}
+        </span>
+      </li>
+    ))}
+  </ul>
+  <slot />
+</section>
+
+<style>
+  .deeper {
+    margin-block: var(--space-lg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-sunk);
+  }
+
+  .deeper__heading { font-size: var(--text-lg); }
+
+  .deeper__list {
+    margin-top: var(--space-sm);
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2xs);
+  }
+
+  .deeper__item {
+    display: grid;
+    gap: var(--space-3xs);
+    padding-block: var(--space-2xs);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  @media (min-width: 34rem) {
+    .deeper__item { grid-template-columns: 8.5rem minmax(0, 1fr); gap: var(--space-sm); }
+  }
+
+  .deeper__time {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+    padding-top: 0.2em;
+  }
+
+  .deeper__body { font-size: var(--text-sm); line-height: var(--leading-normal); }
+
+  .deeper__label { font-weight: var(--weight-medium); }
+  .deeper__body a { font-weight: var(--weight-medium); }
+  .deeper__note { color: var(--color-ink-muted); }
+</style>

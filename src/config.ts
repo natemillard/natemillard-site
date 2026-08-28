@@ -13,14 +13,14 @@ export const site = {
   name: 'Nathaniel Millard',
 
   /** One line. Used in metadata and as the header subtitle on wide screens. */
-  tagline: '[PLACEHOLDER] Community resilience, disaster preparedness, and learning design',
+  tagline: '[PLACEHOLDER] Community collaboration, facilitation, and learning design',
 
   /**
    * Default description for search engines and link previews.
    * Aim for 140–160 characters.
    */
   description:
-    '[PLACEHOLDER] The professional site of Nathaniel Millard — research, projects, and writing on community resilience, disaster preparedness, and the design of learning experiences.',
+    '[PLACEHOLDER] The professional site of Nathaniel Millard — work, writing, and learning design on how communities and organisations collaborate.',
 
   /** Used for the copyright line in the footer. */
   startYear: 2026,
@@ -41,10 +41,18 @@ export const site = {
 export const nav = [
   { label: 'About', href: '/about' },
   { label: 'Work', href: '/work' },
-  { label: 'Training Lab', href: '/training' },
   { label: 'Writing', href: '/writing' },
   { label: 'CV', href: '/cv' },
 ] as const;
+
+/*
+ * The Training Lab is built and working at /training, but deliberately kept
+ * out of the navigation for now. The pages are still reachable by direct
+ * link, which is useful for showing colleagues without announcing it.
+ *
+ * To put it back in the site, add this line to `nav` above:
+ *   { label: 'Learning', href: '/training' },
+ */
 
 /**
  * Footer links. Kept separate from the main nav so the header can stay short.

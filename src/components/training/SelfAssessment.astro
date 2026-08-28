@@ -1,0 +1,333 @@
+---
+/**
+ * A short self-check. Each question offers four answers describing increasing
+ * depth of practice; the result is whichever level the person chose most often.
+ *
+ *   <SelfAssessment
+ *     intro="Five questions, two minutes. Answer for what you actually do."
+ *     bands={[
+ *       { label: 'Mostly 1s', text: 'You understand it…' },
+ *       { label: 'Mostly 2s', text: '…' },
+ *       { label: 'Mostly 3s', text: '…' },
+ *       { label: 'Mostly 4s', text: '…' },
+ *     ]}
+ *     questions={[
+ *       { question: 'When you start work in a new community…',
+ *         options: ['The needs and risk data', '…', '…', '…'] },
+ *     ]}
+ *   />
+ *
+ * This is deliberately not scored as a test. There is no pass mark, nothing is
+ * sent anywhere, and the result is a description rather than a grade.
+ *
+ * WITHOUT JAVASCRIPT every question and every band is readable; the person
+ * simply tallies their own answers, which is what the paper version does.
+ */
+interface Band {
+  label: string;
+  text: string;
+}
+interface Question {
+  question: string;
+  /** Exactly four, in increasing order of depth. */
+  options: string[];
+}
+interface Props {
+  heading?: string;
+  intro?: string;
+  bands: Band[];
+  questions: Question[];
+}
+
+const { heading = 'Where do you stand?', intro, bands, questions } = Astro.props;
+
+const counter = ((globalThis as any).__saCounter ??= { n: 0 });
+counter.n += 1;
+const id = `sa-${counter.n}`;
+---
+
+<section class="sa prose-wide" data-selfassessment aria-labelledby={`${id}-heading`}>
+  <h3 class="sa__heading" id={`${id}-heading`}>{heading}</h3>
+  {intro && <p class="sa__intro">{intro}</p>}
+
+  <ol class="sa__questions">
+    {questions.map((q, qi) => (
+      <li class="sa__question">
+        <fieldset class="sa__field">
+          <legend class="sa__legend">{q.question}</legend>
+          <div class="sa__options">
+            {q.options.map((option, oi) => (
+              <label class="sa__option">
+                <input type="radio" name={`${id}-q${qi}`} value={oi + 1} data-level={oi + 1} />
+                <span class="sa__option-number" aria-hidden="true">{oi + 1}</span>
+                <span class="sa__option-text">{option}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      </li>
+    ))}
+  </ol>
+
+  <p class="sa__progress" data-progress hidden aria-live="polite"></p>
+
+  <div class="sa__result" data-result hidden>
+    <p class="sa__result-label" data-result-label></p>
+    <p class="sa__result-text" data-result-text></p>
+    <p class="sa__result-spread" data-result-spread></p>
+    <button class="sa__reset" type="button" data-reset>Start again</button>
+  </div>
+
+  <div class="sa__bands" data-bands>
+    <p class="sa__bands-heading">What the answers mean</p>
+    <dl class="sa__bands-list">
+      {bands.map((band, i) => (
+        <div class="sa__band" data-band={i + 1}>
+          <dt>{band.label}</dt>
+          <dd>{band.text}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+
+  <p class="sa__privacy">
+    Nothing here is scored, saved, or sent anywhere. It is a mirror, not a test.
+  </p>
+</section>
+
+<style>
+  .sa {
+    margin-block: var(--space-xl);
+    padding: var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-top: 3px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+  }
+
+  .sa__heading { font-size: var(--text-xl); }
+
+  .sa__intro {
+    margin-top: var(--space-2xs);
+    color: var(--color-ink-muted);
+    line-height: var(--leading-normal);
+    max-width: 56ch;
+  }
+
+  .sa__questions {
+    margin-top: var(--space-lg);
+    list-style: none;
+    padding: 0;
+    counter-reset: saq;
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .sa__question { counter-increment: saq; }
+
+  .sa__field { border: 0; padding: 0; margin: 0; }
+
+  .sa__legend {
+    padding: 0;
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-snug);
+  }
+
+  .sa__legend::before {
+    content: counter(saq) '. ';
+    color: var(--color-ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sa__options { margin-top: var(--space-2xs); display: grid; gap: var(--space-3xs); }
+
+  .sa__option {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: baseline;
+    gap: var(--space-2xs);
+    padding: var(--space-2xs) var(--space-xs);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper);
+    cursor: pointer;
+    transition: border-color var(--duration) var(--ease),
+                background var(--duration) var(--ease);
+  }
+
+  .sa__option:hover { border-color: var(--color-rule-strong); }
+
+  .sa__option:has(input:checked) {
+    border-color: var(--color-accent);
+    background: var(--color-accent-wash);
+  }
+
+  .sa__option input { accent-color: var(--color-accent); margin: 0; }
+
+  .sa__option-number {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-ink-faint);
+  }
+
+  .sa__option-text { font-size: var(--text-sm); line-height: var(--leading-normal); }
+
+  .sa__progress {
+    margin-top: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .sa__result {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--color-accent-wash);
+    border: 1px solid var(--color-accent);
+  }
+
+  .sa__result-label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .sa__result-text {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+  }
+
+  .sa__result-spread {
+    margin-top: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+
+  .sa__reset {
+    margin-top: var(--space-sm);
+    background: none;
+    border: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .sa__bands {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .sa__bands-heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .sa__bands-list { margin-top: var(--space-2xs); display: grid; gap: var(--space-2xs); }
+
+  .sa__band dt {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    display: inline;
+  }
+
+  .sa__band dd {
+    display: inline;
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+
+  .sa__band dt::after { content: ' — '; color: var(--color-ink-faint); }
+
+  .sa__privacy {
+    margin-top: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-selfassessment]').forEach((block) => {
+    const inputs = Array.from(block.querySelectorAll<HTMLInputElement>('input[type="radio"]'));
+    const total = new Set(inputs.map((i) => i.name)).size;
+
+    const progress = block.querySelector<HTMLElement>('[data-progress]');
+    const result = block.querySelector<HTMLElement>('[data-result]');
+    const resultLabel = block.querySelector<HTMLElement>('[data-result-label]');
+    const resultText = block.querySelector<HTMLElement>('[data-result-text]');
+    const resultSpread = block.querySelector<HTMLElement>('[data-result-spread]');
+    const bands = block.querySelector<HTMLElement>('[data-bands]');
+
+    if (progress) progress.hidden = false;
+
+    function update() {
+      const chosen = inputs.filter((i) => i.checked);
+      const answered = chosen.length;
+
+      if (answered < total) {
+        if (progress) {
+          progress.hidden = false;
+          progress.textContent = `${answered} of ${total} answered`;
+        }
+        if (result) result.hidden = true;
+        return;
+      }
+
+      // The result is the level chosen most often. Ties resolve downward, which
+      // keeps the read honest rather than flattering.
+      const counts = [0, 0, 0, 0];
+      for (const input of chosen) counts[Number(input.dataset.level) - 1] += 1;
+
+      let best = 0;
+      for (let i = 1; i < counts.length; i += 1) {
+        if (counts[i] > counts[best]) best = i;
+      }
+
+      const band = block.querySelector<HTMLElement>(`[data-band="${best + 1}"]`);
+      const label = band?.querySelector('dt')?.textContent ?? '';
+      const text = band?.querySelector('dd')?.textContent ?? '';
+
+      if (resultLabel) resultLabel.textContent = label;
+      if (resultText) resultText.textContent = text;
+      if (resultSpread) {
+        resultSpread.textContent =
+          'Your answers: ' +
+          counts.map((c, i) => `${c} × level ${i + 1}`).filter((_, i) => counts[i] > 0).join(', ');
+      }
+      if (progress) progress.hidden = true;
+      if (result) result.hidden = false;
+      if (bands) bands.hidden = true;
+    }
+
+    inputs.forEach((input) => input.addEventListener('change', update));
+
+    block.querySelector<HTMLButtonElement>('[data-reset]')?.addEventListener('click', () => {
+      inputs.forEach((input) => { input.checked = false; });
+      if (result) result.hidden = true;
+      if (bands) bands.hidden = false;
+      update();
+      inputs[0]?.focus();
+    });
+
+    update();
+  });
+</script>

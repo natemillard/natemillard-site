@@ -1,0 +1,64 @@
+---
+/**
+ * One thing to try. Use inside <PracticeGrid>.
+ * `finding` is the payoff line — what the person is likely to notice.
+ */
+interface Props {
+  title: string;
+  time?: string;
+  finding?: string;
+}
+const { title, time, finding } = Astro.props;
+---
+
+<article class="practice">
+  {time && <p class="practice__time">{time}</p>}
+  <h4 class="practice__title">{title}</h4>
+  <div class="practice__body"><slot /></div>
+  {finding && <p class="practice__finding">{finding}</p>}
+</article>
+
+<style>
+  .practice {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-top: 2px solid var(--color-clay);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+    height: 100%;
+  }
+
+  .practice__time {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .practice__title {
+    margin-top: var(--space-3xs);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-snug);
+  }
+
+  .practice__body {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+
+  .practice__body :global(> * + *) { margin-top: var(--space-2xs); }
+
+  .practice__finding {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-2xs);
+    border-top: 1px solid var(--color-rule);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink);
+    font-style: italic;
+  }
+</style>

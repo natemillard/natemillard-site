@@ -1,0 +1,44 @@
+---
+/**
+ * The numbered parts of a framework. Pairs with <FrameworkItem>.
+ *
+ *   <FrameworkGrid note="Most people find the first one and stop.">
+ *     <FrameworkItem title="Individuals">…</FrameworkItem>
+ *   </FrameworkGrid>
+ *
+ * Pure CSS, no JavaScript.
+ */
+interface Props {
+  /** Optional line under the heading, before the items. */
+  note?: string;
+}
+const { note } = Astro.props;
+---
+
+<section class="framework prose-wide">
+  {note && <p class="framework__note">{note}</p>}
+  <ol class="framework__list"><slot /></ol>
+</section>
+
+<style>
+  .framework { margin-block: var(--space-lg); }
+
+  .framework__note {
+    color: var(--color-ink-muted);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--space-md);
+  }
+
+  .framework__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: fw;
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  @media (min-width: 40rem) {
+    .framework__list { grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+  }
+</style>

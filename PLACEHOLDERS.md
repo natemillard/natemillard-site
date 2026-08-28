@@ -28,8 +28,11 @@ files carry a `⚠ PLACEHOLDER COPY` note in the comment block at the top.
 | `src/content/projects/household-recovery-study.md` |
 | `src/content/projects/neighborhood-preparedness-networks.md` |
 | `src/content/projects/shelter-volunteer-onboarding.md` |
-| `src/content/trainings/mapping-the-helpers.mdx` |
-| `src/content/trainings/first-72-hours.mdx` |
+| `src/content/trainings/first-72-hours.mdx` (now `draft: true` — develop or delete) |
+
+`src/content/trainings/asset-mapping.mdx` is **not** placeholder content. It is
+a real prototype module, de-branded and framed as a personal adaptation. Review
+its `affiliationNote` before the site goes public.
 
 Keep the `_TEMPLATE` files — they are the starting point for new content.
 

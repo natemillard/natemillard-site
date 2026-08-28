@@ -1,0 +1,46 @@
+---
+/**
+ * "Things to try this week." Pairs with <Practice>.
+ *
+ *   <PracticeGrid heading="Four things to try this week" note="Pick one. Not four.">
+ *     <Practice title="Fill the four corners" time="15 minutes, alone"
+ *               finding="One box will be much thinner than the others.">
+ *       What to do.
+ *     </Practice>
+ *   </PracticeGrid>
+ */
+interface Props {
+  heading?: string;
+  note?: string;
+}
+const { heading, note } = Astro.props;
+---
+
+<section class="practices prose-wide">
+  {heading && <h3 class="practices__heading">{heading}</h3>}
+  {note && <p class="practices__note">{note}</p>}
+  <div class="practices__grid"><slot /></div>
+</section>
+
+<style>
+  .practices { margin-block: var(--space-lg); }
+
+  .practices__heading { font-size: var(--text-lg); }
+
+  .practices__note {
+    margin-top: var(--space-3xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .practices__grid {
+    margin-top: var(--space-md);
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  @media (min-width: 40rem) {
+    .practices__grid { grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+  }
+</style>

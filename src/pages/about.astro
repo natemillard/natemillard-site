@@ -1,109 +1,120 @@
 ---
 /* =========================================================================
    ABOUT
-   ⚠ ALL PROSE IN THIS FILE IS PLACEHOLDER COPY. See PLACEHOLDERS.md.
-   Written at roughly the right length so you can judge the layout.
+   ⚠ ALL PROSE IN THIS FILE IS PLACEHOLDER. Every paragraph below is written
+   at roughly the right length and in roughly the right register so the page
+   can be judged — but the words are mine, not Nathaniel's. Replace them.
+
+   The framing is deliberate: this page is about collaboration and bringing
+   people together, not about disaster. Keep that centre of gravity when you
+   rewrite it.
    ========================================================================= */
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/site/PageHeader.astro';
 import ContactBlock from '../components/site/ContactBlock.astro';
 import { cvDownload } from '../config';
+
+/* The "Beyond the work" strip. Swap files or captions freely; images live in
+   /public/images/. Alt text is required — describe what is happening. */
+const personalPhotos = [
+  { src: '/images/river.jpg', alt: 'Rowing a raft down a wide desert river, a child paddling a board alongside.' },
+  { src: '/images/riding.jpg', alt: 'Two people in bike helmets on a green hillside on an overcast day.' },
+  { src: '/images/family.jpg', alt: 'A family of five posing on the Zion National Park entrance sign in the rain.' },
+  { src: '/images/paintbrush.jpg', alt: 'Wearing a headband card reading "I am a paintbrush" during a guessing game on a deck.' },
+];
 ---
 
 <BaseLayout
   title="About"
-  description="Background, research interests, and community work."
+  description="Background, approach, and the work of helping communities and organisations collaborate."
 >
   <div class="container">
     <PageHeader
       eyebrow="About"
-      title="A researcher and training designer working on community resilience"
-      lede="I am interested in the difference between a community that has a plan and a community that can actually act — and in what kinds of learning close that gap."
+      title="I help communities and organisations find their way to working together"
+      lede="Most of the hard problems I have worked on were not short of good intentions or capable people. They were short of a way for those people to act together. That gap is what interests me."
     />
   </div>
 
   <div class="container about">
     <div class="about__body prose">
       <p>
-        [PLACEHOLDER] I grew up in Northern California and have spent most of my
-        working life within a few hours of where I started, which turns out to
-        matter for this kind of work. The communities I study are ones I have
-        some standing in, and the questions I ask tend to come from something I
-        watched happen rather than something I read.
+        [PLACEHOLDER — replace with your own opening.] I work at the point where
+        good intentions meet the practical difficulty of coordination: where
+        several organisations serve the same neighbourhood without ever quite
+        working together, where a plan exists but nobody owns the first move,
+        where the people with the most local knowledge are the least often in
+        the room.
+      </p>
+
+      <h2>What I do</h2>
+      <p>
+        [PLACEHOLDER] Two or three paragraphs on the shape of your work —
+        the kinds of engagements, who you do them with, and what you are
+        usually brought in to solve. Be specific rather than comprehensive;
+        this is the section people read before deciding to get in touch.
+      </p>
+
+      <h2>How I work</h2>
+      <p>
+        [PLACEHOLDER] Your approach, stated plainly. What do you believe about
+        how collaboration actually forms? What do you do differently as a
+        result? This is the most useful section on the page and the hardest to
+        write — it is worth taking your time over it.
       </p>
 
       <h2>Professional background</h2>
       <p>
-        [PLACEHOLDER] Several paragraphs about your professional trajectory —
-        where you have worked, what kinds of roles you have held, and what the
-        through-line is. This is the section people read when deciding whether
-        to get in touch, so it should be specific rather than comprehensive.
-      </p>
-      <p>
-        [PLACEHOLDER] Where work has been carried out for a specific employer,
-        this is the natural place to say so plainly, and to distinguish that work
-        from the personal projects and prototypes elsewhere on this site.
+        [PLACEHOLDER] Where you have worked and what the through-line is. Where
+        work has been done for a particular employer, this is the natural place
+        to say so plainly.
       </p>
 
       <h2>Academic background</h2>
       <p>
-        [PLACEHOLDER] Degrees, institutions, and the shape of your training —
-        written as narrative rather than as a list. The list already exists on
-        the <a href="/cv">CV</a>.
+        [PLACEHOLDER] Degrees and training, written as narrative rather than as
+        a list — the list already lives on the <a href="/cv">CV</a>.
       </p>
 
-      <h2>Research interests</h2>
+      <h2>Teaching and facilitation</h2>
       <p>
-        [PLACEHOLDER] What you are actually curious about, stated as questions
-        rather than as fields. Two or three paragraphs.
-      </p>
-
-      <h2>Disaster resilience and community work</h2>
-      <p>
-        [PLACEHOLDER] The applied side: coalitions, volunteer work, advisory
-        roles, and the ongoing relationships that keep the research honest.
-      </p>
-
-      <h2>Teaching and training</h2>
-      <p>
-        [PLACEHOLDER] Your approach to teaching and facilitation, and how it
-        connects to the work in the <a href="/training">Training Lab</a>. This is
-        a good place to say what you believe about adult learning, briefly and
-        without jargon.
+        [PLACEHOLDER] What you teach, who you teach, and what you believe about
+        how adults actually learn. Briefly, and without jargon.
       </p>
 
       <h2>Writing</h2>
       <p>
-        [PLACEHOLDER] What you write, where it appears, and why. Link through to
-        the <a href="/writing">archive</a>.
+        [PLACEHOLDER] What you write and why. Link through to the
+        <a href="/writing">archive</a>.
       </p>
 
       <h2>Beyond the work</h2>
       <p>
-        [PLACEHOLDER] A short, genuine paragraph — the outdoors, a craft, a
-        river, whatever is true. One paragraph is plenty; it does more for the
-        human register of a site like this than three would.
+        [PLACEHOLDER] A short, true paragraph — rivers, bikes, the kids, the
+        card game nobody wins gracefully. One paragraph does more for the human
+        register of a site like this than three would.
       </p>
     </div>
 
     <div class="about__aside">
-      <div class="about__portrait">
-        <!-- Replace with a real portrait at /public/images/portrait.jpg -->
-        <div class="about__portrait-placeholder" aria-hidden="true">
-          <span>Portrait</span>
-        </div>
-      </div>
+      <img
+        class="about__portrait"
+        src="/images/portrait.jpg"
+        alt="Nathaniel Millard, outdoors in front of a wooden fence."
+        width="680"
+        height="850"
+      />
 
       <dl class="about__facts">
         <dt>Based in</dt>
-        <dd>[PLACEHOLDER] Chico, California</dd>
+        <dd>[PLACEHOLDER] Northern California</dd>
 
         <dt>Works on</dt>
-        <dd>Community resilience, disaster preparedness, learning design</dd>
+        <dd>Community collaboration, facilitation, learning design</dd>
 
         <dt>Currently</dt>
-        <dd>[PLACEHOLDER] Your current position and affiliation</dd>
+        <dd>[PLACEHOLDER] Your current role</dd>
       </dl>
 
       <p class="about__cv">
@@ -113,6 +124,17 @@ import { cvDownload } from '../config';
       </p>
     </div>
   </div>
+
+  <section class="container photos">
+    <h2 class="photos__heading">Elsewhere</h2>
+    <ul class="photos__grid">
+      {personalPhotos.map((photo) => (
+        <li>
+          <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+        </li>
+      ))}
+    </ul>
+  </section>
 
   <ContactBlock />
 </BaseLayout>
@@ -130,27 +152,17 @@ import { cvDownload } from '../config';
       gap: var(--space-2xl);
     }
 
-    .about__aside {
-      position: sticky;
-      top: var(--space-lg);
-      order: 2;
-    }
+    .about__aside { position: sticky; top: var(--space-lg); }
   }
 
   .about__body { max-width: var(--width-prose); }
 
-  .about__portrait-placeholder {
+  .about__portrait {
+    width: 100%;
     aspect-ratio: 4 / 5;
-    display: grid;
-    place-items: center;
-    background: var(--color-paper-sunk);
-    border: 1px solid var(--color-rule);
+    object-fit: cover;
     border-radius: var(--radius-lg);
-    font-family: var(--font-sans);
-    font-size: var(--text-xs);
-    letter-spacing: var(--tracking-caps);
-    text-transform: uppercase;
-    color: var(--color-ink-faint);
+    border: 1px solid var(--color-rule);
   }
 
   .about__facts {
@@ -174,4 +186,41 @@ import { cvDownload } from '../config';
   }
 
   .about__cv { margin-top: var(--space-lg); }
+
+  /* ---------- Photo strip ---------- */
+
+  .photos {
+    margin-top: var(--section-gap);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .photos__heading {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .photos__grid {
+    margin-top: var(--space-md);
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-sm);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 48rem) {
+    .photos__grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .photos__grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-rule);
+  }
 </style>

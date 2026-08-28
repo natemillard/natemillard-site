@@ -244,6 +244,16 @@ const trainings = defineCollection({
         )
         .default([]),
 
+      /**
+       * Filenames (without extension) of other trainings this one connects to.
+       * Renders as cross-links at the foot of the page. Keeping the
+       * relationships as data rather than as hand-written prose links means a
+       * future "build a session around X" tool has something to read.
+       *
+       *   related: ['stakeholder-mapping', 'building-trust']
+       */
+      related: z.array(z.string()).default([]),
+
       /** Last meaningful revision. Shown on the page. */
       updated: z.coerce.date(),
     })

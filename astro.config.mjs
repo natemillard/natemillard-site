@@ -31,9 +31,9 @@ function hiddenPaths() {
 const hidden = hiddenPaths();
 
 export default defineConfig({
-  // TODO: replace with your real domain once it is pointed at Netlify.
-  // This is used for absolute URLs in the sitemap and RSS feed.
-  site: 'https://nathanielmillard.com',
+  // Used for absolute URLs in the sitemap and the RSS feed. Safe to set before
+  // DNS is cut over — it only affects the URLs written into those files.
+  site: 'https://natemillard.com',
   output: 'static',
   trailingSlash: 'ignore',
   integrations: [

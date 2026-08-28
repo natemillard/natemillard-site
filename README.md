@@ -141,9 +141,30 @@ training file automatically:
 | `<DecisionChoice>` | A branching decision with consequences per choice |
 | `<DownloadResource>` | A link to a worksheet or guide |
 | `<FacilitatorNote>` | Guidance for whoever is running the session |
+| `<Callout>` | A short emphasised line naming the move a section makes |
+| `<FrameworkGrid>` / `<FrameworkItem>` | The numbered parts of a framework |
+| `<PracticeGrid>` / `<Practice>` | "Things to try this week", each with a payoff line |
+| `<SelfAssessment>` | Five questions, four levels; tallies the answers and reports a band |
+| `<GoDeeper>` | Escalating ways to take the skill further |
 
 `src/content/trainings/_TEMPLATE.mdx` shows all of them in use, and
-`src/content/trainings/mapping-the-helpers.mdx` is a complete worked example.
+`src/content/trainings/asset-mapping.mdx` is a complete worked example.
+
+### Linking modules together
+
+A training can declare which other modules it connects to:
+
+```yaml
+related:
+  - 'stakeholder-mapping'
+  - 'building-trust-with-others'
+```
+
+These render as cross-links at the foot of the page. Modules that don't exist
+yet are skipped silently, so you can list them before you build them. Keeping
+the relationships in frontmatter rather than writing links by hand means that a
+future tool — "build me a session around the skills I want to work on" — has
+structured data to read rather than prose to parse.
 
 To add a new component, build it in `src/components/training/` and add it to
 the `trainingComponents` object in `src/pages/training/[slug].astro`. It then

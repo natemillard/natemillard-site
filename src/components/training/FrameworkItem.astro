@@ -1,0 +1,49 @@
+---
+/** One numbered part of a framework. Use inside <FrameworkGrid>. */
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<li class="fw-item">
+  <p class="fw-item__title">{title}</p>
+  <div class="fw-item__body"><slot /></div>
+</li>
+
+<style>
+  .fw-item {
+    counter-increment: fw;
+    position: relative;
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-md);
+    background: var(--color-paper-raised);
+  }
+
+  .fw-item::before {
+    content: counter(fw);
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-clay);
+    margin-bottom: var(--space-3xs);
+  }
+
+  .fw-item__title {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    line-height: var(--leading-snug);
+  }
+
+  .fw-item__body {
+    margin-top: var(--space-2xs);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+
+  .fw-item__body :global(> * + *) { margin-top: var(--space-2xs); }
+</style>
