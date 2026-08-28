@@ -1,0 +1,8 @@
+# The personal/professional site is indexed normally.
+# The Training Lab is unlisted: reachable by direct link, but kept out of
+# search results. NOTE: this stops discovery, not access. Anyone with a link
+# can still read those pages. It is not a substitute for a password.
+User-agent: *
+Disallow: /training/
+
+Sitemap: https://natemillard.com/sitemap-index.xml

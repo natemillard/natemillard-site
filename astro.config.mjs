@@ -38,7 +38,13 @@ export default defineConfig({
   trailingSlash: 'ignore',
   integrations: [
     mdx(),
-    sitemap({ filter: (page) => !hidden.some((h) => page.endsWith(h)) }),
+    sitemap({
+      filter: (page) =>
+        // The Training Lab is unlisted: reachable by link, absent from search.
+        // Delete this line to list it again.
+        !page.includes('/training') &&
+        !hidden.some((h) => page.endsWith(h)),
+    }),
   ],
   markdown: {
     shikiConfig: { theme: 'github-light', wrap: true },

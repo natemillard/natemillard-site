@@ -76,7 +76,7 @@ const related = d.related
   title={d.title}
   description={d.summary}
   image={d.image}
-  noindex={d.draft || !d.listed}
+  noindex={true} /* whole Training Lab is unlisted; see public/robots.txt */
 >
   <article class="container training">
     <header class="training__head">

@@ -49,7 +49,7 @@ const plural = (word: string, n: number) =>
 <BaseLayout
   title={`${training.data.title} — exercises`}
   description={`The activity bank behind ${training.data.title}: icebreakers, core experiences, workshops, and the facilitator guide.`}
-  noindex={training.data.draft || !training.data.listed}
+  noindex={true} /* whole Training Lab is unlisted; see public/robots.txt */
 >
   <div class="container">
     <PageHeader
