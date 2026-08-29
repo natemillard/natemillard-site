@@ -40,9 +40,9 @@ const lanes = LANES.map((lane) => ({
 >
   <div class="container">
     <PageHeader
-      eyebrow="Writing & Research"
-      title="Research, essays, and things written for their own sake"
-      lede="Two kinds of writing that turn out not to be as separate as they look. The research asks how communities hold together; the rest is mostly about water, place, and paying attention. Where a piece was published elsewhere, the entry links out to it."
+      eyebrow="Writing"
+      title="Writing"
+      lede="Creative nonfiction and poems, written over about fifteen years — mostly about water, place, and paying attention to both."
     />
 
     {tags.length > 0 && (
@@ -58,12 +58,18 @@ const lanes = LANES.map((lane) => ({
 
     {lanes.map((lane) => (
       <section class="lane">
-        <div class="lane__head">
-          <h2 class="lane__heading">{lane.heading}</h2>
-          <p class="lane__note">{lane.note}</p>
-        </div>
+        {lanes.length > 1 && (
+          <div class="lane__head">
+            <h2 class="lane__heading">{lane.heading}</h2>
+            <p class="lane__note">{lane.note}</p>
+          </div>
+        )}
         <div class="lane__list">
-          {lane.items.map((entry) => <WritingCard entry={entry} />)}
+          {/* With the lane heading hidden there is no <h2> above the cards,
+              so they step up a level to keep the heading order unbroken. */}
+          {lane.items.map((entry) => (
+            <WritingCard entry={entry} headingLevel={lanes.length > 1 ? 3 : 2} />
+          ))}
         </div>
       </section>
     ))}

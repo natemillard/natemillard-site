@@ -11,7 +11,7 @@ export async function GET(context: APIContext) {
   const entries = (await visible('writing')).sort(byDateDesc('date'));
 
   return rss({
-    title: `${site.name} — Writing & Research`,
+    title: `${site.name} — Writing`,
     description: site.description,
     site: context.site!,
     items: entries.map((entry) => ({
