@@ -6,8 +6,9 @@
 
 :root {
   /* ---------- Colour -----------------------------------------------------
-     Warm paper ground, near-black ink carrying a trace of brown, deep
-     juniper as the accent, clay as a secondary reserved for the Training Lab.
+     Warm paper ground, near-black ink carrying a trace of brown, a tidal
+     blue-green as the accent, clay as a secondary reserved for the Training
+     Lab.
      All text pairings below meet WCAG AA against --color-paper.            */
 
   --color-paper:        #FBFAF7;  /* page background */
@@ -21,16 +22,16 @@
   --color-rule:         #E2DED6;  /* hairline borders and dividers */
   --color-rule-strong:  #CFC9BE;  /* borders that need to read as edges */
 
-  --color-accent:       #2E4F42;  /* juniper — links, marks      10.0:1 */
-  --color-accent-hover: #1F3A30;
-  --color-accent-wash:  #EAF0EC;  /* tinted background */
+  --color-accent:       #1C5058;  /* tidal — links, marks         9.4:1 */
+  --color-accent-hover: #113940;
+  --color-accent-wash:  #E6F0F0;  /* shallow water, tinted background */
 
   --color-clay:         #8F5138;  /* Training Lab secondary       5.9:1 */
   --color-clay-hover:   #703D28;
   --color-clay-wash:    #F7EFEA;
 
-  --color-focus:        #2E4F42;  /* focus ring */
-  --color-selection:    #DCE6DF;  /* ::selection background */
+  --color-focus:        #1C5058;  /* focus ring */
+  --color-selection:    #D6E6E6;  /* ::selection background */
 
   /* ---------- Typography -------------------------------------------------
      Source Serif 4 (self-hosted variable font) for headings and long-form
