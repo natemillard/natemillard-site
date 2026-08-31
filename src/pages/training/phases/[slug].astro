@@ -1,0 +1,222 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Prose from '../../../components/site/Prose.astro';
+import LabDisclaimer from '../../../components/training/LabDisclaimer.astro';
+import { phases, skillsInPhase, skillNo } from '../../../lib/cm';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('phases');
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+
+const { loadBearing, supporting } = await skillsInPhase(d.code);
+const all = await phases();
+const i = all.findIndex((p) => p.id === entry.id);
+const prev = all[i - 1];
+const next = all[i + 1];
+---
+
+<BaseLayout noindex title={d.title} description={d.summary}>
+  <article class="phase container">
+    <header class="phase__head">
+      <p class="eyebrow"><a href="/training/phases">The five phases</a></p>
+      <p class="phase__code">{d.code}</p>
+      <h1>{d.title}</h1>
+      <p class="lede">{d.summary}</p>
+      <p class="phase__bar"><span class="phase__bar-label">The bar</span> {d.bar}</p>
+    </header>
+
+    <section class="needs">
+      <h2>What this phase asks for</h2>
+      <p class="needs__note">
+        Load-bearing means the phase goes badly without it, and it will be
+        visible.
+      </p>
+
+      <ol class="needs__list">
+        {loadBearing.map((s) => (
+          <li>
+            <a class="needs__skill" href={`/training/${s.id}`}>
+              <span class="needs__num">{skillNo(s)}</span>
+              <span>
+                <span class="needs__title">{s.data.title}</span>
+                <span class="needs__summary">{s.data.summary}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ol>
+
+      {supporting.length > 0 && (
+        <p class="needs__supporting">
+          <span class="needs__supporting-label">Supporting</span>
+          {supporting.map((s, n) => (
+            <>
+              {n > 0 && ', '}
+              <a href={`/training/${s.id}`}>{s.data.title}</a>
+            </>
+          ))}
+        </p>
+      )}
+    </section>
+
+    <Prose class="phase__body"><Content /></Prose>
+
+    <nav class="phase__nav" aria-label="Phases">
+      {prev ? (
+        <a class="phase__nav-link" href={`/training/phases/${prev.id}`}>
+          <span class="phase__nav-dir">Before this</span>
+          <span>{prev.data.title}</span>
+        </a>
+      ) : <span />}
+      {next && (
+        <a class="phase__nav-link phase__nav-link--next" href={`/training/phases/${next.id}`}>
+          <span class="phase__nav-dir">Next</span>
+          <span>{next.data.title}</span>
+        </a>
+      )}
+    </nav>
+
+    <footer class="phase__foot">
+      <LabDisclaimer variant="short" />
+      <p><a class="link-arrow" href="/training/phases">All five phases</a></p>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .phase > * { max-width: var(--width-text); }
+
+  .phase__head { padding-block: var(--space-2xl) var(--space-lg); }
+  .phase__head .eyebrow { margin-bottom: var(--space-xs); }
+  .phase__head .eyebrow a { color: inherit; text-decoration: none; }
+  .phase__head .eyebrow a:hover { color: var(--color-clay); }
+
+  .phase__code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-clay);
+  }
+
+  .phase__head h1 { font-size: var(--text-3xl); margin-top: var(--space-3xs); }
+  .phase__head .lede { margin-top: var(--space-md); }
+
+  .phase__bar {
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-paper-sunk);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .phase__bar-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+    margin-bottom: var(--space-3xs);
+  }
+
+  .needs {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .needs h2 { font-size: var(--text-xl); }
+
+  .needs__note,
+  .needs__supporting {
+    margin-top: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .needs__list {
+    list-style: none;
+    margin: var(--space-md) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .needs__skill {
+    display: flex;
+    gap: var(--space-md);
+    padding-block: var(--space-sm);
+    border-bottom: 1px solid var(--color-rule);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .needs__skill:hover .needs__title { color: var(--color-clay); }
+
+  .needs__num {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+    padding-top: 0.15em;
+  }
+
+  .needs__title { display: block; font-weight: 600; }
+
+  .needs__summary {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    margin-top: var(--space-3xs);
+  }
+
+  .needs__supporting { margin-top: var(--space-md); }
+
+  .needs__supporting-label {
+    display: block;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    margin-bottom: var(--space-3xs);
+  }
+
+  .phase__body { max-width: var(--width-prose); margin-top: var(--space-2xl); }
+
+  .phase__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .phase__nav-link {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .phase__nav-link--next { text-align: right; }
+  .phase__nav-link:hover { color: var(--color-clay); }
+
+  .phase__nav-dir {
+    display: block;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .phase__foot {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+  }
+</style>

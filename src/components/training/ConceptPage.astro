@@ -1,0 +1,302 @@
+---
+/**
+ * One mindset or one framework. Both render identically on purpose: they are
+ * the same kind of object, something a person can get better at, and the
+ * curriculum treats them that way.
+ *
+ * The page is mostly not its own words. Its job is to show what draws on this
+ * idea, which is the thing a glossary cannot do.
+ */
+import { render, type CollectionEntry } from 'astro:content';
+import Prose from '../site/Prose.astro';
+import LabDisclaimer from './LabDisclaimer.astro';
+import { usedBy, skillNo, minutesLabel } from '../../lib/cm';
+
+interface Props {
+  entry: CollectionEntry<'mindsets'> | CollectionEntry<'frameworks'>;
+  kind: 'mindsets' | 'frameworks';
+}
+const { entry, kind } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry as CollectionEntry<'mindsets'>);
+
+const links = await usedBy(kind, entry.id);
+const label = kind === 'mindsets' ? 'Mindset' : 'Framework';
+const indexHref = `/training/${kind}`;
+
+/* Only things you can actually put in an agenda get listed. Handouts and
+   worksheets are real material but they are not a slot in a session, so they
+   are counted and left out of the lists. */
+const schedulable = links.activities.filter((a) => a.data.schedulable);
+const handouts = links.activities.length - schedulable.length;
+const groups = links.bySkill
+  .map((g) => ({ ...g, items: g.items.filter((a) => a.data.schedulable) }))
+  .filter((g) => g.items.length > 0);
+---
+
+<article class="concept container">
+  <header class="concept__head">
+    <p class="eyebrow"><a href={indexHref}>{label}s</a></p>
+    <h1>{d.title}</h1>
+    <p class="concept__definition">{d.definition}</p>
+    <p class="concept__source">
+      <span class="concept__source-label">Source</span>
+      {d.sourceUrl
+        ? <a href={d.sourceUrl} rel="noopener" target="_blank">{d.source} ↗</a>
+        : <span>{d.source}</span>}
+    </p>
+  </header>
+
+  <Prose class="concept__body"><Content /></Prose>
+
+  <section class="concept__uses">
+    <h2>Where this shows up</h2>
+
+    {links.skills.length === 0 ? (
+      <p class="concept__empty">
+        No skill currently draws on this. That is worth looking at: either a
+        skill is missing the link, or this belongs on the list of ideas to
+        retire.
+      </p>
+    ) : (
+      <p class="concept__count">
+        {links.skills.length} {links.skills.length === 1 ? 'skill' : 'skills'}
+        {schedulable.length > 0 && ` and ${schedulable.length} activities you can run`}.
+      </p>
+    )}
+
+    {links.skills.length > 0 && (
+      <ol class="concept__skills">
+        {links.skills.map((s) => (
+          <li>
+            <a class="concept__skill" href={`/training/${s.id}`}>
+              <span class="concept__skill-num">{skillNo(s)}</span>
+              <span>
+                <span class="concept__skill-title">{s.data.title}</span>
+                <span class="concept__skill-summary">{s.data.summary}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    )}
+
+    {groups.length > 0 && (
+      <div class="concept__activities">
+        <h3>Activities that practice it</h3>
+        <p class="concept__note">
+          Grouped by the skill they come from. Open a skill to see its
+          activities. Times are the whole block: the activity plus its debrief.
+          {handouts > 0 && ` ${handouts} handouts and worksheets sit alongside these.`}
+        </p>
+        {groups.map((group) => (
+          <details class="acts">
+            <summary class="acts__skill">
+              <span>{group.skill.data.title}</span>
+              <span class="acts__n">{group.items.length}</span>
+            </summary>
+            <p class="acts__open">
+              <a href={`/training/${group.skill.id}`}>Open the skill</a>
+            </p>
+            <ul class="acts__list">
+              {group.items.map((a) => (
+                <li class="act">
+                  <span class="act__type">{a.data.type}</span>
+                  {a.data.exerciseId ? (
+                    <a href={`/training/exercises/${a.data.skill}#${a.data.exerciseId}`}>
+                      {a.data.title}
+                    </a>
+                  ) : (
+                    <span>{a.data.title}</span>
+                  )}
+                  {a.data.blockMinutes && (
+                    <span class="act__time">{a.data.blockMinutes} min</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </details>
+        ))}
+      </div>
+    )}
+  </section>
+
+  <footer class="concept__foot">
+    <LabDisclaimer variant="short" />
+    <p><a class="link-arrow" href={indexHref}>All {label.toLowerCase()}s</a></p>
+  </footer>
+</article>
+
+<style>
+  .concept > * { max-width: var(--width-text); }
+
+  .concept__head { padding-block: var(--space-2xl) var(--space-lg); }
+  .concept__head .eyebrow { margin-bottom: var(--space-xs); }
+  .concept__head .eyebrow a { color: inherit; text-decoration: none; }
+  .concept__head .eyebrow a:hover { color: var(--color-clay); }
+  .concept__head h1 { font-size: var(--text-3xl); }
+
+  .concept__definition {
+    margin-top: var(--space-md);
+    font-size: var(--text-lg);
+    line-height: var(--leading-normal);
+    color: var(--color-ink-muted);
+  }
+
+  .concept__source {
+    margin-top: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .concept__source-label {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    margin-right: var(--space-2xs);
+  }
+
+  .concept__body { max-width: var(--width-prose); }
+  .concept__body:empty { display: none; }
+
+  .concept__uses {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .concept__uses h2 { font-size: var(--text-xl); }
+
+  .concept__count,
+  .concept__empty,
+  .concept__note {
+    margin-top: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .concept__skills {
+    list-style: none;
+    margin: var(--space-lg) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .concept__skill {
+    display: flex;
+    gap: var(--space-md);
+    padding-block: var(--space-sm);
+    border-bottom: 1px solid var(--color-rule);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .concept__skill:hover .concept__skill-title { color: var(--color-clay); }
+
+  .concept__skill-num {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+    padding-top: 0.15em;
+  }
+
+  .concept__skill-title { display: block; font-weight: 600; }
+
+  .concept__skill-summary {
+    display: block;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    margin-top: var(--space-3xs);
+  }
+
+  .concept__activities { margin-top: var(--space-xl); }
+  .concept__activities h3 { font-size: var(--text-lg); }
+
+  .acts { border-bottom: 1px solid var(--color-rule); }
+  .acts:first-of-type { border-top: 1px solid var(--color-rule); }
+
+  .acts__skill {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    align-items: baseline;
+    padding-block: var(--space-sm);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  .acts__skill { list-style: none; }
+  .acts__skill::-webkit-details-marker { display: none; }
+
+  .acts__skill::after {
+    content: '';
+    width: 0.45em;
+    height: 0.45em;
+    margin-left: 0;
+    border-right: 1.5px solid var(--color-ink-faint);
+    border-bottom: 1.5px solid var(--color-ink-faint);
+    transform: rotate(45deg) translateY(-0.1em);
+    transition: transform var(--motion-fast, 120ms) ease;
+  }
+
+  .acts[open] .acts__skill::after {
+    transform: rotate(-135deg) translateY(-0.1em);
+    border-color: var(--color-clay);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .acts__skill::after { transition: none; }
+  }
+  .acts[open] .acts__skill { color: var(--color-clay); }
+
+  .acts__n {
+    margin-left: auto;
+    font-weight: 400;
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .acts__open {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    margin-bottom: var(--space-2xs);
+  }
+
+  .acts__list {
+    list-style: none;
+    margin: 0 0 var(--space-sm);
+    padding: 0;
+  }
+
+  .act {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2xs);
+    flex-wrap: wrap;
+    padding-block: var(--space-3xs);
+    font-size: var(--text-sm);
+  }
+
+  .act__type {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-clay);
+    min-width: 8.5ch;
+  }
+
+  .act__time {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .concept__foot {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+  }
+</style>

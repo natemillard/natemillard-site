@@ -4,6 +4,7 @@ import PageHeader from '../../components/site/PageHeader.astro';
 import LabDisclaimer from '../../components/training/LabDisclaimer.astro';
 import ContactBlock from '../../components/site/ContactBlock.astro';
 import { visible } from '../../lib/content';
+import { phases, skillsInPhase } from '../../lib/cm';
 
 const all = await visible('trainings');
 
@@ -31,6 +32,16 @@ const trackLabel: Record<string, string> = {
 const other = all.filter((t) => t.data.skillNumber === undefined);
 
 const total = numbered.length;
+
+/* The phase spine. Skills are the depth; phases are the order you meet them
+   in, so the Lab leads with the question "where am I" before "what is this". */
+const spine = await Promise.all(
+  (await phases()).map(async (phase) => ({
+    phase,
+    loadBearing: (await skillsInPhase(phase.data.code)).loadBearing.length,
+  }))
+);
+
 ---
 
 <BaseLayout
@@ -65,6 +76,37 @@ const total = numbered.length;
       </div>
     </div>
 
+    <section class="spine">
+      <div class="spine__head">
+        <h2>Start with where you are</h2>
+        <p>
+          Planning runs in five phases, and each one leans hard on a handful of
+          skills and touches the rest lightly. If you are not sure which skill
+          you need, that is the right question and this is where it gets
+          answered.
+        </p>
+      </div>
+
+      <ol class="spine__list">
+        {spine.map(({ phase, loadBearing }) => (
+          <li>
+            <a class="spine__item" href={`/training/phases/${phase.id}`}>
+              <span class="spine__code">{phase.data.code}</span>
+              <span class="spine__title">{phase.data.title}</span>
+              <span class="spine__sub">{phase.data.subtitle}</span>
+              <span class="spine__n">
+                {loadBearing} {loadBearing === 1 ? 'skill' : 'skills'}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ol>
+
+      <p class="spine__more">
+        <a class="link-arrow" href="/training/phases">All five phases</a>
+      </p>
+    </section>
+
     {tracks.map((track) => (
       <section class="track">
         <h2 class="track__heading">{trackLabel[track.name] ?? track.name}</h2>
@@ -86,6 +128,28 @@ const total = numbered.length;
         </ol>
       </section>
     ))}
+
+    <section class="concepts-nav">
+      <h2>Underneath the skills</h2>
+      <div class="concepts-nav__grid">
+        <a class="concepts-nav__card" href="/training/mindsets">
+          <span class="concepts-nav__n">6</span>
+          <span class="concepts-nav__title">Mindsets</span>
+          <span class="concepts-nav__text">
+            What you bring into the room. Dispositions, not techniques, and
+            every skill asks for three of them.
+          </span>
+        </a>
+        <a class="concepts-nav__card" href="/training/frameworks">
+          <span class="concepts-nav__n">16</span>
+          <span class="concepts-nav__title">Frameworks</span>
+          <span class="concepts-nav__text">
+            Published models the skills borrow from, each with the work it
+            comes out of.
+          </span>
+        </a>
+      </div>
+    </section>
 
     {other.length > 0 && (
       <section class="track">
@@ -120,6 +184,115 @@ const total = numbered.length;
 </BaseLayout>
 
 <style>
+  .spine {
+    margin-bottom: var(--section-gap);
+    max-width: var(--width-text);
+  }
+
+  .spine__head h2 { font-size: var(--text-xl); }
+
+  .spine__head p {
+    margin-top: var(--space-2xs);
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .spine__list {
+    list-style: none;
+    margin: var(--space-md) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .spine__item {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    align-items: baseline;
+    gap: var(--space-2xs) var(--space-sm);
+    padding-block: var(--space-sm);
+    border-bottom: 1px solid var(--color-rule);
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--font-sans);
+  }
+
+  .spine__code {
+    grid-row: span 2;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  .spine__title { font-weight: 600; }
+  .spine__item:hover .spine__title { color: var(--color-clay); }
+
+  .spine__n {
+    grid-row: span 2;
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .spine__sub {
+    grid-column: 2;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+  }
+
+  .spine__more { margin-top: var(--space-sm); }
+
+  .concepts-nav {
+    margin-block: var(--section-gap);
+    max-width: var(--width-text);
+  }
+
+  .concepts-nav h2 { font-size: var(--text-xl); }
+
+  .concepts-nav__grid {
+    display: grid;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  @media (min-width: 40rem) {
+    .concepts-nav__grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .concepts-nav__card {
+    display: block;
+    padding: var(--space-md);
+    background: var(--color-paper-sunk);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .concepts-nav__card:hover { background: var(--color-clay-wash); }
+
+  .concepts-nav__n {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-clay);
+  }
+
+  .concepts-nav__title {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-top: var(--space-3xs);
+  }
+
+  .concepts-nav__text {
+    display: block;
+    margin-top: var(--space-2xs);
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    line-height: var(--leading-normal);
+  }
+
   .lab-intro {
     display: grid;
     align-items: start;

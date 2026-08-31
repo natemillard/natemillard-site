@@ -1,0 +1,5619 @@
+[
+ {
+  "id": "01-icebreaker-the-moment-it-shifted",
+  "title": "The Moment It Shifted",
+  "type": "Ice Breaker",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": 15,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 25,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "self-discovery--the-moment-it-shifted"
+ },
+ {
+  "id": "01-icebreaker-four-words",
+  "title": "Four Words",
+  "type": "Ice Breaker",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 14,
+  "exerciseId": "self-discovery--four-words"
+ },
+ {
+  "id": "01-icebreaker-pick-the-picture",
+  "title": "Pick the Picture",
+  "type": "Ice Breaker",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 15,
+  "exerciseId": "self-discovery--pick-the-picture"
+ },
+ {
+  "id": "01-workshop-one-hour-workshop-what-you-bring",
+  "title": "One-Hour Workshop: What You Bring",
+  "type": "Workshop",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 36,
+  "exerciseId": "self-discovery--one-hour-workshop-what-you-bring"
+ },
+ {
+  "id": "01-workshop-two-hour-workshop-bringing-yourself",
+  "title": "Two-Hour Workshop: Bringing Yourself",
+  "type": "Workshop",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 37,
+  "exerciseId": "self-discovery--two-hour-workshop-bringing-yourself"
+ },
+ {
+  "id": "01-workshop-four-hour-workshop-the-full-arc",
+  "title": "Four-Hour Workshop: The Full Arc",
+  "type": "Workshop",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 38,
+  "exerciseId": "self-discovery--four-hour-workshop-the-full-arc"
+ },
+ {
+  "id": "01-handout-the-identity-wheel",
+  "title": "The Identity Wheel",
+  "type": "Handout",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 40,
+  "exerciseId": null
+ },
+ {
+  "id": "01-handout-gifts",
+  "title": "Gifts",
+  "type": "Handout",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 41,
+  "exerciseId": null
+ },
+ {
+  "id": "01-handout-social-identity-groups",
+  "title": "Social Identity Groups",
+  "type": "Handout",
+  "skill": "self-discovery",
+  "skillName": "Self-Discovery",
+  "skillNumber": 1,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "humility",
+   "curiosity",
+   "growth-mindset"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "communities-of-practice"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 43,
+  "exerciseId": null
+ },
+ {
+  "id": "02-icebreaker-king-or-queen-for-the-day",
+  "title": "King or Queen for the Day",
+  "type": "Ice Breaker",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 5,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 3,
+  "groupSizeMax": 999,
+  "groupSizeSource": "sourced: Any",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 12,
+  "exerciseId": "building-trust-with-others--king-or-queen-for-the-day"
+ },
+ {
+  "id": "02-icebreaker-what-is-behind-that",
+  "title": "What Is Behind That?",
+  "type": "Ice Breaker",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 5,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 5,
+  "groupSizeMax": 20,
+  "groupSizeSource": "sourced: Small to Medium",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 14,
+  "exerciseId": "building-trust-with-others--what-is-behind-that"
+ },
+ {
+  "id": "02-icebreaker-curiosity-roulette",
+  "title": "Curiosity Roulette",
+  "type": "Ice Breaker",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 2,
+  "groupSizeMax": 999,
+  "groupSizeSource": "sourced: Pairs",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 15,
+  "exerciseId": "building-trust-with-others--curiosity-roulette"
+ },
+ {
+  "id": "02-icebreaker-bad-and-good-conversations",
+  "title": "Bad and Good Conversations",
+  "type": "Ice Breaker",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 5,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 16,
+  "exerciseId": "building-trust-with-others--bad-and-good-conversations"
+ },
+ {
+  "id": "02-practice-curiosity-bingo",
+  "title": "Curiosity Bingo",
+  "type": "Practice",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 20,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 28,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 19,
+  "exerciseId": "building-trust-with-others--curiosity-bingo"
+ },
+ {
+  "id": "02-practice-the-internal-intervention",
+  "title": "The Internal Intervention",
+  "type": "Practice",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 20,
+  "exerciseId": "building-trust-with-others--the-internal-intervention"
+ },
+ {
+  "id": "02-practice-the-simple-flow-dry-run",
+  "title": "The Simple Flow Dry Run",
+  "type": "Practice",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 20,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 28,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 21,
+  "exerciseId": "building-trust-with-others--the-simple-flow-dry-run"
+ },
+ {
+  "id": "02-coreexperience-curiosity-bingo-at-full-length",
+  "title": "Curiosity Bingo at Full Length",
+  "type": "Core Experience",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 23,
+  "exerciseId": "building-trust-with-others--curiosity-bingo-at-full-length"
+ },
+ {
+  "id": "02-coreexperience-deep-dive-on-the-flow-and-the-ramp",
+  "title": "Deep Dive on the Flow and the Ramp",
+  "type": "Core Experience",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 70,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 25,
+  "exerciseId": "building-trust-with-others--deep-dive-on-the-flow-and-the-ramp"
+ },
+ {
+  "id": "02-coreexperience-community-discovery-practice",
+  "title": "Community Discovery Practice",
+  "type": "Core Experience",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 70,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 27,
+  "exerciseId": "building-trust-with-others--community-discovery-practice"
+ },
+ {
+  "id": "02-workshop-one-hour-workshop-core-skills",
+  "title": "One-Hour Workshop: Core Skills",
+  "type": "Workshop",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 39,
+  "exerciseId": "building-trust-with-others--one-hour-workshop-core-skills"
+ },
+ {
+  "id": "02-workshop-two-hour-workshop-applied-practice",
+  "title": "Two-Hour Workshop: Applied Practice",
+  "type": "Workshop",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 40,
+  "exerciseId": "building-trust-with-others--two-hour-workshop-applied-practice"
+ },
+ {
+  "id": "02-handout-the-curiosity-bingo-card",
+  "title": "The Curiosity Bingo Card",
+  "type": "Handout",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 43,
+  "exerciseId": null
+ },
+ {
+  "id": "02-handout-conversation-prep-sheet",
+  "title": "Conversation Prep Sheet",
+  "type": "Handout",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 44,
+  "exerciseId": null
+ },
+ {
+  "id": "02-handout-community-discovery-questions",
+  "title": "Community Discovery Questions",
+  "type": "Handout",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 45,
+  "exerciseId": null
+ },
+ {
+  "id": "02-handout-personal-reflection-questions",
+  "title": "Personal Reflection Questions",
+  "type": "Handout",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 46,
+  "exerciseId": null
+ },
+ {
+  "id": "02-handout-skill-to-practice-map",
+  "title": "Skill-to-Practice Map",
+  "type": "Handout",
+  "skill": "building-trust-with-others",
+  "skillName": "Building Trust with Others",
+  "skillNumber": 2,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "social-capital-theory",
+   "community-organizing-and-public-narrative"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 47,
+  "exerciseId": null
+ },
+ {
+  "id": "03-icebreaker-who-holds-the-power",
+  "title": "Who Holds the Power?",
+  "type": "Ice Breaker",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": 7,
+  "durationMax": 7,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 12,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 6,
+  "exerciseId": "inclusive-facilitation--who-holds-the-power"
+ },
+ {
+  "id": "03-handout-role-cards-who-holds-the-power",
+  "title": "Role Cards, Who Holds the Power?",
+  "type": "Handout",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 8,
+  "exerciseId": null
+ },
+ {
+  "id": "03-handout-role-cards-facilitator-in-the-hot-seat",
+  "title": "Role Cards, Facilitator in the Hot Seat",
+  "type": "Handout",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 11,
+  "exerciseId": null
+ },
+ {
+  "id": "03-handout-the-participant-growth-gauge",
+  "title": "The Participant Growth Gauge",
+  "type": "Handout",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 16,
+  "exerciseId": null
+ },
+ {
+  "id": "03-handout-growth-gauge-one-pager",
+  "title": "Growth Gauge one-pager",
+  "type": "Handout",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 23,
+  "exerciseId": null
+ },
+ {
+  "id": "03-handout-the-4-column-matrix",
+  "title": "The 4-Column Matrix",
+  "type": "Handout",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 17,
+  "exerciseId": null
+ },
+ {
+  "id": "03-workshop-disrupting-power-dynamics",
+  "title": "Disrupting Power Dynamics",
+  "type": "Workshop",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": 30,
+  "durationMax": 30,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 30,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 19,
+  "exerciseId": null
+ },
+ {
+  "id": "03-handout-internal-engagement-growth-gauge",
+  "title": "Internal Engagement Growth Gauge",
+  "type": "Handout",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 20,
+  "exerciseId": null
+ },
+ {
+  "id": "03-workshop-belonging-centered-leadership",
+  "title": "Belonging-Centered Leadership",
+  "type": "Workshop",
+  "skill": "inclusive-facilitation",
+  "skillName": "Inclusive Facilitation",
+  "skillNumber": 3,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "equity-and-inclusion-awareness",
+   "humility",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "belonging"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 21,
+  "exerciseId": null
+ },
+ {
+  "id": "04-icebreaker-do-you-know-your-neighbors",
+  "title": "Do You Know Your Neighbors?",
+  "type": "Ice Breaker",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 7,
+  "durationMax": 8,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 13,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 8,
+  "exerciseId": "asset-mapping--do-you-know-your-neighbors"
+ },
+ {
+  "id": "04-icebreaker-where-do-you-show-up",
+  "title": "Where Do You Show Up?",
+  "type": "Ice Breaker",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 9,
+  "exerciseId": "asset-mapping--where-do-you-show-up"
+ },
+ {
+  "id": "04-icebreaker-mapping-from-memory",
+  "title": "Mapping From Memory",
+  "type": "Ice Breaker",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 10,
+  "exerciseId": "asset-mapping--mapping-from-memory"
+ },
+ {
+  "id": "04-icebreaker-fill-the-four-corners",
+  "title": "Fill the Four Corners",
+  "type": "Ice Breaker",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 11,
+  "exerciseId": "asset-mapping--fill-the-four-corners"
+ },
+ {
+  "id": "04-coreexperience-the-participatory-mapping-session",
+  "title": "The Participatory Mapping Session",
+  "type": "Core Experience",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 50,
+  "durationMax": 50,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "asset-mapping--the-participatory-mapping-session"
+ },
+ {
+  "id": "04-coreexperience-connect-the-map",
+  "title": "Connect the Map",
+  "type": "Core Experience",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 40,
+  "durationMax": 40,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 48,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 15,
+  "exerciseId": "asset-mapping--connect-the-map"
+ },
+ {
+  "id": "04-coreexperience-from-assets-to-activation",
+  "title": "From Assets to Activation",
+  "type": "Core Experience",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 17,
+  "exerciseId": "asset-mapping--from-assets-to-activation"
+ },
+ {
+  "id": "04-workshop-one-hour-workshop-seeing-what-is-already",
+  "title": "One-Hour Workshop: Seeing What Is Already There",
+  "type": "Workshop",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 23,
+  "exerciseId": "asset-mapping--one-hour-workshop-seeing-what-is-already-there"
+ },
+ {
+  "id": "04-workshop-two-hour-workshop-from-inventory-to-netw",
+  "title": "Two-Hour Workshop: From Inventory to Network",
+  "type": "Workshop",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 24,
+  "exerciseId": "asset-mapping--two-hour-workshop-from-inventory-to-network"
+ },
+ {
+  "id": "04-workshop-four-hour-workshop-the-full-arc",
+  "title": "Four-Hour Workshop: The Full Arc",
+  "type": "Workshop",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 25,
+  "exerciseId": "asset-mapping--four-hour-workshop-the-full-arc"
+ },
+ {
+  "id": "04-handout-asset-inventory",
+  "title": "Asset Inventory",
+  "type": "Handout",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 26,
+  "exerciseId": null
+ },
+ {
+  "id": "04-handout-connector-map",
+  "title": "Connector Map",
+  "type": "Handout",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 28,
+  "exerciseId": null
+ },
+ {
+  "id": "04-handout-activation-plan",
+  "title": "Activation Plan",
+  "type": "Handout",
+  "skill": "asset-mapping",
+  "skillName": "Asset Mapping",
+  "skillNumber": 4,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "shared-ownership",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "social-capital-theory"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 29,
+  "exerciseId": null
+ },
+ {
+  "id": "05-icebreaker-how-do-you-choose",
+  "title": "How Do You Choose?",
+  "type": "Ice Breaker",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 10,
+  "exerciseId": "data-informed-learning--how-do-you-choose"
+ },
+ {
+  "id": "05-icebreaker-choosing-the-right-day-care",
+  "title": "Choosing the Right Day Care",
+  "type": "Ice Breaker",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 11,
+  "exerciseId": "data-informed-learning--choosing-the-right-day-care"
+ },
+ {
+  "id": "05-icebreaker-what-data-shapes-your-decisions",
+  "title": "What Data Shapes Your Decisions?",
+  "type": "Ice Breaker",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 12,
+  "exerciseId": "data-informed-learning--what-data-shapes-your-decisions"
+ },
+ {
+  "id": "05-icebreaker-the-cost-of-friction",
+  "title": "The Cost of Friction",
+  "type": "Ice Breaker",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "data-informed-learning--the-cost-of-friction"
+ },
+ {
+  "id": "05-icebreaker-name-the-decision",
+  "title": "Name the Decision",
+  "type": "Ice Breaker",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 14,
+  "exerciseId": "data-informed-learning--name-the-decision"
+ },
+ {
+  "id": "05-coreexperience-the-perfect-lemonade-challenge",
+  "title": "The Perfect Lemonade Challenge",
+  "type": "Core Experience",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 25,
+  "durationMax": 25,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 33,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 19,
+  "exerciseId": "data-informed-learning--the-perfect-lemonade-challenge"
+ },
+ {
+  "id": "05-coreexperience-targeting-what-matters-most",
+  "title": "Targeting What Matters Most",
+  "type": "Core Experience",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 70,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 21,
+  "exerciseId": "data-informed-learning--targeting-what-matters-most"
+ },
+ {
+  "id": "05-coreexperience-allocating-scarce-resources",
+  "title": "Allocating Scarce Resources",
+  "type": "Core Experience",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 55,
+  "durationMax": 55,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 65,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 24,
+  "exerciseId": "data-informed-learning--allocating-scarce-resources"
+ },
+ {
+  "id": "05-coreexperience-the-volunteer-onboarding-simulation",
+  "title": "The Volunteer Onboarding Simulation",
+  "type": "Core Experience",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 70,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 27,
+  "exerciseId": "data-informed-learning--the-volunteer-onboarding-simulation"
+ },
+ {
+  "id": "05-workshop-one-hour-workshop-from-instinct-to-evide",
+  "title": "One-Hour Workshop: From Instinct to Evidence",
+  "type": "Workshop",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 35,
+  "exerciseId": "data-informed-learning--one-hour-workshop-from-instinct-to-evidence"
+ },
+ {
+  "id": "05-workshop-two-hour-workshop-deciding-where-the-nee",
+  "title": "Two-Hour Workshop: Deciding Where the Need Is Greatest",
+  "type": "Workshop",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 36,
+  "exerciseId": "data-informed-learning--two-hour-workshop-deciding-where-the-need-is-greatest"
+ },
+ {
+  "id": "05-workshop-four-hour-workshop-the-full-cycle",
+  "title": "Four-Hour Workshop: The Full Cycle",
+  "type": "Workshop",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 37,
+  "exerciseId": "data-informed-learning--four-hour-workshop-the-full-cycle"
+ },
+ {
+  "id": "05-handout-data-inventory",
+  "title": "Data Inventory",
+  "type": "Handout",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 38,
+  "exerciseId": null
+ },
+ {
+  "id": "05-handout-prioritization-scoring-worksheet",
+  "title": "Prioritization Scoring Worksheet",
+  "type": "Handout",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 39,
+  "exerciseId": null
+ },
+ {
+  "id": "05-handout-pdsa-cycle-worksheet",
+  "title": "PDSA Cycle Worksheet",
+  "type": "Handout",
+  "skill": "data-informed-learning",
+  "skillName": "Data-Informed Learning",
+  "skillNumber": 5,
+  "phases": [
+   "internal-asset-mapping",
+   "priority-area-selection"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "humility"
+  ],
+  "frameworks": [
+   "continuous-quality-improvement",
+   "social-determinants-of-health"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 41,
+  "exerciseId": null
+ },
+ {
+  "id": "06-icebreaker-build-the-board",
+  "title": "Build the Board",
+  "type": "Ice Breaker",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 9,
+  "exerciseId": "stakeholder-mapping--build-the-board"
+ },
+ {
+  "id": "06-icebreaker-map-the-heartbeat",
+  "title": "Map the Heartbeat",
+  "type": "Ice Breaker",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 5,
+  "durationMax": 5,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 10,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 11,
+  "exerciseId": "stakeholder-mapping--map-the-heartbeat"
+ },
+ {
+  "id": "06-icebreaker-the-missing-landmark",
+  "title": "The Missing Landmark",
+  "type": "Ice Breaker",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 12,
+  "exerciseId": "stakeholder-mapping--the-missing-landmark"
+ },
+ {
+  "id": "06-icebreaker-mapping-from-memory",
+  "title": "Mapping From Memory",
+  "type": "Ice Breaker",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "stakeholder-mapping--mapping-from-memory"
+ },
+ {
+  "id": "06-coreexperience-shift-the-lens",
+  "title": "Shift the Lens",
+  "type": "Core Experience",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 30,
+  "durationMax": 30,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 38,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 14,
+  "exerciseId": "stakeholder-mapping--shift-the-lens"
+ },
+ {
+  "id": "06-coreexperience-mapping-power-and-trust",
+  "title": "Mapping Power and Trust",
+  "type": "Core Experience",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 40,
+  "durationMax": 40,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 48,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 16,
+  "exerciseId": "stakeholder-mapping--mapping-power-and-trust"
+ },
+ {
+  "id": "06-coreexperience-from-map-to-plan",
+  "title": "From Map to Plan",
+  "type": "Core Experience",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 18,
+  "exerciseId": "stakeholder-mapping--from-map-to-plan"
+ },
+ {
+  "id": "06-workshop-two-hour-workshop-from-list-to-map",
+  "title": "Two-Hour Workshop: From List to Map",
+  "type": "Workshop",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 26,
+  "exerciseId": "stakeholder-mapping--two-hour-workshop-from-list-to-map"
+ },
+ {
+  "id": "06-workshop-four-hour-workshop-map-the-people-unders",
+  "title": "Four-Hour Workshop: Map the People, Understand the Power",
+  "type": "Workshop",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 27,
+  "exerciseId": null
+ },
+ {
+  "id": "06-handout-stakeholder-list",
+  "title": "Stakeholder List",
+  "type": "Handout",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 30,
+  "exerciseId": null
+ },
+ {
+  "id": "06-handout-influence-and-interest-matrix",
+  "title": "Influence and Interest Matrix",
+  "type": "Handout",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 31,
+  "exerciseId": null
+ },
+ {
+  "id": "06-handout-engagement-plan",
+  "title": "Engagement Plan",
+  "type": "Handout",
+  "skill": "stakeholder-mapping",
+  "skillName": "Stakeholder Mapping",
+  "skillNumber": 6,
+  "phases": [
+   "internal-asset-mapping",
+   "community-discovery"
+  ],
+  "mindsets": [
+   "curiosity",
+   "equity-and-inclusion-awareness",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "power-analysis-power-cube",
+   "social-capital-theory"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 32,
+  "exerciseId": null
+ },
+ {
+  "id": "07-icebreaker-meeting-or-email",
+  "title": "Meeting or Email?",
+  "type": "Ice Breaker",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 11,
+  "exerciseId": "running-effective-meetings--meeting-or-email"
+ },
+ {
+  "id": "07-icebreaker-what-is-the-real-outcome",
+  "title": "What Is the Real Outcome?",
+  "type": "Ice Breaker",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "running-effective-meetings--what-is-the-real-outcome"
+ },
+ {
+  "id": "07-icebreaker-one-word-check-in",
+  "title": "One Word Check-In",
+  "type": "Ice Breaker",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 15,
+  "exerciseId": "running-effective-meetings--one-word-check-in"
+ },
+ {
+  "id": "07-icebreaker-put-a-meeting-on-the-table",
+  "title": "Put a Meeting on the Table",
+  "type": "Ice Breaker",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 16,
+  "exerciseId": "running-effective-meetings--put-a-meeting-on-the-table"
+ },
+ {
+  "id": "07-coreexperience-the-meeting-makeover",
+  "title": "The Meeting Makeover",
+  "type": "Core Experience",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 20,
+  "exerciseId": "running-effective-meetings--the-meeting-makeover"
+ },
+ {
+  "id": "07-coreexperience-from-vague-to-verbatim",
+  "title": "From Vague to Verbatim",
+  "type": "Core Experience",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 35,
+  "durationMax": 35,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 43,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 23,
+  "exerciseId": "running-effective-meetings--from-vague-to-verbatim"
+ },
+ {
+  "id": "07-coreexperience-what-happens-after",
+  "title": "What Happens After",
+  "type": "Core Experience",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 40,
+  "durationMax": 40,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 48,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 25,
+  "exerciseId": "running-effective-meetings--what-happens-after"
+ },
+ {
+  "id": "07-workshop-two-hour-workshop-meeting-design-snapsho",
+  "title": "Two-Hour Workshop: Meeting Design Snapshot",
+  "type": "Workshop",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 37,
+  "exerciseId": "running-effective-meetings--two-hour-workshop-meeting-design-snapshot"
+ },
+ {
+  "id": "07-workshop-four-hour-workshop-leading-meetings-that",
+  "title": "Four-Hour Workshop: Leading Meetings That Drive Results",
+  "type": "Workshop",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 38,
+  "exerciseId": "running-effective-meetings--four-hour-workshop-leading-meetings-that-drive-results"
+ },
+ {
+  "id": "07-handout-meeting-design-worksheet",
+  "title": "Meeting Design Worksheet",
+  "type": "Handout",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 39,
+  "exerciseId": null
+ },
+ {
+  "id": "07-handout-agenda-template",
+  "title": "Agenda Template",
+  "type": "Handout",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 40,
+  "exerciseId": null
+ },
+ {
+  "id": "07-handout-meeting-notes-and-action-tracker",
+  "title": "Meeting Notes and Action Tracker",
+  "type": "Handout",
+  "skill": "running-effective-meetings",
+  "skillName": "Running Effective Meetings",
+  "skillNumber": 7,
+  "phases": [
+   "pre-launch",
+   "internal-asset-mapping"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "participatory-action-research"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 41,
+  "exerciseId": null
+ },
+ {
+  "id": "08-icebreaker-what-is-your-superpower",
+  "title": "What Is Your Superpower?",
+  "type": "Ice Breaker",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 5,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 11,
+  "exerciseId": "aligning-our-priorities-with-partners--what-is-your-superpower"
+ },
+ {
+  "id": "08-icebreaker-the-marble-jar",
+  "title": "The Marble Jar",
+  "type": "Ice Breaker",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 5,
+  "durationMax": 7,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 12,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "aligning-our-priorities-with-partners--the-marble-jar"
+ },
+ {
+  "id": "08-icebreaker-belonging-words",
+  "title": "Belonging Words",
+  "type": "Ice Breaker",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 15,
+  "exerciseId": "aligning-our-priorities-with-partners--belonging-words"
+ },
+ {
+  "id": "08-icebreaker-name-the-partner",
+  "title": "Name the Partner",
+  "type": "Ice Breaker",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 17,
+  "exerciseId": "aligning-our-priorities-with-partners--name-the-partner"
+ },
+ {
+  "id": "08-coreexperience-the-two-columns",
+  "title": "The Two Columns",
+  "type": "Core Experience",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 19,
+  "exerciseId": "aligning-our-priorities-with-partners--the-two-columns"
+ },
+ {
+  "id": "08-coreexperience-where-it-breaks",
+  "title": "Where It Breaks",
+  "type": "Core Experience",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 40,
+  "durationMax": 40,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 48,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 21,
+  "exerciseId": "aligning-our-priorities-with-partners--where-it-breaks"
+ },
+ {
+  "id": "08-coreexperience-the-ask-and-the-offer",
+  "title": "The Ask and the Offer",
+  "type": "Core Experience",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 50,
+  "durationMax": 50,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 24,
+  "exerciseId": "aligning-our-priorities-with-partners--the-ask-and-the-offer"
+ },
+ {
+  "id": "08-workshop-one-hour-workshop-understanding-the-part",
+  "title": "One-Hour Workshop: Understanding the Partner",
+  "type": "Workshop",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 35,
+  "exerciseId": "aligning-our-priorities-with-partners--one-hour-workshop-understanding-the-partner"
+ },
+ {
+  "id": "08-workshop-two-hour-workshop-finding-the-overlap",
+  "title": "Two-Hour Workshop: Finding the Overlap",
+  "type": "Workshop",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 36,
+  "exerciseId": "aligning-our-priorities-with-partners--two-hour-workshop-finding-the-overlap"
+ },
+ {
+  "id": "08-workshop-four-hour-workshop-from-overlap-to-commi",
+  "title": "Four-Hour Workshop: From Overlap to Commitment",
+  "type": "Workshop",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 37,
+  "exerciseId": "aligning-our-priorities-with-partners--four-hour-workshop-from-overlap-to-commitment"
+ },
+ {
+  "id": "08-handout-partner-profile",
+  "title": "Partner Profile",
+  "type": "Handout",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 38,
+  "exerciseId": null
+ },
+ {
+  "id": "08-handout-overlap-map",
+  "title": "Overlap Map",
+  "type": "Handout",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 39,
+  "exerciseId": null
+ },
+ {
+  "id": "08-handout-joint-commitment-sheet",
+  "title": "Joint Commitment Sheet",
+  "type": "Handout",
+  "skill": "aligning-our-priorities-with-partners",
+  "skillName": "Aligning Our Priorities with Partners",
+  "skillNumber": 8,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "benefit-mindset",
+   "curiosity"
+  ],
+  "frameworks": [
+   "collective-impact",
+   "communities-of-practice"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 41,
+  "exerciseId": null
+ },
+ {
+  "id": "09-icebreaker-this-or-that",
+  "title": "This or That",
+  "type": "Ice Breaker",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 11,
+  "exerciseId": "leading-through-influence--this-or-that"
+ },
+ {
+  "id": "09-icebreaker-influence-continuum",
+  "title": "Influence Continuum",
+  "type": "Ice Breaker",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 3,
+  "groupSizeMax": 10,
+  "groupSizeSource": "sourced: Up to 10",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "leading-through-influence--influence-continuum"
+ },
+ {
+  "id": "09-icebreaker-influence-in-action",
+  "title": "Influence in Action",
+  "type": "Ice Breaker",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 4,
+  "groupSizeMax": 999,
+  "groupSizeSource": "sourced: Groups of 2-3",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 16,
+  "exerciseId": "leading-through-influence--influence-in-action"
+ },
+ {
+  "id": "09-icebreaker-the-wisdom-in-the-room",
+  "title": "The Wisdom in the Room",
+  "type": "Ice Breaker",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 17,
+  "exerciseId": "leading-through-influence--the-wisdom-in-the-room"
+ },
+ {
+  "id": "09-handout-simulation-role-cards",
+  "title": "Simulation Role Cards",
+  "type": "Handout",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 27,
+  "exerciseId": null
+ },
+ {
+  "id": "09-workshop-one-hour-workshop-foundations",
+  "title": "One-Hour Workshop: Foundations",
+  "type": "Workshop",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 35,
+  "exerciseId": "leading-through-influence--one-hour-workshop-foundations"
+ },
+ {
+  "id": "09-workshop-one-hour-workshop-everyday-application",
+  "title": "One-Hour Workshop: Everyday Application",
+  "type": "Workshop",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 36,
+  "exerciseId": "leading-through-influence--one-hour-workshop-everyday-application"
+ },
+ {
+  "id": "09-workshop-two-hour-workshop-facilitating-internal-",
+  "title": "Two-Hour Workshop: Facilitating Internal Conversations",
+  "type": "Workshop",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 37,
+  "exerciseId": "leading-through-influence--two-hour-workshop-facilitating-internal-conversations"
+ },
+ {
+  "id": "09-workshop-two-hour-workshop-moving-decisions-forwa",
+  "title": "Two-Hour Workshop: Moving Decisions Forward",
+  "type": "Workshop",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 38,
+  "exerciseId": "leading-through-influence--two-hour-workshop-moving-decisions-forward"
+ },
+ {
+  "id": "09-workshop-four-hour-workshop-influence-simulation-",
+  "title": "Four-Hour Workshop: Influence Simulation Lab",
+  "type": "Workshop",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 39,
+  "exerciseId": "leading-through-influence--four-hour-workshop-influence-simulation-lab"
+ },
+ {
+  "id": "09-workshop-four-hour-workshop-real-world-applicatio",
+  "title": "Four-Hour Workshop: Real-World Application Lab",
+  "type": "Workshop",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 40,
+  "exerciseId": "leading-through-influence--four-hour-workshop-real-world-application-lab"
+ },
+ {
+  "id": "09-handout-the-riverside-corridor",
+  "title": "The Riverside Corridor",
+  "type": "Handout",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 41,
+  "exerciseId": null
+ },
+ {
+  "id": "09-handout-job-aid",
+  "title": "Job Aid",
+  "type": "Handout",
+  "skill": "leading-through-influence",
+  "skillName": "Leading Through Influence",
+  "skillNumber": 9,
+  "phases": [
+   "pre-launch",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "curiosity"
+  ],
+  "frameworks": [
+   "adaptive-leadership",
+   "power-analysis-power-cube"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 42,
+  "exerciseId": null
+ },
+ {
+  "id": "10-icebreaker-you-can-only-pick-three",
+  "title": "You Can Only Pick Three",
+  "type": "Ice Breaker",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "prioritization--you-can-only-pick-three"
+ },
+ {
+  "id": "10-icebreaker-too-much-not-enough-time",
+  "title": "Too Much, Not Enough Time",
+  "type": "Ice Breaker",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 15,
+  "exerciseId": "prioritization--too-much-not-enough-time"
+ },
+ {
+  "id": "10-icebreaker-the-budget-shuffle",
+  "title": "The Budget Shuffle",
+  "type": "Ice Breaker",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 15,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 25,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 16,
+  "exerciseId": "prioritization--the-budget-shuffle"
+ },
+ {
+  "id": "10-icebreaker-the-wedding-planning-challenge",
+  "title": "The Wedding Planning Challenge",
+  "type": "Ice Breaker",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 15,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 25,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 18,
+  "exerciseId": "prioritization--the-wedding-planning-challenge"
+ },
+ {
+  "id": "10-icebreaker-the-loudest-request",
+  "title": "The Loudest Request",
+  "type": "Ice Breaker",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 20,
+  "exerciseId": "prioritization--the-loudest-request"
+ },
+ {
+  "id": "10-coreexperience-the-chapter-resource-allocation-challeng",
+  "title": "The Chapter Resource Allocation Challenge",
+  "type": "Core Experience",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 22,
+  "exerciseId": "prioritization--the-chapter-resource-allocation-challenge"
+ },
+ {
+  "id": "10-coreexperience-the-grant-is-ending",
+  "title": "The Grant Is Ending",
+  "type": "Core Experience",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 26,
+  "exerciseId": "prioritization--the-grant-is-ending"
+ },
+ {
+  "id": "10-coreexperience-community-priority-and-mission-alignment",
+  "title": "Community Priority and Mission Alignment",
+  "type": "Core Experience",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 30,
+  "durationMax": 30,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 38,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 30,
+  "exerciseId": "prioritization--community-priority-and-mission-alignment"
+ },
+ {
+  "id": "10-workshop-one-hour-workshop-making-tradeoffs-visib",
+  "title": "One-Hour Workshop: Making Tradeoffs Visible",
+  "type": "Workshop",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 39,
+  "exerciseId": "prioritization--one-hour-workshop-making-tradeoffs-visible"
+ },
+ {
+  "id": "10-workshop-two-hour-workshop-aligning-limited-resou",
+  "title": "Two-Hour Workshop: Aligning Limited Resources with the Highest-Impact Work",
+  "type": "Workshop",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 40,
+  "exerciseId": "prioritization--two-hour-workshop-aligning-limited-resources-with-the-highest-impact-w"
+ },
+ {
+  "id": "10-workshop-two-hour-workshop-program-stewardship",
+  "title": "Two-Hour Workshop: Program Stewardship",
+  "type": "Workshop",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 42,
+  "exerciseId": "prioritization--two-hour-workshop-program-stewardship"
+ },
+ {
+  "id": "10-workshop-four-hour-workshop-choosing-and-sustaini",
+  "title": "Four-Hour Workshop: Choosing and Sustaining",
+  "type": "Workshop",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 44,
+  "exerciseId": "prioritization--four-hour-workshop-choosing-and-sustaining"
+ },
+ {
+  "id": "10-handout-the-criteria-scoring-worksheet",
+  "title": "The Criteria Scoring Worksheet",
+  "type": "Handout",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 46,
+  "exerciseId": null
+ },
+ {
+  "id": "10-handout-must-should-may-and-urgent-against-impor",
+  "title": "Must, Should, May and Urgent against Important",
+  "type": "Handout",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 48,
+  "exerciseId": null
+ },
+ {
+  "id": "10-handout-the-stewardship-assessment",
+  "title": "The Stewardship Assessment",
+  "type": "Handout",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 50,
+  "exerciseId": null
+ },
+ {
+  "id": "10-handout-the-communication-planner",
+  "title": "The Communication Planner",
+  "type": "Handout",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 52,
+  "exerciseId": null
+ },
+ {
+  "id": "10-handout-reflection-sheet",
+  "title": "Reflection Sheet",
+  "type": "Handout",
+  "skill": "prioritization",
+  "skillName": "Prioritization",
+  "skillNumber": 10,
+  "phases": [
+   "priority-area-selection",
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "equity-and-inclusion-awareness",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "appreciative-inquiry",
+   "collective-impact"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 54,
+  "exerciseId": null
+ },
+ {
+  "id": "11-icebreaker-the-triangle",
+  "title": "The Triangle",
+  "type": "Ice Breaker",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 20,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 25,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "sourced: 8 to 25, sweet spot 12 to 18",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 13,
+  "exerciseId": "designing-more-impactful-program-delivery--the-triangle"
+ },
+ {
+  "id": "11-icebreaker-levels-quick-sort",
+  "title": "Levels Quick-Sort",
+  "type": "Ice Breaker",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 15,
+  "exerciseId": "designing-more-impactful-program-delivery--levels-quick-sort"
+ },
+ {
+  "id": "11-handout-the-sorting-set",
+  "title": "The Sorting Set",
+  "type": "Handout",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 16,
+  "exerciseId": null
+ },
+ {
+  "id": "11-icebreaker-your-strongest-level",
+  "title": "Your Strongest Level",
+  "type": "Ice Breaker",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 18,
+  "exerciseId": "designing-more-impactful-program-delivery--your-strongest-level"
+ },
+ {
+  "id": "11-icebreaker-the-map-you-already-have",
+  "title": "The Map You Already Have",
+  "type": "Ice Breaker",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 19,
+  "exerciseId": "designing-more-impactful-program-delivery--the-map-you-already-have"
+ },
+ {
+  "id": "11-handout-challenge-cards",
+  "title": "Challenge Cards",
+  "type": "Handout",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 20,
+  "exerciseId": null
+ },
+ {
+  "id": "11-practice-map-your-program-across-levels",
+  "title": "Map Your Program Across Levels",
+  "type": "Practice",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 20,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 28,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 21,
+  "exerciseId": "designing-more-impactful-program-delivery--map-your-program-across-levels"
+ },
+ {
+  "id": "11-practice-ripple-tracing",
+  "title": "Ripple Tracing",
+  "type": "Practice",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 22,
+  "exerciseId": "designing-more-impactful-program-delivery--ripple-tracing"
+ },
+ {
+  "id": "11-practice-find-your-layer-partners",
+  "title": "Find Your Layer Partners",
+  "type": "Practice",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "field assignment",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 23,
+  "exerciseId": null
+ },
+ {
+  "id": "11-practice-the-sustainability-audit",
+  "title": "The Sustainability Audit",
+  "type": "Practice",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 20,
+  "durationMax": 20,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 28,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 24,
+  "exerciseId": "designing-more-impactful-program-delivery--the-sustainability-audit"
+ },
+ {
+  "id": "11-practice-reinforcement-audit",
+  "title": "Reinforcement Audit",
+  "type": "Practice",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 25,
+  "durationMax": 25,
+  "durationSource": "sourced",
+  "debriefMinutes": 8,
+  "breakMinutes": 0,
+  "blockMinutes": 33,
+  "groupSizeMin": 4,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 25,
+  "exerciseId": "designing-more-impactful-program-delivery--reinforcement-audit"
+ },
+ {
+  "id": "11-coreexperience-the-layered-design-studio",
+  "title": "The Layered Design Studio",
+  "type": "Core Experience",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 70,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 27,
+  "exerciseId": "designing-more-impactful-program-delivery--the-layered-design-studio"
+ },
+ {
+  "id": "11-coreexperience-the-mobilize-challenge",
+  "title": "The MOBILIZE Challenge",
+  "type": "Core Experience",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 29,
+  "exerciseId": "designing-more-impactful-program-delivery--the-mobilize-challenge"
+ },
+ {
+  "id": "11-handout-resilience-cards",
+  "title": "Resilience Cards",
+  "type": "Handout",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 31,
+  "exerciseId": null
+ },
+ {
+  "id": "11-coreexperience-the-superfood-launch",
+  "title": "The Superfood Launch",
+  "type": "Core Experience",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 32,
+  "exerciseId": "designing-more-impactful-program-delivery--the-superfood-launch"
+ },
+ {
+  "id": "11-workshop-one-hour-workshop-seeing-the-five-levels",
+  "title": "One-Hour Workshop: Seeing the Five Levels",
+  "type": "Workshop",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 39,
+  "exerciseId": "designing-more-impactful-program-delivery--one-hour-workshop-seeing-the-five-levels"
+ },
+ {
+  "id": "11-workshop-one-hour-workshop-finding-the-partner-yo",
+  "title": "One-Hour Workshop: Finding the Partner You Are Missing",
+  "type": "Workshop",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 40,
+  "exerciseId": "designing-more-impactful-program-delivery--one-hour-workshop-finding-the-partner-you-are-missing"
+ },
+ {
+  "id": "11-workshop-two-hour-workshop-layered-impact",
+  "title": "Two-Hour Workshop: Layered Impact",
+  "type": "Workshop",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 41,
+  "exerciseId": "designing-more-impactful-program-delivery--two-hour-workshop-layered-impact"
+ },
+ {
+  "id": "11-workshop-four-hour-workshop-building-across-level",
+  "title": "Four-Hour Workshop: Building Across Levels",
+  "type": "Workshop",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 42,
+  "exerciseId": "designing-more-impactful-program-delivery--four-hour-workshop-building-across-levels"
+ },
+ {
+  "id": "11-handout-program-mapping-template",
+  "title": "Program Mapping Template",
+  "type": "Handout",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 44,
+  "exerciseId": null
+ },
+ {
+  "id": "11-handout-the-ripple-diagram",
+  "title": "The Ripple Diagram",
+  "type": "Handout",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 46,
+  "exerciseId": null
+ },
+ {
+  "id": "11-handout-the-sustainability-audit",
+  "title": "The Sustainability Audit",
+  "type": "Handout",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 47,
+  "exerciseId": "designing-more-impactful-program-delivery--the-sustainability-audit"
+ },
+ {
+  "id": "11-handout-program-audit-worksheet",
+  "title": "Program Audit Worksheet",
+  "type": "Handout",
+  "skill": "designing-more-impactful-program-delivery",
+  "skillName": "Designing More Impactful Program Delivery",
+  "skillNumber": 11,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "growth-mindset",
+   "curiosity",
+   "shared-ownership"
+  ],
+  "frameworks": [
+   "social-ecological-model",
+   "systems-thinking",
+   "resilience-activation-framework",
+   "copewell"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 48,
+  "exerciseId": null
+ },
+ {
+  "id": "12-icebreaker-who-owns-the-marker",
+  "title": "Who Owns the Marker?",
+  "type": "Ice Breaker",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 10,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 12,
+  "exerciseId": "empowering-others-to-deliver-our-programs--who-owns-the-marker"
+ },
+ {
+  "id": "12-icebreaker-if-we-left-tomorrow",
+  "title": "If We Left Tomorrow",
+  "type": "Ice Breaker",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 10,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 14,
+  "exerciseId": "empowering-others-to-deliver-our-programs--if-we-left-tomorrow"
+ },
+ {
+  "id": "12-icebreaker-participation-or-ownership",
+  "title": "Participation or Ownership?",
+  "type": "Ice Breaker",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 5,
+  "durationMax": 10,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 15,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 16,
+  "exerciseId": "empowering-others-to-deliver-our-programs--participation-or-ownership"
+ },
+ {
+  "id": "12-icebreaker-name-the-program",
+  "title": "Name the Program",
+  "type": "Ice Breaker",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 15,
+  "durationMax": 15,
+  "durationSource": "sourced",
+  "debriefMinutes": 5,
+  "breakMinutes": 0,
+  "blockMinutes": 20,
+  "groupSizeMin": 6,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 18,
+  "exerciseId": "empowering-others-to-deliver-our-programs--name-the-program"
+ },
+ {
+  "id": "12-coreexperience-the-ownership-transfer-table",
+  "title": "The Ownership Transfer Table",
+  "type": "Core Experience",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 45,
+  "durationMax": 45,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 55,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 20,
+  "exerciseId": "empowering-others-to-deliver-our-programs--the-ownership-transfer-table"
+ },
+ {
+  "id": "12-coreexperience-map-design-practice",
+  "title": "Map, Design, Practice",
+  "type": "Core Experience",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 10,
+  "breakMinutes": 0,
+  "blockMinutes": 70,
+  "groupSizeMin": 8,
+  "groupSizeMax": 30,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 29,
+  "exerciseId": "empowering-others-to-deliver-our-programs--map-design-practice"
+ },
+ {
+  "id": "12-workshop-one-hour-workshop-participation-or-owner",
+  "title": "One-Hour Workshop: Participation or Ownership",
+  "type": "Workshop",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 60,
+  "durationMax": 60,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": 60,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 37,
+  "exerciseId": "empowering-others-to-deliver-our-programs--one-hour-workshop-participation-or-ownership"
+ },
+ {
+  "id": "12-workshop-two-hour-workshop-the-transfer-table",
+  "title": "Two-Hour Workshop: The Transfer Table",
+  "type": "Workshop",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 120,
+  "durationMax": 120,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 10,
+  "blockMinutes": 120,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 38,
+  "exerciseId": "empowering-others-to-deliver-our-programs--two-hour-workshop-the-transfer-table"
+ },
+ {
+  "id": "12-workshop-four-hour-workshop-from-holding-to-handi",
+  "title": "Four-Hour Workshop: From Holding to Handing Over",
+  "type": "Workshop",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": 240,
+  "durationMax": 240,
+  "durationSource": "sourced",
+  "debriefMinutes": 0,
+  "breakMinutes": 25,
+  "blockMinutes": 240,
+  "groupSizeMin": 8,
+  "groupSizeMax": 25,
+  "groupSizeSource": "PROPOSED",
+  "virtualOk": null,
+  "schedulable": true,
+  "page": 39,
+  "exerciseId": "empowering-others-to-deliver-our-programs--four-hour-workshop-from-holding-to-handing-over"
+ },
+ {
+  "id": "12-handout-ownership-map",
+  "title": "Ownership Map",
+  "type": "Handout",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 41,
+  "exerciseId": null
+ },
+ {
+  "id": "12-handout-transition-plan",
+  "title": "Transition Plan",
+  "type": "Handout",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 42,
+  "exerciseId": null
+ },
+ {
+  "id": "12-handout-action-and-follow-through",
+  "title": "Action and Follow-Through",
+  "type": "Handout",
+  "skill": "empowering-others-to-deliver-our-programs",
+  "skillName": "Empowering Others to Deliver Our Programs",
+  "skillNumber": 12,
+  "phases": [
+   "tactical-action-planning"
+  ],
+  "mindsets": [
+   "shared-ownership",
+   "humility",
+   "benefit-mindset"
+  ],
+  "frameworks": [
+   "asset-based-community-development",
+   "adaptive-leadership"
+  ],
+  "durationMin": null,
+  "durationMax": null,
+  "durationSource": "missing",
+  "debriefMinutes": 0,
+  "breakMinutes": 0,
+  "blockMinutes": null,
+  "groupSizeMin": null,
+  "groupSizeMax": null,
+  "groupSizeSource": "n/a",
+  "virtualOk": null,
+  "schedulable": false,
+  "page": 43,
+  "exerciseId": null
+ }
+]

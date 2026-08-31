@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/site/PageHeader.astro';
+import ConceptList from '../../../components/training/ConceptList.astro';
+import LabDisclaimer from '../../../components/training/LabDisclaimer.astro';
+---
+
+<BaseLayout
+  noindex
+  title="Frameworks"
+  description="The sixteen published frameworks the community mobilization skills draw on."
+>
+  <div class="container">
+    <PageHeader
+      eyebrow="Training Lab"
+      title="Sixteen frameworks"
+      lede="Models the skills borrow from, each with the work it comes out of. The bar for appearing here is a citation: an idea without a source may still be a good practice, but it is not a framework."
+    />
+    <ConceptList kind="frameworks" />
+    <div class="foot"><LabDisclaimer variant="short" /></div>
+  </div>
+</BaseLayout>
+
+<style>
+  .foot {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+    max-width: var(--width-text);
+  }
+</style>

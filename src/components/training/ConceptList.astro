@@ -1,0 +1,84 @@
+---
+/** The index of mindsets, or the index of frameworks. Same layout for both. */
+import { getCollection } from 'astro:content';
+import { usedBy } from '../../lib/cm';
+
+interface Props { kind: 'mindsets' | 'frameworks' }
+const { kind } = Astro.props;
+
+const entries = await getCollection(kind);
+/* Mindsets carry an explicit order; frameworks are alphabetical. */
+const sorted = entries.sort((a, b) =>
+  a.data.order !== undefined && b.data.order !== undefined
+    ? a.data.order - b.data.order
+    : a.data.title.localeCompare(b.data.title)
+);
+
+const rows = await Promise.all(
+  sorted.map(async (entry) => ({ entry, links: await usedBy(kind, entry.id) }))
+);
+---
+
+<ul class="concepts">
+  {rows.map(({ entry, links }) => (
+    <li>
+      <a class="concepts__item" href={`/training/${kind}/${entry.id}`}>
+        <span class="concepts__title">{entry.data.title}</span>
+        <span class="concepts__definition">{entry.data.definition}</span>
+        <span class="concepts__meta">
+          <span>{entry.data.source}</span>
+          <span class="concepts__count">
+            {links.skills.length} {links.skills.length === 1 ? 'skill' : 'skills'}
+          </span>
+        </span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .concepts {
+    list-style: none;
+    margin: var(--space-xl) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--color-rule);
+    max-width: var(--width-text);
+  }
+
+  .concepts__item {
+    display: block;
+    padding-block: var(--space-md);
+    border-bottom: 1px solid var(--color-rule);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .concepts__title {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  .concepts__item:hover .concepts__title { color: var(--color-clay); }
+
+  .concepts__definition {
+    display: block;
+    margin-top: var(--space-3xs);
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .concepts__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs) var(--space-md);
+    margin-top: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .concepts__count { color: var(--color-clay); }
+</style>

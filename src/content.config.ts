@@ -278,6 +278,35 @@ const trainings = defineCollection({
        */
       related: z.array(z.string()).default([]),
 
+      /* ---------------------------------------------------------------
+         THE MAP — how this skill connects to everything else.
+
+         These three fields are the single source of truth for the whole
+         cross-link web. A phase page works out which skills it needs by
+         reading every skill's `phases`; a mindset page works out which skills
+         practise it by reading every skill's `mindsets`. Nothing stores the
+         reverse direction, so the two can never disagree.
+
+         Filenames, not display names: 'shared-ownership', not 'Shared
+         Ownership'. A filename that does not exist fails the build.
+         --------------------------------------------------------------- */
+
+      /** Where this skill is load-bearing, and where it merely helps. */
+      phases: z
+        .array(
+          z.object({
+            code: z.enum(['PL', 'P1', 'P2', 'P3', 'P4']),
+            role: z.enum(['load-bearing', 'supporting']),
+          })
+        )
+        .default([]),
+
+      /** Filenames from src/content/mindsets. */
+      mindsets: z.array(z.string()).default([]),
+
+      /** Filenames from src/content/frameworks. */
+      frameworks: z.array(z.string()).default([]),
+
       /** Last meaningful revision. Shown on the page. */
       updated: z.coerce.date(),
     })
@@ -327,4 +356,132 @@ const exercises = defineCollection({
   }),
 });
 
-export const collections = { writing, projects, trainings, exercises };
+
+/* -------------------------------------------------------------------------
+   PHASES — the five chapter planning phases
+   File: src/content/phases/community-discovery.md
+
+   The spine the skills hang off. Which skills each phase asks for is NOT
+   stored here; it is read off the skills themselves. See the note on
+   `phases` in the trainings schema above.
+   ---------------------------------------------------------------------- */
+
+const phases = defineCollection({
+  loader: glob({
+    base: './src/content/phases',
+    pattern: ['**/*.md', '!**/_*'],
+  }),
+  schema: z.object({
+    title: z.string(),
+
+    /** A few words under the title, e.g. 'Choose one place'. */
+    subtitle: z.string(),
+
+    /** PL, P1, P2, P3 or P4. This is what the skills refer to. */
+    code: z.enum(['PL', 'P1', 'P2', 'P3', 'P4']),
+
+    /** 0 for Pre-Launch, then 1 to 4. Drives the order everywhere. */
+    order: z.number().int().min(0),
+
+    summary: z.string(),
+
+    /** How you know the phase is finished. One sentence. */
+    bar: z.string(),
+  }),
+});
+
+/* -------------------------------------------------------------------------
+   MINDSETS (6) and FRAMEWORKS (16)
+   Files: src/content/mindsets/curiosity.md
+          src/content/frameworks/adaptive-leadership.md
+
+   Same shape on purpose. A mindset is a disposition you bring; a framework
+   is a model you apply. Both are things a person can get better at, both are
+   referred to by filename from the skills, and both render the same way.
+
+   A framework earns its page by having a citation. That is the bar, and
+   `source` is required for exactly that reason.
+   ---------------------------------------------------------------------- */
+
+const conceptSchema = z.object({
+  title: z.string(),
+
+  /** One or two sentences. Shown at the top of the page and in listings. */
+  definition: z.string(),
+
+  /** Where the idea comes from. Required: no citation, no page. */
+  source: z.string(),
+
+  /** Optional link for the citation above. */
+  sourceUrl: z.string().url().optional(),
+
+  /** Mindsets are shown in a fixed order; frameworks are alphabetical. */
+  order: z.number().int().optional(),
+});
+
+const mindsets = defineCollection({
+  loader: glob({ base: './src/content/mindsets', pattern: ['**/*.md', '!**/_*'] }),
+  schema: conceptSchema,
+});
+
+const frameworks = defineCollection({
+  loader: glob({ base: './src/content/frameworks', pattern: ['**/*.md', '!**/_*'] }),
+  schema: conceptSchema,
+});
+
+/* -------------------------------------------------------------------------
+   ACTIVITIES — the tagged activity table
+   File: src/data/activities.json (generated, do not hand-edit)
+
+   Read the header of that file's build script before changing anything here.
+   Two fields matter more than they look:
+
+     blockMinutes  duration PLUS debrief. Always schedule against this.
+                   The stated durations in the source packs exclude the
+                   debrief, so anything scheduled on `durationMax` runs long.
+     schedulable   false for handouts and other things that are not a slot
+                   in an agenda.
+   ---------------------------------------------------------------------- */
+
+const activities = defineCollection({
+  loader: file('src/data/activities.json'),
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    /** Ice Breaker | Practice | Core Experience | Workshop | Handout */
+    type: z.string(),
+    /** Filename of the skill in src/content/trainings. */
+    skill: z.string(),
+    skillName: z.string(),
+    skillNumber: z.number().nullable(),
+    phases: z.array(z.string()).default([]),
+    mindsets: z.array(z.string()).default([]),
+    frameworks: z.array(z.string()).default([]),
+    durationMin: z.number().nullable(),
+    durationMax: z.number().nullable(),
+    /** 'sourced' if the pack stated it, otherwise it was assigned. */
+    durationSource: z.string().nullable(),
+    debriefMinutes: z.number().nullable(),
+    breakMinutes: z.number().nullable(),
+    blockMinutes: z.number().nullable(),
+    groupSizeMin: z.number().nullable(),
+    groupSizeMax: z.number().nullable(),
+    groupSizeSource: z.string().nullable(),
+    virtualOk: z.boolean().nullable(),
+    schedulable: z.boolean(),
+    page: z.number().nullable(),
+    /** Matching entry in the exercise bank, where one was found. */
+    exerciseId: z.string().nullable(),
+  }),
+});
+
+export const collections = {
+  writing,
+  projects,
+  trainings,
+  exercises,
+  phases,
+  mindsets,
+  frameworks,
+  activities,
+};

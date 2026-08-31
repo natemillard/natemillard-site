@@ -1,0 +1,189 @@
+---
+/** The spine: five phases, and which skills each one actually asks for. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/site/PageHeader.astro';
+import LabDisclaimer from '../../../components/training/LabDisclaimer.astro';
+import { phases, skillsInPhase, skillNo } from '../../../lib/cm';
+
+const rows = await Promise.all(
+  (await phases()).map(async (phase) => ({
+    phase,
+    ...(await skillsInPhase(phase.data.code)),
+  }))
+);
+---
+
+<BaseLayout
+  noindex
+  title="The five phases"
+  description="Which community mobilization skills each planning phase actually asks for, and which can wait."
+>
+  <div class="container">
+    <PageHeader
+      eyebrow="Training Lab"
+      title="The five phases"
+      lede="The skills are not a curriculum to finish before planning starts. Each phase leans hard on a handful of them and touches the rest lightly. This is which ones, and when."
+    />
+
+    <p class="key">
+      <span class="key__item"><span class="dot dot--load"></span> Load-bearing: the phase will go badly without it, and it will be visible.</span>
+      <span class="key__item"><span class="dot dot--support"></span> Supporting: it helps, and you can build it as you go.</span>
+    </p>
+
+    <ol class="spine">
+      {rows.map(({ phase, loadBearing, supporting }) => (
+        <li class="phase">
+          <p class="phase__code">{phase.data.code}</p>
+          <div class="phase__body">
+            <h2>
+              <a href={`/training/phases/${phase.id}`}>{phase.data.title}</a>
+            </h2>
+            <p class="phase__subtitle">{phase.data.subtitle}</p>
+            <p class="phase__summary">{phase.data.summary}</p>
+
+            <p class="phase__skills">
+              {loadBearing.map((s, i) => (
+                <>
+                  {i > 0 && <span class="sep"> · </span>}
+                  <a class="chip chip--load" href={`/training/${s.id}`}>
+                    <span class="chip__num">{skillNo(s)}</span> {s.data.title}
+                  </a>
+                </>
+              ))}
+            </p>
+
+            {supporting.length > 0 && (
+              <p class="phase__supporting">
+                Also draws on {supporting.length}{' '}
+                {supporting.length === 1 ? 'skill' : 'skills'} lightly.
+              </p>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <section class="argument">
+      <h2>Every skill is load-bearing somewhere</h2>
+      <p>
+        If a skill carries no solid mark in the phase you are in, it is not the
+        one to reach for yet. And the phase to read first is Internal Asset
+        Mapping, which asks for seven skills, more than any other, on people who
+        already know you. It is the rehearsal for Community Discovery, where
+        none of that is true.
+      </p>
+      <p>
+        <a class="link-arrow" href="/training/phases/internal-asset-mapping">
+          Why Phase 1 is the rehearsal
+        </a>
+      </p>
+    </section>
+
+    <div class="foot"><LabDisclaimer variant="short" /></div>
+  </div>
+</BaseLayout>
+
+<style>
+  .key {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+    max-width: var(--width-text);
+  }
+
+  .key__item { display: flex; align-items: baseline; gap: var(--space-2xs); }
+
+  .dot {
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .dot--load { background: var(--color-clay); }
+  .dot--support { background: transparent; border: 1px solid var(--color-rule-strong); }
+
+  .spine {
+    list-style: none;
+    margin: var(--space-xl) 0 0;
+    padding: 0;
+    max-width: var(--width-text);
+    border-top: 1px solid var(--color-rule);
+  }
+
+  .phase {
+    display: flex;
+    gap: var(--space-md);
+    padding-block: var(--space-lg);
+    border-bottom: 1px solid var(--color-rule);
+  }
+
+  .phase__code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+    padding-top: 0.35em;
+    min-width: 2.5ch;
+  }
+
+  .phase__body { flex: 1; }
+  .phase__body h2 { font-size: var(--text-xl); }
+  .phase__body h2 a { color: inherit; text-decoration: none; }
+  .phase__body h2 a:hover { color: var(--color-clay); }
+
+  .phase__subtitle {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--color-ink-faint);
+    margin-top: var(--space-3xs);
+  }
+
+  .phase__summary {
+    margin-top: var(--space-2xs);
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+
+  .phase__skills {
+    margin-top: var(--space-sm);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--leading-loose);
+  }
+
+  .chip { text-decoration: none; color: var(--color-clay); }
+  .chip:hover { text-decoration: underline; }
+  .chip__num { font-family: var(--font-mono); font-size: var(--text-xs); }
+  .sep { color: var(--color-rule-strong); }
+
+  .phase__supporting {
+    margin-top: var(--space-2xs);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+
+  .argument {
+    margin-top: var(--space-2xl);
+    padding: var(--space-md);
+    background: var(--color-paper-sunk);
+    border-radius: var(--radius-md);
+    max-width: var(--width-text);
+  }
+
+  .argument h2 { font-size: var(--text-lg); }
+  .argument p { margin-top: var(--space-2xs); }
+
+  .foot {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-rule);
+    max-width: var(--width-text);
+  }
+</style>
