@@ -6,6 +6,26 @@ summary: "A walk out to Point Sal on Saint Lucia's Day, and an attempt to explai
 tags: ["place", "watershed", "central coast"]
 listed: true
 draft: false
+
+# Captions are lines from the essay itself. The sequence follows the walk:
+# the view down the coast, the beach, the tidepools, the rocks at low sun,
+# and then the sun, which is what the whole piece is actually about.
+gallery:
+  - src: "/images/writing/paradise/01-point-sal.jpg"
+    alt: "Looking down from a high dry ridge onto a long curve of empty beach, surf breaking white along it, the coast running north into haze and low mountains beyond."
+    caption: "Point Sal, and the Coast Range emerging from the sand dunes at Oceano."
+  - src: "/images/writing/paradise/02-beach-and-birds.jpg"
+    alt: "A wide empty beach at low tide with a long line of gulls and shorebirds standing at the waterline, pale bluffs running down to the sand, and a small black dog walking alone in the foreground."
+    caption: "This little spot of crust at the edge of the Pacific Ocean."
+  - src: "/images/writing/paradise/03-anemones.jpg"
+    alt: "A close view of a cluster of sea anemones in a tidepool, their closed bodies crusted with sand and broken shell, several open to show green centers."
+    caption: "A place where the ocean and land meet."
+  - src: "/images/writing/paradise/04-mussel-beds.jpg"
+    alt: "A figure in a cap and backpack walking across a bed of mussels on a rocky point, silhouetted against a low sun with surf breaking behind."
+    caption: "With me is an old friend. He had never been to Paradise Beach."
+  - src: "/images/writing/paradise/05-sunset.jpg"
+    alt: "The sun setting into a flat Pacific horizon through bands of orange and grey cloud, small waves running up an empty beach in the near corner."
+    caption: "My walk to where I can watch the earth spin."
 ---
 
 This is writing about home. After months of walking around the town, I found my walk to where I can watch the earth spin; such hints of life in the universe, feeling the shadows fill, the way the colors round out to darkness, keep me sane. I feel us falling away from the sun. When I think “son of god,” I think only of this. To me, it is what unites and unifies everything. All of energy is sun energy. I write by the power of a burning mass of hydrogen and helium sending waves of light towards a rock spinning around the sun. The earth, an accretion of heavy metals, possibly expelled during the creation of the sun, and growing in size by colliding with other smaller similar objects, was initially a molten ball of heat. As water formed on the surface, it cooled outer crusts. These crusts, floating on a sea of lava deep below the surface, emerge through the salt oceans. And on these crusts and in the oceans, the earth collects, converts, and stores the energy of our sun. The earth is a history of evolving organisms powered by our sun. Photosynthesis is the miracle of life: a protein found in a plant that can use the nuclear energy from the sun to separate the bonds of carbon dioxide, to build glucose, starch, cellulose, fat and protein, food for the biotic world, and release oxygen back into the environment. It is in this place, on this moving mass of earth, this time of unfathomable history, I was born, a complicated, growing symbiotic mass that eats sun energy. I have felt the sun each day for years of my early life here in this little spot of crust at the edge of the Pacific Ocean. Here, I went to school and converted sun energy into the ability to read and write. Here, I stored sun energy as memories of friends and family. Here, through such amazing systems of planets spinning, of water cycling, or carbon transferring, I ate, drank, grew, learned, and loved. If I am a sentient being, I live only in connection with systems of energy so large and complex, I am humbled and in awe of the few years I am allowed to live on this earth and watch the sun set. Energy for life on earth is found in the bonds in the molecules made through the energy of the sun. If I were to worship anything, I worship the sun. And my god sits somewhere out beyond the universe, somewhere we will never be able to see, and put into motion galaxies and solar systems that continuously amaze me. I eat the sun each day, breathe the air, and drink the coolest water and want only the healthiest earth I can possibly imagine because each day is filled by the beauty of time. I fear how little I have.

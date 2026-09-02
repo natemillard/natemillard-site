@@ -13,7 +13,7 @@ outcomes:
   - 'Twelve guiding principles linking sustainability competencies to student learning outcomes across existing and new courses.'
   - 'Cross-departmental climate justice curriculum integrating sustainability, resilience, mental health, and social equity.'
   - 'An assessment framework measuring attitudes and behaviour, not only knowledge.'
-order: 4
+order: 5
 ---
 
 Universities are good at assessing whether students know something and poor at

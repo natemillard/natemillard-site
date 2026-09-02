@@ -56,6 +56,17 @@ const d = entry.data;
 
     <Prose class:list={['piece-body', { 'prose--verse': d.type === 'poem' }]}><Content /></Prose>
 
+    {d.gallery.length > 0 && (
+      <section class="piece-photos" aria-label="Photographs">
+        {d.gallery.map((img) => (
+          <figure>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+            {img.caption && <figcaption>{img.caption}</figcaption>}
+          </figure>
+        ))}
+      </section>
+    )}
+
     {d.tags.length > 0 && (
       <footer class="piece-tags">
         {d.tags.map((t) => <Tag tag={t} href={`/writing/tag/${slugifyTag(t)}`} />)}
@@ -105,6 +116,45 @@ const d = entry.data;
     margin-top: var(--space-sm);
     font-family: var(--font-sans);
     font-size: var(--text-sm);
+    color: var(--color-ink-faint);
+  }
+
+  /* A sequence, not a grid. One photograph at a time, in the order given,
+     so a run of pictures reads as a chronology rather than a contact sheet.
+     Images are never cropped here: the shape each one was taken in is part
+     of what it is. */
+  .piece-photos {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-rule);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .piece-photos figure { margin: 0; }
+
+  .piece-photos img {
+    display: block;
+    /* Capped in BOTH directions and never stretched. A tall photograph at
+       full reading width runs a thousand pixels down the page and turns a
+       short sequence into a scroll; capping the height instead lets a
+       portrait sit narrower than a landscape, which is also the truer shape
+       for it. Small originals stay small rather than being blown up. */
+    max-width: 100%;
+    max-height: 32rem;
+    width: auto;
+    height: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-rule);
+  }
+
+  .piece-photos figcaption {
+    margin-top: var(--space-2xs);
+    max-width: 46ch;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
     color: var(--color-ink-faint);
   }
 

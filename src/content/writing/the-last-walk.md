@@ -6,6 +6,32 @@ summary: "Fourteen years, two countries, eight houses and too many sunsets to co
 tags: ["chico", "grief"]
 listed: true
 draft: false
+
+# Captions are drawn from the essay itself rather than written fresh, so the
+# pictures echo the text instead of narrating over it. Alt text describes what
+# is actually in the frame, which is a different job from the caption.
+gallery:
+  - src: "/images/writing/the-last-walk/01-rescue-day.jpg"
+    alt: "A small black dog with a shaggy coat standing on a road beside an open car hatchback, a young man crouched down holding him, a yellow rope running from the dog back to the car."
+    caption: "The day I got him. He was a street dog, found with his brother roaming the streets."
+  - src: "/images/writing/the-last-walk/02-game-trails.jpg"
+    alt: "A backpacker with a walking stick climbing a boulder field toward a pass, an alpine lake and patches of snow in the basin below, a black dog in a red pack following behind."
+    caption: "Following game trails into the evening to watch a sunset on some remote area of the world."
+  - src: "/images/writing/the-last-walk/03-hammock.jpg"
+    alt: "A woman in sunglasses lying in a striped hammock strung between pines, reading a paperback, a large black dog wedged into the hammock beside her."
+    caption: "He has wedged himself in the hammock with me, into my sleeping bag with me."
+  - src: "/images/writing/the-last-walk/04-paddleboard.jpg"
+    alt: "Looking down the nose of a red and white paddleboard over clear turquoise water, a black dog lying at the front, the paddler's shadow falling on the sand below."
+    caption: "When he could no longer run with me, I took up paddle boarding and he was my masthead."
+  - src: "/images/writing/the-last-walk/05-under-the-desk.jpg"
+    alt: "An older black dog asleep on green carpet beneath a desk, cables running along the wall above him, grey coming through the fur around his muzzle."
+    caption: "He would sleep under my desk while I typed, getting up to remind me to take breaks."
+  - src: "/images/writing/the-last-walk/06-last-night.jpg"
+    alt: "A man and a black dog lying face to face on a bed under a patchwork quilt in warm lamplight, the man's eyes closed, the dog looking toward the camera."
+    caption: "These will be the last words I write with his body pressed against mine."
+  - src: "/images/writing/the-last-walk/07-paw-print.jpg"
+    alt: "A round disc of white clay with a dog's paw pressed into it beside a man's open handprint, the words Chico and Nate scratched across the top."
+    caption: "On the way we stopped to make a print of his paw."
 ---
 
 I spent last night laying with my head against Chico, trying to comfort him. They often say you never really know when your last moment is going to be your last moment. Last week we took the whole family to the coast and on our first day I took Chico down to the ocean and he ran like a puppy...well, a very stiff legged puppy, like rocking horse running, but he pranced around at the edge of the ocean like he has done so many times. Like all the ocean walks up and down the California and Oregon coast, like the morning walks we would do together in Guatemala as he would chase crabs down into the surf. He has always loved the ocean. Maybe he is a reflection of me.

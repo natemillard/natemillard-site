@@ -52,6 +52,20 @@ const shared = {
   listed: z.boolean().default(true),
 };
 
+/* A run of images with captions, used by projects and by writing. `alt` is
+   required rather than optional: an image with no alt text is invisible to
+   anyone using a screen reader, and a caption is not a substitute — a caption
+   is read by everybody, alt text describes what the picture actually shows. */
+const gallery = z
+  .array(
+    z.object({
+      src: z.string(),
+      alt: z.string(),
+      caption: z.string().optional(),
+    })
+  )
+  .default([]);
+
 /* -------------------------------------------------------------------------
    WRITING — essays, research, publications, talks, reflections
    File: src/content/writing/my-essay.md
@@ -96,6 +110,14 @@ const writing = defineCollection({
 
       /** Optional DOI, e.g. '10.1080/example'. Rendered as a link. */
       doi: z.string().optional(),
+
+      /**
+       * A sequence of photographs shown after the piece, in the order given.
+       * For essays that were once blog posts and had pictures with them.
+       * They sit after the text rather than inside it, so the prose reads as
+       * one piece and the photographs are what you find when you finish.
+       */
+      gallery,
     })
     .refine((d) => !d.image || !!d.imageAlt, {
       message: 'imageAlt is required whenever image is set (accessibility).',
@@ -152,15 +174,7 @@ const projects = defineCollection({
         .default([]),
 
       /** Extra images, shown beneath the description. */
-      gallery: z
-        .array(
-          z.object({
-            src: z.string(),
-            alt: z.string(),
-            caption: z.string().optional(),
-          })
-        )
-        .default([]),
+      gallery,
 
       /** Lower numbers sort first on /work. Ties fall back to date. */
       order: z.number().optional(),
